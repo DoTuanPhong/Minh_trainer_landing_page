@@ -167,7 +167,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-
 /* Footer */
 footer a {
     text-decoration: none;
@@ -177,11 +176,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* --- Zoho Popup CSS (Updated to _19499) --- */
+/* Copy the CSS from your Zoho popup script's <style> block here and update IDs */
 
-/* --- Zoho Popup CSS --- */
-/* Copy the CSS from your Zoho popup script's <style> block here */
-
-.zf_lB_Dimmer_571131{
+.zf_lB_Dimmer_19499{
     position: fixed;
     top: 0px;
     left: 0px;
@@ -189,16 +187,15 @@ footer a:hover {
     bottom: 0px;
     background: rgb(0, 0, 0);
     opacity: 0.8;
-    z-index: 10000000;
+    z-index: 10000000; /* Should be lower than container/wrapper */
 }
 
-.zf_lB_Container_571131{
+.zf_lB_Container_19499{
 	position: fixed;
 	background-color: white;
 	margin: 0;
-	margin-right: 0px;
 	padding: 0;
-	/* height: 767px; Remove fixed height, let iframe determine or use max-height */
+	/* height: 800px; Remove fixed height */
 	width: 70%; /* Adjust as needed, or use max-width */
 	top: 50%;
 	left: 50%;
@@ -207,24 +204,18 @@ footer a:hover {
 	border: 7px solid none; /* Seems odd, check if this is intentional */
 	max-height: calc(100% - 60px); /* Limit max height */
     overflow-y: auto; /* Add scrolling if content exceeds max-height */
-	z-index: 99999999; /* Ensure it's below dimmer but high */
+	z-index: 10000001; /* Ensure it's above dimmer */
     box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Add shadow */
     border-radius: 8px; /* Add rounded corners */
 }
 
+/* .zf_lB_Wrapper_19499 {
+    // This wrapper's styles seem problematic (fixed position, specific margin-top).
+    // The container itself is already centered with transform. Let's rely on the container.
+    // If removing this causes issues, you might need to debug Zoho's intended structure.
+} */
 
-.zf_lB_Wrapper_571131{
-	position: fixed; /* Wrapper should also be fixed relative to viewport */
-    top: 50%;
-    left: 50%;
-    /* margin-left: 0; Remove fixed margins */
-    /* margin-top: -180px; Remove fixed margins */
-    transform: translate(-50%, -50%); /* Center using transform */
-    z-index: 10000001; /* Wrapper above dimmer */
-    /* No explicit width/height here, let container determine size */
-}
-
-.zf_main_id_571131{
+.zf_main_id_19499{
 	height: 100%; /* Allow iframe holder to take full container height */
 	display: flex;
 	overflow-y: hidden; /* Overflow handled by container */
@@ -233,15 +224,14 @@ footer a:hover {
     box-sizing: border-box; /* Include padding in height/width */
 }
 
-.zf_main_id_571131 iframe {
+.zf_main_id_19499 iframe {
      display: block; /* Ensure iframe is block */
      width: 100%; /* Iframe takes full width of its container */
      min-height: 100%; /* Ensure iframe starts with minimum height */
      height: auto !important; /* Let Zoho script control height */
 }
 
-
-.zf_lb_closeform_571131 {
+.zf_lb_closeform_19499 {
     position: absolute;
     right: -15px; /* Adjust position */
     background: #2f2e2e;
@@ -252,9 +242,9 @@ footer a:hover {
     top: -15px; /* Adjust position */
     cursor: pointer;
     border: 2px solid #d9d9d9;
-    z-index: 100000000; /* Ensure close button is on top */
+    z-index: 10000002; /* Ensure close button is on top of container */
 }
-.zf_lb_closeform_571131:before, .zf_lb_closeform_571131:after {
+.zf_lb_closeform_19499:before, .zf_lb_closeform_19499:after {
     position: absolute;
     left: 12px; /* Adjust position based on new width */
     content: ' ';
@@ -264,10 +254,10 @@ footer a:hover {
     background-color: #f7f7f7;
 }
 
-.zf_lb_closeform_571131:before {
+.zf_lb_closeform_19499:before {
   transform: rotate(45deg);
 }
-.zf_lb_closeform_571131:after {
+.zf_lb_closeform_19499:after {
   transform: rotate(-45deg);
 }
 
@@ -289,21 +279,21 @@ footer a:hover {
     100% {opacity: 1;}
 }
 
-/* Media Queries for Responsive Popup Size */
+/* Media Queries for Responsive Popup Size (Updated to _19499) */
 /* Adjusted based on typical screen breakpoints */
 @media (max-width: 575.98px) { /* Extra small devices */
-    .zf_lB_Container_571131 {
+    .zf_lB_Container_19499 {
         width: 95%; /* Take almost full width on small screens */
         max-height: calc(100% - 40px);
     }
-    .zf_main_id_571131 {
+    .zf_main_id_19499 {
         padding: 15px;
     }
-     .zf_lb_closeform_571131 {
+     .zf_lb_closeform_19499 {
          right: 5px; /* Adjust position */
          top: 5px; /* Adjust position */
      }
-      .zf_lb_closeform_571131:before, .zf_lb_closeform_571131:after {
+      .zf_lb_closeform_19499:before, .zf_lb_closeform_19499:after {
          left: 10px;
          top: 5px;
          height: 12px;
@@ -312,34 +302,31 @@ footer a:hover {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) { /* Small devices */
-     .zf_lB_Container_571131 {
+     .zf_lB_Container_19499 {
         width: 85%;
         max-height: calc(100% - 50px);
     }
-     .zf_main_id_571131 {
+     .zf_main_id_19499 {
         padding: 20px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { /* Medium devices */
-    .zf_lB_Container_571131 {
+    .zf_lB_Container_19499 {
         width: 75%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { /* Large devices */
-     .zf_lB_Container_571131 {
+     .zf_lB_Container_19499 {
         width: 60%;
     }
 }
 
 @media (min-width: 1200px) { /* Extra large devices */
-     .zf_lB_Container_571131 {
+     .zf_lB_Container_19499 {
         width: 50%; /* Or your preferred max width */
     }
 }
-
-/* You can adjust the media queries above based on your specific needs and the Zoho styles */
-/* The original Zoho media queries were based on device-width which is often less reliable than just width */
 
 /* --- End Zoho Popup CSS --- */
