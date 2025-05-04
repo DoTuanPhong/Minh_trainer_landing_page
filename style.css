@@ -5,6 +5,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    overflow-x: hidden; /* Ngăn overflow khi animation kéo element từ ngoài vào */
 }
 
 .section-padding {
@@ -25,6 +26,10 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') no-repeat center center/cover; /* Thay images/hero-bg.jpg bằng ảnh nền của bạn */
     min-height: 80vh; /* Chiều cao tối thiểu */
     color: white;
+    display: flex; /* Thêm display flex để căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa text */
 }
 
 .hero-section h1 {
@@ -40,12 +45,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-     background-color: #007bff; /* Màu xanh Bootstrap */
-     border-color: #007bff;
+      background-color: #007bff; /* Màu xanh Bootstrap */
+    border-color: #007bff;
 }
 .btn-primary:hover {
-     background-color: #0056b3;
-     border-color: #004085;
+      background-color: #0056b3;
+    border-color: #004085;
 }
 
 .btn-success {
@@ -60,17 +65,19 @@ h1, h2, h3, h4, h5, h6 {
 /* Style for the specific CTA button color */
 .hero-section .btn-primary,
 .section-padding .btn-warning { /* Apply to buttons with .btn-warning in any section-padding */
-     background-color: #ffc107; /* Màu vàng nổi bật */
-     border-color: #ffc107;
-     font-size: 1.2rem;
-     padding: 12px 30px;
-     font-weight: bold;
+      background-color: #ffc107; /* Màu vàng nổi bật */
+      border-color: #ffc107;
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      font-weight: bold;
+      color: #212529; /* Đảm bảo text màu tối dễ đọc trên nền vàng */
 }
 
 .hero-section .btn-primary:hover,
 .section-padding .btn-warning:hover {
     background-color: #e0a800;
     border-color: #d39e00;
+    color: #212529;
 }
 
 
@@ -92,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 .info-list dd {
-     margin-bottom: 10px;
+      margin-bottom: 10px;
 }
 
 
@@ -108,8 +115,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Call to Action Sections (replacing old form-section-alt) */
 #call-to-action-1 {
-     background-color: #007bff; /* Màu nền khác cho section CTA giữa trang */
-     color: white;
+      background-color: #007bff; /* Màu nền khác cho section CTA giữa trang */
+      color: white;
 }
 #call-to-action-1 h2 {
     color: white;
@@ -127,11 +134,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Testimonials Section */
 .testimonial-box {
-     padding: 20px;
-     background-color: #fff;
-     border-radius: 8px;
-     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-     height: 100%; /* Đảm bảo chiều cao bằng nhau */
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      height: 100%; /* Đảm bảo chiều cao bằng nhau */
 }
 
 .feedback-img {
@@ -146,12 +153,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: auto;
 }
+/* Apply some margin/padding to gallery images if needed to prevent border/shadow clipping with animation */
+#gallery .col-sm-6, #gallery .col-md-4, #gallery .col-md-6 {
+    padding: 5px; /* Add padding around images */
+}
 
 /* Form Section (Contains Embedded Form) */
 .form-section-main {
-     background-color: #28a745; /* Màu nền nổi bật cho form chính */
-     color: white;
-     text-align: center; /* Căn giữa nội dung trong section form */
+      background-color: #28a745; /* Màu nền nổi bật cho form chính */
+      color: white;
+      text-align: center; /* Căn giữa nội dung trong section form */
 }
 
 .form-section-main h2, .form-section-main p {
@@ -225,40 +236,40 @@ footer a:hover {
 }
 
 .zf_main_id_19499 iframe {
-     display: block; /* Ensure iframe is block */
-     width: 100%; /* Iframe takes full width of its container */
-     min-height: 100%; /* Ensure iframe starts with minimum height */
-     height: auto !important; /* Let Zoho script control height */
+      display: block; /* Ensure iframe is block */
+      width: 100%; /* Iframe takes full width of its container */
+      min-height: 100%; /* Ensure iframe starts with minimum height */
+      height: auto !important; /* Let Zoho script control height */
 }
 
 .zf_lb_closeform_19499 {
-    position: absolute;
-    right: -15px; /* Adjust position */
-    background: #2f2e2e;
-    padding: 0;
-    border-radius: 50%;
-    width: 30px; /* Adjust size */
-    height: 30px; /* Adjust size */
-    top: -15px; /* Adjust position */
-    cursor: pointer;
-    border: 2px solid #d9d9d9;
+    position: absolute;
+    right: -15px; /* Adjust position */
+    background: #2f2e2e;
+    padding: 0;
+    border-radius: 50%;
+    width: 30px; /* Adjust size */
+    height: 30px; /* Adjust size */
+    top: -15px; /* Adjust position */
+    cursor: pointer;
+    border: 2px solid #d9d9d9;
     z-index: 10000002; /* Ensure close button is on top of container */
 }
 .zf_lb_closeform_19499:before, .zf_lb_closeform_19499:after {
-    position: absolute;
-    left: 12px; /* Adjust position based on new width */
-    content: ' ';
-    height: 15px; /* Adjust height */
-    width: 2px;
-    top: 6px; /* Adjust position based on new height */
-    background-color: #f7f7f7;
+    position: absolute;
+    left: 12px; /* Adjust position based on new width */
+    content: ' ';
+    height: 15px; /* Adjust height */
+    width: 2px;
+    top: 6px; /* Adjust position based on new height */
+    background-color: #f7f7f7;
 }
 
 .zf_lb_closeform_19499:before {
-  transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .zf_lb_closeform_19499:after {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .fadeIn {
@@ -289,26 +300,26 @@ footer a:hover {
     .zf_main_id_19499 {
         padding: 15px;
     }
-     .zf_lb_closeform_19499 {
-         right: 5px; /* Adjust position */
-         top: 5px; /* Adjust position */
-     }
-      .zf_lb_closeform_19499:before, .zf_lb_closeform_19499:after {
-         left: 10px;
-         top: 5px;
-         height: 12px;
-     }
+      .zf_lb_closeform_19499 {
+          right: 5px; /* Adjust position */
+          top: 5px; /* Adjust position */
+      }
+       .zf_lb_closeform_19499:before, .zf_lb_closeform_19499:after {
+          left: 10px;
+          top: 5px;
+          height: 12px;
+      }
 
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) { /* Small devices */
-     .zf_lB_Container_19499 {
-        width: 85%;
-        max-height: calc(100% - 50px);
-    }
-     .zf_main_id_19499 {
-        padding: 20px;
-    }
+      .zf_lB_Container_19499 {
+          width: 85%;
+          max-height: calc(100% - 50px);
+      }
+      .zf_main_id_19499 {
+          padding: 20px;
+      }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { /* Medium devices */
@@ -318,15 +329,15 @@ footer a:hover {
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { /* Large devices */
-     .zf_lB_Container_19499 {
-        width: 60%;
-    }
+      .zf_lB_Container_19499 {
+          width: 60%;
+      }
 }
 
 @media (min-width: 1200px) { /* Extra large devices */
-     .zf_lB_Container_19499 {
-        width: 50%; /* Or your preferred max width */
-    }
+      .zf_lB_Container_19499 {
+          width: 50%; /* Or your preferred max width */
+      }
 }
 
 /* --- End Zoho Popup CSS --- */
