@@ -264,7 +264,64 @@
                     <h2 class="mb-4 text-white">Hoàn Tất Đăng Ký Tham Gia Tại Đây</h2>
                     <p class="lead mb-4 text-white">Điền đầy đủ thông tin bên dưới để xác nhận việc tham gia Workshop.</p>
                      <div id="zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4" class="zoho-embed-form">
-                        </div>
+                        <script type="text/javascript">(function() {
+                            try{
+                                // !!! Cập nhật ID div target nếu nó khác trong mã Zoho của bạn !!!
+                                // Chú ý: ID này có thể khác ID của div chứa iframe trong popup
+                                var targetDivId = "zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4";
+                                var targetDiv = document.getElementById(targetDivId);
+
+                                if (targetDiv && targetDiv.getElementsByTagName("iframe").length === 0) { // Only embed if div exists and no iframe is already inside
+                                    var f = document.createElement("iframe");
+                                    // !!! Cập nhật SRC này bằng URL form EMBED của bạn từ Zoho !!!
+                                    f.src = 'https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1';
+                                    f.style.border="none";
+                                    f.style.width="100%"; // Use 100% width to be responsive within container
+                                    f.style.minHeight="600px"; // Initial minimum height, will be adjusted by Zoho script
+                                    f.style.overflow="hidden";
+                                    f.style.transition="all 0.5s ease";
+                                    f.setAttribute("aria-label", '\u0110\u0103ng\x20K\xFD\x20Tham\x20Gia\x20Workshop\x20Ngay'); // Add ARIA label
+
+                                    targetDiv.appendChild(f);
+
+                                    window.addEventListener('message', function (event){
+                                        var evntData = event.data;
+                                        if( evntData && evntData.constructor == String ){
+                                            var zf_ifrm_data = evntData.split("|");
+                                            if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                                                var zf_perma = zf_ifrm_data[0];
+                                                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+                                                 // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
+                                                var iframe = document.getElementById("zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4").getElementsByTagName("iframe")[0];
+                                                if ( iframe && (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                                                    var prevIframeHeight = iframe.style.height;
+                                                    var zf_tout = false;
+                                                    if( zf_ifrm_data.length == 3 ) {
+                                                        iframe.scrollIntoView({ behavior: 'smooth' }); // Keep scrollIntoView for embed
+                                                        zf_tout = true;
+                                                    }
+                                                    if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                                                        if( zf_tout ) {
+                                                            setTimeout(function(){
+                                                                iframe.style.height = zf_ifrm_ht_nw;
+                                                            },500);
+                                                        } else {
+                                                            iframe.style.height = zf_ifrm_ht_nw;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }, false);
+                                     console.log("Zoho Embed Script initialized.");
+                                } else if (!targetDiv) {
+                                     console.error("Zoho embed target div #" + targetDivId + " not found!");
+                                }
+
+                            }catch(e){ console.error("Error in Zoho Embed Script:", e); }
+                            })();
+                            </script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -296,166 +353,214 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <button id="zf_button_571131" style="display: none;">Trigger Zoho Form Popup</button>
+    <button id="zf_button_19499" style="display: none;">Trigger Zoho Form Popup</button>
 
     <script type="text/javascript">(function() {
         try{
-            if( document.readyState == "complete" ){
-                onloadActions_571131();
-            } else {
-                window.addEventListener('load', function (){
-                    onloadActions_571131();
-                }, false);
-            }
+            console.log("Zoho Popup Script Initializing...");
 
-            function onloadActions_571131(){
-                // Remove the automatic showZForm call if you don't want popup on page load
-                // showZForm_571131(); // Comment out or remove this line if it exists in your original script
-            }
+            // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
+            var iframeHolderId = 'n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_19499';
+            // !!! Cập nhật ID container nếu nó khác trong mã Zoho của bạn !!!
+            var containerDivId = 'containerDiv_19499';
+            // !!! Cập nhật ID lightbox chính nếu nó khác trong mã Zoho của bạn !!!
+            var mainLightboxId = 'formsLightBox_19499';
+            // !!! Cập nhật ID nút đóng nếu nó khác trong mã Zoho của bạn !!!
+            var closeButtonId = 'deleteform_19499';
 
-            function constructDiv_571131(){
+            // Construct the necessary divs immediately when script runs
+            constructDiv_19499();
+            console.log("Popup divs constructed.");
+
+            // Function to construct the necessary divs for the popup
+            function constructDiv_19499(){
+                 // Check if the main lightbox div already exists
+                 if (document.getElementById(mainLightboxId)) {
+                     // console.log("Main lightbox div already exists.");
+                     return; // Do not reconstruct if it's already there
+                 }
+
                 var iframeDiv = document.createElement("div");
-                // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
-                iframeDiv.setAttribute('id','n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131');
-                iframeDiv.setAttribute('class','zf_main_id_571131');
+                iframeDiv.setAttribute('id', iframeHolderId);
+                iframeDiv.setAttribute('class','zf_main_id_19499'); // Class name from your Zoho code
 
                 var closeFormDiv = document.createElement("div");
-                closeFormDiv.setAttribute('id','deleteform_571131');
-                closeFormDiv.setAttribute('class','zf_lb_closeform_571131');
-
+                closeFormDiv.setAttribute('id', closeButtonId);
+                closeFormDiv.setAttribute('class','zf_lb_closeform_19499'); // Class name from your Zoho code
 
                 var containerDiv = document.createElement("div");
-                containerDiv.setAttribute('id','containerDiv_571131');
-                containerDiv.setAttribute('class','zf_lB_Container_571131 fadeIn'); // fadeIn requires CSS
+                containerDiv.setAttribute('id', containerDivId);
+                containerDiv.setAttribute('class','zf_lB_Container_19499 fadeIn'); // Class name from your Zoho code + animation
                 containerDiv.appendChild(iframeDiv);
                 containerDiv.appendChild(closeFormDiv);
 
                 var wrapperDiv = document.createElement("div");
-                wrapperDiv.setAttribute('class','zf_lB_Wrapper_571131');
+                wrapperDiv.setAttribute('class','zf_lB_Wrapper_19499'); // Class name from your Zoho code
                 wrapperDiv.appendChild(containerDiv);
 
-
                 var dimmerDiv = document.createElement("div");
-                dimmerDiv.setAttribute('class','zf_lB_Dimmer_571131');
-                dimmerDiv.setAttribute('elname','popup_box');
+                dimmerDiv.setAttribute('class','zf_lB_Dimmer_19499'); // Class name from your Zoho code
+                dimmerDiv.setAttribute('elname','popup_box'); // As in Zoho code
 
                 var mainDiv = document.createElement("div");
-                mainDiv.setAttribute('id','formsLightBox_571131');
+                mainDiv.setAttribute('id', mainLightboxId);
                 mainDiv.style.display = "none"; // Popup is hidden by default
                 mainDiv.appendChild(wrapperDiv);
                 mainDiv.appendChild(dimmerDiv);
 
                 document.body.appendChild(mainDiv);
+                console.log("Popup structure added to body.");
 
-                 // Attach close event listener
-                 var deleteForm = document.getElementById("deleteform_571131");
-                    deleteForm.onclick = function deleteZForm_571131() {
-                        var divCont = document.getElementById("formsLightBox_571131");
-                        divCont.style.display="none";
-                        document.body.style.overflow = ""; // Restore scrolling
+                 // Attach close event listener AFTER creating the close button div
+                 var deleteForm = document.getElementById(closeButtonId);
+                    if (deleteForm) {
+                         deleteForm.onclick = function deleteZForm_19499() {
+                             console.log("Close button clicked.");
+                             var divCont = document.getElementById(mainLightboxId);
+                             if (divCont) {
+                                 divCont.style.display="none";
+                                 document.body.style.overflow = ""; // Restore scrolling
+                                 console.log("Popup hidden, body scrolling restored.");
+                             }
 
-                        // Optional: Remove iframe to prevent background activity/memory leak
-                        var iframe = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131").getElementsByTagName("iframe")[0];
-                         if (iframe) { iframe.remove(); }
+                             // Optional: Remove iframe content on close to prevent background activity/memory leak
+                             // This also ensures loadZForm creates a new iframe next time
+                             var iframeHolder = document.getElementById(iframeHolderId);
+                             if (iframeHolder) {
+                                 var iframe = iframeHolder.getElementsByTagName("iframe")[0];
+                                 if (iframe) {
+                                     iframe.remove();
+                                     console.log("Iframe removed from popup.");
+                                 }
+                             }
+                         }
+                         console.log("Close button listener attached.");
+                    } else {
+                        console.error("Close button element not found after constructing!");
                     }
-
             }
 
             // Function to show the Zoho form popup
-            function showZForm_571131(){
-                 // Reconstruct iframe each time to fix potential issues
-                 var iframeHolder = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131"); // !!! ID này phải khớp !!!
-                 if (!iframeHolder || iframeHolder.getElementsByTagName("iframe").length === 0) {
-                      // Construct main div and iframe if not already there or removed
-                      var mainDiv = document.getElementById('formsLightBox_571131');
-                      if (!mainDiv) {
-                          constructDiv_571131(); // Reconstruct dimmer, container etc.
-                          mainDiv = document.getElementById('formsLightBox_570298'); // Get it after constructing
-                           // Re-attach close listener if div was reconstructed
-                          var deleteForm = document.getElementById("deleteform_571131");
-                            deleteForm.onclick = function deleteZForm_571131() {
-                                var divCont = document.getElementById("formsLightBox_571131");
-                                divCont.style.display="none";
-                                document.body.style.overflow = ""; // Restore scrolling
-                                var iframe = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131").getElementsByTagName("iframe")[0];
-                                 if (iframe) { iframe.remove(); }
-                            }
-                      } else {
-                         // Just create/load the iframe if the main structure exists
-                         loadZForm_571131();
-                      }
+            function showZForm_19499(){
+                console.log("showZForm_19499 called.");
+                // Ensure the main popup div structure exists
+                 var mainDiv = document.getElementById(mainLightboxId);
+                 if (!mainDiv) {
+                     console.log("Main lightbox div not found, constructing...");
+                     constructDiv_19499();
+                     mainDiv = document.getElementById(mainLightboxId); // Get it after constructing
                  }
 
+                 if (mainDiv) {
+                     // Load or reload the iframe content if it's not present
+                     loadZForm_19499();
+                     console.log("loadZForm_19499 called.");
 
-                document.getElementById("formsLightBox_571131").style.display = "block";
-                document.body.style.overflow = "hidden"; // Prevent scrolling background
+                     // Display the main lightbox div (makes dimmer and container visible)
+                     mainDiv.style.display = "block";
+                     document.body.style.overflow = "hidden"; // Prevent scrolling background
+                     console.log("Popup main div set to display: block.");
+                 } else {
+                     console.error("Failed to show popup: Main lightbox div not found after construction attempt.");
+                 }
             }
 
-            // Function to load the iframe content
-            function loadZForm_571131() {
-                 // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
-                var iframeHolder = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131");
+            // Function to load the iframe content inside the popup
+            function loadZForm_19499() {
+                console.log("loadZForm_19499 called.");
+                // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
+                var iframeHolder = document.getElementById(iframeHolderId);
+
                  if (!iframeHolder) {
-                     // This shouldn't happen if constructDiv was called, but as a safeguard
-                     console.error("Zoho iframe holder div not found!");
-                     return;
+                     console.error("Iframe holder div #" + iframeHolderId + " not found!");
+                     return; // Cannot load iframe if holder is missing
                  }
 
                 var iframe = iframeHolder.getElementsByTagName("iframe")[0];
+                 console.log("Checking for existing iframe:", iframe);
 
-                if(iframe == undefined ||iframe.length == 0){
+                if(iframe == undefined){ // Check if iframe element exists
+                    console.log("Iframe not found, creating new iframe.");
                     var f = document.createElement("iframe");
                     // !!! Cập nhật SRC này bằng URL form POPUP của bạn từ Zoho !!!
-                    f.src = getsrcurlZForm_571131('https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1');
+                    f.src = getsrcurlZForm_19499('https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1');
 
                     f.style.border="none";
                     f.style.minWidth="100%";
                     f.style.overflow="hidden";
-                    f.setAttribute("aria-label", '\u0110\u0103ng\x20K\xFD\x20Tham\x20Gia\x20Workshop\x20Ngay'); // Add ARIA label
+                     // f.style.height = "auto"; // Let message listener handle height
+                    f.setAttribute("aria-label", 'Đăng Ký Tham Gia Workshop Ngay'); // Add ARIA label
                     iframeHolder.appendChild(f);
+                    console.log("New iframe created and appended to holder.");
 
-                    // Message listener from iframe (for height adjustments, etc.)
+                    // Message listener from iframe (for height adjustments, etc.) - Attach only once per iframe creation
                     window.addEventListener('message', function (event){
+                         // console.log("Message received from iframe", event.data); // Optional: log all messages
                         var evntData = event.data;
                         if( evntData && evntData.constructor == String ){
                             var zf_ifrm_data = evntData.split("|");
-                            if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                            // Ensure message is the correct format and from the expected form
+                            // Check zf_perma and iframe src if you have multiple Zoho forms
+                            if ( zf_ifrm_data.length >= 2 ) { // zf_ifrm_data.length == 2 or 3
                                 var zf_perma = zf_ifrm_data[0];
-                                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
-                                // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
-                                var currentIframe = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131").getElementsByTagName("iframe")[0];
-                                if ( currentIframe && (currentIframe.src).indexOf('formperma') > 0 && (currentIframe.src).indexOf(zf_perma) > 0 ) {
-                                    var prevIframeHeight = currentIframe.style.height;
+                                var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
+                                if (!isNaN(zf_ifrm_ht_px)) {
+                                    var zf_ifrm_ht_nw = ( zf_ifrm_ht_px + 15 ) + "px"; // Add margin/padding as Zoho does
+                                    // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
+                                    var currentIframe = document.getElementById(iframeHolderId).getElementsByTagName("iframe")[0];
+                                    // You might want to check the iframe's src to ensure it matches the expected form
+                                    // if (currentIframe && currentIframe.src.includes(zf_perma)) { // Check perma ID
+                                     if (currentIframe) { // Simpler check
+                                        var prevIframeHeight = currentIframe.style.height;
+                                        // console.log("Received height:", zf_ifrm_ht_nw, "Current height:", prevIframeHeight); // Log height updates
 
-                                    var zf_tout = false;
-                                    if( zf_ifrm_data.length == 3 ) {
-                                        // currentIframe.scrollIntoView(); // May not want to scroll when in popup
-                                        zf_tout = true;
-                                    }
+                                        // This part seems to handle scrolling and timed height update
+                                        var zf_tout = false;
+                                        if( zf_ifrm_data.length == 3 ) { // This might indicate a need to scroll parent
+                                            // currentIframe.scrollIntoView(); // May not want to scroll when in popup
+                                            zf_tout = true;
+                                        }
 
-                                    if ( prevIframeHeight != zf_ifrm_ht_nw ) {
-                                        if( zf_tout ) {
-                                            setTimeout(function(){
+                                        if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                                            if( zf_tout ) {
+                                                setTimeout(function(){
+                                                    currentIframe.style.minHeight = zf_ifrm_ht_nw; // Use minHeight or height? Zoho uses minHeight sometimes
+                                                     currentIframe.style.height = zf_ifrm_ht_nw; // Also set height for consistency
+                                                    // Adjust container height if needed - the original Zoho CSS does this
+                                                     var containerDiv = document.getElementById(containerDivId);
+                                                    if (containerDiv) { containerDiv.style.height = zf_ifrm_ht_nw; } // Keep container height in sync
+                                                     console.log("Iframe/Container height updated (timed):", zf_ifrm_ht_nw);
+                                                },500); // Delay the height update
+                                            } else {
                                                 currentIframe.style.minHeight = zf_ifrm_ht_nw;
-                                                // Adjust container height if needed
-                                                var containerDiv = document.getElementById("containerDiv_571131");
-                                                if (containerDiv) { containerDiv.style.height=zf_ifrm_ht_nw; } // Keep container height in sync
-                                            },500);
-                                        } else {
-                                            currentIframe.style.minHeight = zf_ifrm_ht_nw;
-                                             var containerDiv = document.getElementById("containerDiv_571131");
-                                            if (containerDiv) { containerDiv.style.height=zf_ifrm_ht_nw; } // Keep container height in sync
+                                                 currentIframe.style.height = zf_ifrm_ht_nw;
+                                                var containerDiv = document.getElementById(containerDivId);
+                                                if (containerDiv) { containerDiv.style.height = zf_ifrm_ht_nw; } // Keep container height in sync
+                                                console.log("Iframe/Container height updated:", zf_ifrm_ht_nw);
+                                            }
                                         }
                                     }
+                                } else {
+                                     console.warn("Received non-numeric height from iframe:", zf_ifrm_data[1]);
                                 }
                             }
                         }
                     }, false);
+                     console.log("Message listener attached to window.");
+                } else {
+                    console.log("Iframe already exists, no need to create.");
+                     // If iframe exists but the source was potentially removed on close, reload it?
+                     // Or ensure the remove() function in close listener removes the iframe element itself.
+                     // The provided deleteZForm_19499 function *does* remove the element.
+                     // So this 'else' block might not be strictly necessary if remove() works correctly.
+                     // But if the iframe exists but is blank, you might need to set its src again here.
+                     // iframe.src = getsrcurlZForm_19499('https://forms.zohopublic.com/...'); // Uncomment if needed
                 }
             }
 
             // Function to get Zoho source URL (often includes UTM tracking)
-            function getsrcurlZForm_571131(zf_src) {
+            function getsrcurlZForm_19499(zf_src) {
+                // console.log("getsrcurlZForm_19499 called with:", zf_src);
                 try {
                     // Zoho's built-in tracking logic - Keep this as is
                     if ( typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined" ) {
@@ -488,18 +593,21 @@
                             }
                         }
                     }
-                }catch(e){}
+                }catch(e){ console.error("Error in getsrcurlZForm_19499:", e); }
+                // console.log("Returning src:", zf_src);
                 return zf_src;
             }
 
-            // Ensure the main popup div structure exists when the script runs initially
-             constructDiv_571131(); // Call constructDiv right away
-
-
             // Add listener to the hidden Zoho button. This is what our CTAs will trigger.
-            var buttonElem = document.getElementById("zf_button_571131");
-             // buttonElem.style.display = "block"; // Keep it hidden
-            buttonElem.addEventListener("click", showZForm_571131);
+            // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
+            var buttonElem = document.getElementById("zf_button_19499");
+            if (buttonElem) {
+                // buttonElem.style.display = "block"; // Keep it hidden
+                buttonElem.addEventListener("click", showZForm_19499);
+                console.log("Zoho trigger button listener attached.");
+            } else {
+                console.error("Zoho trigger button #zf_button_19499 not found!");
+            }
 
 
         }catch(e){ console.error("Error in Zoho Popup Script:", e); }
@@ -508,20 +616,26 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            console.log("Custom JS: DOMContentLoaded.");
             const openPopupButtons = document.querySelectorAll('.open-zoho-popup');
-            const zohoTriggerButton = document.getElementById('zf_button_571131');
+            // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
+            const zohoTriggerButton = document.getElementById('zf_button_19499');
 
             if (!zohoTriggerButton) {
-                console.error("Zoho trigger button #zf_button_571131 not found!");
+                console.error("Custom JS: Zoho trigger button #zf_button_19499 not found! Cannot attach listeners.");
                 return; // Stop if the required Zoho button is missing
             }
+             console.log("Custom JS: Zoho trigger button found.");
 
             openPopupButtons.forEach(button => {
                 button.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevent default link behavior
+                     console.log("Custom JS: Button .open-zoho-popup clicked.");
                     // Programmatically click the hidden Zoho button
                     zohoTriggerButton.click();
+                     console.log("Custom JS: Trigger button clicked programmatically.");
                 });
+                 console.log("Custom JS: Listener attached to button", button);
             });
              console.log("Custom JS for triggering Zoho popup initialized.");
         });
@@ -533,7 +647,8 @@
     <script type="text/javascript">(function() {
     try{
         // !!! Cập nhật ID div target nếu nó khác trong mã Zoho của bạn !!!
-        var targetDivId = "zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4";
+        // Chú ý: ID này có thể khác ID của div chứa iframe trong popup
+        var targetDivId = "zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4"; // Vẫn giữ ID cũ cho embed form nếu nó không thay đổi
         var targetDiv = document.getElementById(targetDivId);
 
         if (targetDiv && targetDiv.getElementsByTagName("iframe").length === 0) { // Only embed if div exists and no iframe is already inside
@@ -545,7 +660,7 @@
             f.style.minHeight="600px"; // Initial minimum height, will be adjusted by Zoho script
             f.style.overflow="hidden";
             f.style.transition="all 0.5s ease";
-            f.setAttribute("aria-label", '\u0110\u0103ng\x20K\xFD\x20Tham\x20Gia\x20Workshop\x20Ngay'); // Add ARIA label
+            f.setAttribute("aria-label", 'Đăng Ký Tham Gia Workshop Ngay'); // Add ARIA label
 
             targetDiv.appendChild(f);
 
@@ -553,25 +668,29 @@
                 var evntData = event.data;
                 if( evntData && evntData.constructor == String ){
                     var zf_ifrm_data = evntData.split("|");
-                    if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                     if ( zf_ifrm_data.length >= 2 ) { // zf_ifrm_data.length == 2 or 3
                         var zf_perma = zf_ifrm_data[0];
-                        var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
-                         // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
-                        var iframe = document.getElementById("zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4").getElementsByTagName("iframe")[0];
-                        if ( iframe && (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
-                            var prevIframeHeight = iframe.style.height;
-                            var zf_tout = false;
-                            if( zf_ifrm_data.length == 3 ) {
-                                iframe.scrollIntoView({ behavior: 'smooth' }); // Keep scrollIntoView for embed
-                                zf_tout = true;
-                            }
-                            if ( prevIframeHeight != zf_ifrm_ht_nw ) {
-                                if( zf_tout ) {
-                                    setTimeout(function(){
+                        var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
+                        if (!isNaN(zf_ifrm_ht_px)) {
+                             var zf_ifrm_ht_nw = ( zf_ifrm_ht_px + 15 ) + "px"; // Add margin/padding
+                            // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!! (Đây là ID của embed div)
+                            var iframe = document.getElementById(targetDivId).getElementsByTagName("iframe")[0];
+                            // Check if iframe exists and matches the form by perma ID
+                            if ( iframe && (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                                var prevIframeHeight = iframe.style.height;
+                                var zf_tout = false;
+                                if( zf_ifrm_data.length == 3 ) { // Indicates scroll might be needed
+                                    // iframe.scrollIntoView({ behavior: 'smooth' }); // Keep scrollIntoView for embed
+                                    zf_tout = true;
+                                }
+                                if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                                    if( zf_tout ) {
+                                        setTimeout(function(){
+                                            iframe.style.height = zf_ifrm_ht_nw;
+                                        },500);
+                                    } else {
                                         iframe.style.height = zf_ifrm_ht_nw;
-                                    },500);
-                                } else {
-                                    iframe.style.height = zf_ifrm_ht_nw;
+                                    }
                                 }
                             }
                         }
