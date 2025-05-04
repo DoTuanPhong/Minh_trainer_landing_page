@@ -390,12 +390,14 @@
           constructDiv_19499();
           console.log("Popup divs constructed.");
 
-        function constructDiv_19499(){
+       function constructDiv_19499(){
                  // Check if the main lightbox div already exists
                  if (document.getElementById(mainLightboxId)) {
-                     // console.log("Main lightbox div already exists.");
+                     // console.log("Zoho Popup: Main lightbox div already exists. Skipping construction.");
                      return; // Do not reconstruct if it's already there
                  }
+
+                console.log("Zoho Popup: Constructing popup divs...");
 
                 var iframeDiv = document.createElement("div");
                 // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
@@ -427,33 +429,46 @@
                 mainDiv.appendChild(dimmerDiv);
 
                 document.body.appendChild(mainDiv);
-                console.log("Popup structure added to body. Main lightbox ID:", mainLightboxId);
+                console.log("Zoho Popup: Popup structure added to body. Main lightbox ID:", mainLightboxId);
+                console.log("Zoho Popup: Dimmer element reference:", dimmerDiv); // Log the actual reference
 
 
-                // Lắng nghe sự kiện click vào main lightbox div để xử lý click-outside
-                mainDiv.addEventListener('click', function(event) {
-                    // Lấy reference đến dimmer div
-                    var dimmer = mainDiv.querySelector('.zf_lB_Dimmer_19499');
-                    // Kiểm tra nếu phần tử được click là mainDiv HOẶC là dimmer
-                    if (event.target === mainDiv || (dimmer && event.target === dimmer)) { // Added check for dimmer existence
-                        console.log("Click outside detected on mainDiv or dimmer. Closing popup.");
-                        deleteZForm_19499(); // Gọi hàm đóng popup
-                    }
-                    // Nếu click vào bất kỳ đâu khác (bên trong container nội dung), sự kiện sẽ không làm gì ở đây
-                });
-                console.log("Click outside listener attached to main lightbox div:", mainLightboxId);
+                // *** THÊM BỘ LẮNG NGHE CLICK VÀO DIMMER TẠI ĐÂY ***
+                if (dimmerDiv) { // Ensure dimmerDiv reference is valid
+                    dimmerDiv.addEventListener('click', function(event) {
+                        console.log("--- Zoho Popup: Click on Dimmer Detected ---");
+                        console.log("Zoho Popup: Event target:", event.target); // Should be the dimmer div itself
+                        console.log("Zoho Popup: Current Dimmer element:", dimmerDiv); // Should match target if click was direct
+
+                        // Kiểm tra xem click có *trực tiếp* trên element dimmer không
+                        if (event.target === dimmerDiv) {
+                             console.log("Zoho Popup: Direct click on dimmer confirmed. Calling deleteZForm_19499().");
+                             deleteZForm_19499(); // Call the close function
+                        } else {
+                             console.log("Zoho Popup: Click detected within mainDiv but not directly on dimmer. Target was:", event.target);
+                             // Điều này xảy ra nếu có element con của mainDiv (không phải dimmer) nằm trên nó và nhận click
+                        }
+                        console.log("--- Zoho Popup: End Dimmer Click Logic ---");
+                    });
+                    console.log("Zoho Popup: Dimmer click listener attached directly.");
+                } else {
+                    console.error("Zoho Popup: Dimmer element reference is invalid after construction!");
+                }
+                // *** KẾT THÚC BỘ LẮNG NGHE CLICK DIMMER ***
 
 
                  // Attach close event listener for the close button AFTER creating the close button div
                  var deleteForm = document.getElementById(closeButtonId);
                     if (deleteForm) {
                          deleteForm.onclick = function deleteZForm_19499() {
-                             console.log("Close button clicked.");
+                             console.log("--- Zoho Popup: deleteZForm_19499 called ---");
                              var divCont = document.getElementById(mainLightboxId);
                              if (divCont) {
                                  divCont.style.display="none";
                                  document.body.style.overflow = ""; // Restore scrolling
-                                 console.log("Popup hidden, body scrolling restored.");
+                                 console.log("Zoho Popup: Popup hidden, body scrolling restored.");
+                             } else {
+                                 console.error("Zoho Popup: deleteZForm_19499: Main lightbox div not found!");
                              }
 
                              // Optional: Remove iframe content on close to prevent background activity/memory leak
@@ -463,16 +478,50 @@
                                  var iframe = iframeHolder.getElementsByTagName("iframe")[0];
                                  if (iframe) {
                                      iframe.remove();
-                                     console.log("Iframe removed from popup.");
+                                     console.log("Zoho Popup: Iframe removed from popup.");
+                                 } else {
+                                      console.log("Zoho Popup: deleteZForm_19499: No iframe found to remove.");
                                  }
+                             } else {
+                                  console.error("Zoho Popup: deleteZForm_19499: Iframe holder div not found!");
                              }
+                              console.log("--- Zoho Popup: End deleteZForm_19499 ---");
                          }
-                         console.log("Close button listener attached.");
+                         console.log("Zoho Popup: Close button listener attached.");
                     } else {
-                        console.error("Close button element not found after constructing!");
+                        console.error("Zoho Popup: Close button element not found after constructing!");
                     }
             }
-            
+          
+          // Function to hide the Zoho form popup
+            function deleteZForm_19499() {
+                console.log("--- Zoho Popup: deleteZForm_19499 called ---"); // <-- Thêm log này
+                var divCont = document.getElementById(mainLightboxId);
+                if (divCont) {
+                    divCont.style.display="none";
+                    document.body.style.overflow = ""; // Restore scrolling
+                    console.log("Zoho Popup: Popup hidden, body scrolling restored."); // <-- Thêm log này
+                } else {
+                    console.error("Zoho Popup: deleteZForm_19499: Main lightbox div not found!"); // <-- Thêm log này
+                }
+
+                // Optional: Remove iframe content on close to prevent background activity/memory leak
+                var iframeHolder = document.getElementById(iframeHolderId); // Use the variable
+                 if (iframeHolder) { // Check if holder exists
+                    var iframe = iframeHolder.getElementsByTagName("iframe")[0];
+                    if (iframe) {
+                        iframe.remove();
+                        console.log("Zoho Popup: Iframe removed from popup."); // <-- Thêm log này
+                    } else {
+                         console.log("Zoho Popup: deleteZForm_19499: No iframe found to remove."); // <-- Thêm log này
+                    }
+                 } else {
+                      console.error("Zoho Popup: deleteZForm_19499: Iframe holder div not found!"); // <-- Thêm log này
+                 }
+                console.log("--- Zoho Popup: End deleteZForm_19499 ---"); // <-- Thêm log này
+            }
+
+          
           // Function to show the Zoho form popup
           function showZForm_19499() {
             console.log("showZForm_19499 called.");
