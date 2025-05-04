@@ -11,16 +11,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Tùy chỉnh style cho thông báo kết quả (tùy chọn) */
-        .form-submission-result {
-            min-height: 1.5em; /* Đảm bảo có không gian hiển thị */
-        }
-    </style>
-</head>
+    </head>
 <body>
 
     <header class="py-3">
@@ -36,7 +27,7 @@
                     <h1 class="display-4 mb-3">Biến Sợ Hãi Thành Tự Tin Chỉ Sau 1 Buổi Workshop!</h1>
                     <p class="lead mb-4">Tham gia Workshop Chuyên Sâu 'Kỹ Năng Nói Trước Công Chúng' cùng Trainer Đặng Văn Minh để kiến tạo sự tự tin, thuyết phục và tỏa sáng.</p>
 
-                    <a href="#form-section" class="btn btn-primary btn-lg mb-3 scroll-to-form">Đăng ký Tham gia Workshop Ngay!</a>
+                    <a href="#" class="btn btn-primary btn-lg mb-3 open-zoho-popup">Đăng ký Tham gia Workshop Ngay!</a>
 
                     <p class="workshop-info-summary">
                         Thời gian: <strong>[Ngày, Giờ]</strong> | Địa điểm: <strong>[Địa chỉ cụ thể]</strong> | Chi phí: <strong>[Giá vé]</strong>
@@ -120,7 +111,7 @@
                             <i class="fas fa-check-circle me-2 text-success"></i>
                             <strong>Nghệ thuật kể chuyện (Storytelling):</strong> Sử dụng câu chuyện để kết nối cảm xúc, làm bài nói của bạn hấp dẫn và đáng nhớ hơn.
                         </li>
-                         <li>
+                        <li>
                             <i class="fas fa-check-circle me-2 text-success"></i>
                             <strong>Thực hành & nhận phản hồi trực tiếp:</strong> Được luyện tập trong môi trường an toàn và nhận góp ý từ Trainer cùng học viên khác. Bạn biết điểm mạnh, điểm yếu và cách cải thiện ngay lập tức.
                         </li>
@@ -128,46 +119,22 @@
                 </div>
             </div>
              <div class="text-center mt-4">
-                 <a href="#form-section" class="btn btn-success btn-lg scroll-to-form">Tôi muốn làm chủ kỹ năng này! Đăng ký ngay!</a>
+                 <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn làm chủ kỹ năng này! Đăng ký ngay!</a>
              </div>
         </div>
     </section>
 
-   <section id="form-section-1" class="section-padding form-section-alt bg-primary text-white">
-     <div class="container">
-         <div class="row justify-content-center">
-             <div class="col-lg-6">
-                 <h2 class="text-center mb-4">Đăng Ký Tham Gia Workshop Ngay</h2>
-                 <p class="text-center mb-4">Điền thông tin bên dưới để giữ chỗ và nhận ngay các quà tặng đặc biệt!</p>
-
-                 <form id="form1" method="POST">
-
-                     <input type="hidden" name="access_key" value="e8722341-fde2-4639-b5a9-0a57ebad0293"> <input type="hidden" name="subject" value="Workshop Registration - Top Form"> <input type="checkbox" name="botcheck" id="" style="display: none;"> <input type="hidden" name="form-name" value="Workshop Registration - Top"> <div class="mb-3">
-                         <label for="fullName" class="form-label">Họ tên <span class="text-danger">*</span></label>
-                         <input type="text" class="form-control" id="fullName" name="Họ tên" required>
-                     </div>
-                     <div class="mb-3">
-                         <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                         <input type="email" class="form-control" id="email" name="Email" required>
-                     </div>
-                     <div class="mb-3">
-                         <label for="phone" class="form-label">Số điện thoại <span class="text-danger">*</span></label>
-                         <input type="tel" class="form-control" id="phone" name="Số điện thoại" required>
-                     </div>
-
-                     <div class="d-grid">
-                         <button type="submit" class="btn btn-warning btn-lg">Hoàn tất Đăng Ký</button>
-                     </div>
-
-                     <p class="text-center mt-3"><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small></p>
-
-                     <div id="result1" class="mt-3 text-center form-submission-result"></div>
-
-                 </form>
-             </div>
-         </div>
-     </div>
- </section>
+    <section id="call-to-action-1" class="section-padding bg-primary text-white text-center">
+        <div class="container">
+             <div class="row justify-content-center">
+                <div class="col-lg-8">
+                     <h2 class="text-center mb-4 text-white">Sẵn Sàng Tỏa Sáng?</h2>
+                     <p class="lead mb-4">Click vào nút bên dưới để đăng ký ngay và nhận bộ quà tặng đặc biệt!</p>
+                     <a href="#" class="btn btn-warning btn-lg open-zoho-popup">Nhận Vé Tham Gia Workshop</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <section id="gifts" class="section-padding">
@@ -176,52 +143,55 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                      <ul class="list-unstyled gift-list row">
+                        <li class="col-md-6 mb-3">
+                            <i class="fas fa-gift me-2 text-warning"></i>
+                            <strong>Ebook "10 Bước Chuẩn Bị Bài Thuyết Trình Hoàn Hảo"</strong>
+                        </li>
                          <li class="col-md-6 mb-3">
                              <i class="fas fa-gift me-2 text-warning"></i>
-                             <strong>Ebook "10 Bước Chuẩn Bị Bài Thuyết Trình Hoàn Hảo"</strong>
-                         </li>
+                            <strong>Bộ Checklist Luyện Tập Kỹ Năng Nói Hàng Ngày</strong>
+                        </li>
+                         <li class="col-md-6 mb-3">
+                             <i class="fas fa-gift me-2 text-warning"></i>
+                            <strong>Voucher Giảm Giá Khóa Học Chuyên Sâu [Giá trị]</strong>
+                        </li>
+                         <li class="col-md-6 mb-3">
+                             <i class="fas fa-users me-2 text-warning"></i>
+                            <strong>Tham gia Cộng Đồng Học Viên Độc Quyền</strong>
+                        </li>
                           <li class="col-md-6 mb-3">
-                              <i class="fas fa-gift me-2 text-warning"></i>
-                             <strong>Bộ Checklist Luyện Tập Kỹ Năng Nói Hàng Ngày</strong>
-                         </li>
-                          <li class="col-md-6 mb-3">
-                              <i class="fas fa-gift me-2 text-warning"></i>
-                             <strong>Voucher Giảm Giá Khóa Học Chuyên Sâu [Giá trị]</strong>
-                         </li>
-                          <li class="col-md-6 mb-3">
-                              <i class="fas fa-users me-2 text-warning"></i>
-                             <strong>Tham gia Cộng Đồng Học Viên Độc Quyền</strong>
-                         </li>
-                           <li class="col-md-6 mb-3">
-                              <i class="fas fa-video me-2 text-warning"></i>
-                             <strong>Bonus: Ghi hình buổi thực hành của bạn để xem lại</strong>
-                         </li>
-                     </ul>
-                     <p class="text-center mt-4 lead">Tổng giá trị quà tặng lên đến <strong>[Tổng giá trị]</strong>!</p>
-                 </div>
+                             <i class="fas fa-video me-2 text-warning"></i>
+                            <strong>Bonus: Ghi hình buổi thực hành của bạn để xem lại</strong>
+                        </li>
+                    </ul>
+                    <p class="text-center mt-4 lead">Tổng giá trị quà tặng lên đến <strong>[Tổng giá trị]</strong>!</p>
+                </div>
             </div>
+             <div class="text-center mt-4">
+                 <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký & Nhận Quà Ngay!</a>
+             </div>
         </div>
     </section>
 
-      <section id="trainer" class="section-padding bg-light">
-         <div class="container">
-             <h2 class="text-center mb-4">Gặp Gỡ Trainer Của Bạn: Đặng Văn Minh</h2>
-             <div class="row align-items-center">
-                 <div class="col-md-4 text-center mb-4 mb-md-0">
-                     <img src="images/trainer-minh.jpg" alt="Trainer Đặng Văn Minh" class="img-fluid rounded-circle trainer-img">
-                 </div>
-                 <div class="col-md-8">
-                     <p class="lead">Trainer Đặng Văn Minh là chuyên gia hàng đầu trong lĩnh vực...</p>
-                     <p>[Mô tả chi tiết về kinh nghiệm, thành tích, các tổ chức/khách hàng đã làm việc, triết lý đào tạo...]</p>
-                     <p>Với hơn [Số] năm kinh nghiệm đào tạo và diễn thuyết, anh đã giúp hàng ngàn người [Nêu bật kết quả cụ thể mà Trainer giúp được].</p>
-                      <blockquote>
-                          <em>"[Một trích dẫn tâm đắc của Trainer về kỹ năng nói hoặc về giá trị buổi workshop]"</em>
-                          <footer class="blockquote-footer">Trainer Đặng Văn Minh</footer>
-                      </blockquote>
-                 </div>
-             </div>
-         </div>
-     </section>
+     <section id="trainer" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Gặp Gỡ Trainer Của Bạn: Đặng Văn Minh</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="images/trainer-minh.jpg" alt="Trainer Đặng Văn Minh" class="img-fluid rounded-circle trainer-img">
+                </div>
+                <div class="col-md-8">
+                    <p class="lead">Trainer Đặng Văn Minh là chuyên gia hàng đầu trong lĩnh vực...</p>
+                    <p>[Mô tả chi tiết về kinh nghiệm, thành tích, các tổ chức/khách hàng đã làm việc, triết lý đào tạo...]</p>
+                    <p>Với hơn [Số] năm kinh nghiệm đào tạo và diễn thuyết, anh đã giúp hàng ngàn người [Nêu bật kết quả cụ thể mà Trainer giúp được].</p>
+                     <blockquote>
+                         <em>"[Một trích dẫn tâm đắc của Trainer về kỹ năng nói hoặc về giá trị buổi workshop]"</em>
+                         <footer class="blockquote-footer">Trainer Đặng Văn Minh</footer>
+                     </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="testimonials" class="section-padding">
         <div class="container">
@@ -235,27 +205,30 @@
                     </div>
                 </div>
                  <div class="col-md-6 col-lg-3 mb-4">
-                     <div class="testimonial-box text-center">
-                         <img src="images/feedback (2).png" alt="Ảnh học viên 2" class="img-fluid rounded-circle mb-3 feedback-img">
-                         <p class="fst-italic">"[Trích dẫn feedback của học viên 2]"</p>
-                         <p><strong>[Tên Học Viên 2]</strong><br><small>[Chức danh/Nghề nghiệp nếu có]</small></p>
-                     </div>
-                 </div>
-                  <div class="col-md-6 col-lg-3 mb-4">
-                     <div class="testimonial-box text-center">
-                         <img src="images/feedback (3).png" alt="Ảnh học viên 3" class="img-fluid rounded-circle mb-3 feedback-img">
-                         <p class="fst-italic">"[Trích dẫn feedback của học viên 3]"</p>
-                         <p><strong>[Tên Học Viên 3]</strong><br><small>[Chức danh/Nghề nghiệp nếu có]</small></p>
-                     </div>
-                 </div>
-                  <div class="col-md-6 col-lg-3 mb-4">
-                     <div class="testimonial-box text-center">
-                         <img src="images/feedback (4).png" alt="Ảnh học viên 4" class="img-fluid rounded-circle mb-3 feedback-img">
-                         <p class="fst-italic">"[Trích dẫn feedback của học viên 4]"</p>
-                         <p><strong>[Tên Học Viên 4]</strong><br><small>[Chức danh/Nghề nghiệp nếu có]</small></p>
-                     </div>
-                 </div>
+                    <div class="testimonial-box text-center">
+                        <img src="images/feedback (2).png" alt="Ảnh học viên 2" class="img-fluid rounded-circle mb-3 feedback-img">
+                        <p class="fst-italic">"[Trích dẫn feedback của học viên 2]"</p>
+                        <p><strong>[Tên Học Viên 2]</strong><br><small>[Chức danh/Nghề nghiệp nếu có]</small></p>
+                    </div>
+                </div>
+                 <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="testimonial-box text-center">
+                        <img src="images/feedback (3).png" alt="Ảnh học viên 3" class="img-fluid rounded-circle mb-3 feedback-img">
+                        <p class="fst-italic">"[Trích dẫn feedback của học viên 3]"</p>
+                        <p><strong>[Tên Học Viên 3]</strong><br><small>[Chức danh/Nghề nghiệp nếu có]</small></p>
+                    </div>
+                </div>
+                 <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="testimonial-box text-center">
+                        <img src="images/feedback (4).png" alt="Ảnh học viên 4" class="img-fluid rounded-circle mb-3 feedback-img">
+                        <p class="fst-italic">"[Trích dẫn feedback của học viên 4]"</p>
+                        <p><strong>[Tên Học Viên 4]</strong><br><small>[Chức danh/Nghề nghiệp nếu có]</small></p>
+                    </div>
+                </div>
             </div>
+             <div class="text-center mt-4">
+                 <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn có kết quả như họ! Đăng ký ngay!</a>
+             </div>
         </div>
     </section>
 
@@ -266,51 +239,36 @@
                     <img src="images/workshop1.jpg" alt="Workshop ảnh 1" class="img-fluid rounded shadow-sm">
                 </div>
                 <div class="col-sm-6 col-md-4">
-                     <img src="images/workshop2.jpg" alt="Workshop ảnh 2" class="img-fluid rounded shadow-sm">
+                    <img src="images/workshop2.jpg" alt="Workshop ảnh 2" class="img-fluid rounded shadow-sm">
                 </div>
                  <div class="col-sm-6 col-md-4">
-                      <img src="images/workshop3.jpg" alt="Workshop ảnh 3" class="img-fluid rounded shadow-sm">
+                    <img src="images/workshop3.jpg" alt="Workshop ảnh 3" class="img-fluid rounded shadow-sm">
                 </div>
                  <div class="col-sm-6 col-md-6">
-                      <img src="images/workshop4.jpg" alt="Workshop ảnh 4" class="img-fluid rounded shadow-sm">
+                    <img src="images/workshop4.jpg" alt="Workshop ảnh 4" class="img-fluid rounded shadow-sm">
                 </div>
                  <div class="col-sm-6 col-md-6">
-                      <img src="images/workshop5.jpg" alt="Workshop ảnh 5" class="img-fluid rounded shadow-sm">
+                    <img src="images/workshop5.jpg" alt="Workshop ảnh 5" class="img-fluid rounded shadow-sm">
                 </div>
             </div>
+            <div class="text-center mt-4">
+                 <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Tham gia ngay buổi Workshop tiếp theo!</a>
+             </div>
         </div>
     </section>
 
     <section id="form-section" class="section-padding form-section-main bg-success text-white">
         <div class="container">
              <div class="row justify-content-center">
-                 <div class="col-lg-7">
-                     <h2 class="text-center mb-4">Đừng Chần Chừ! Đăng Ký Tham Gia Ngay Hôm Nay!</h2>
-                     <p class="text-center mb-4 lead">Số lượng chỗ có hạn. Nắm bắt cơ hội thay đổi kỹ năng nói trước công chúng của bạn.</p>
-                     <form id="form2" method="POST">
-                          <input type="hidden" name="access_key" value="e8722341-fde2-4639-b5a9-0a57ebad0293"> <input type="hidden" name="subject" value="Workshop Registration - Bottom Form"> <input type="checkbox" name="botcheck" id="" style="display: none;"> <input type="hidden" name="form-name" value="Workshop Registration - Bottom"> <div class="mb-3">
-                              <label for="fullName2" class="form-label">Họ tên <span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="fullName2" name="Họ tên" required>
-                          </div>
-                          <div class="mb-3">
-                              <label for="email2" class="form-label">Email <span class="text-danger">*</span></label>
-                              <input type="email" class="form-control" id="email2" name="Email" required>
-                          </div>
-                          <div class="mb-3">
-                              <label for="phone2" class="form-label">Số điện thoại <span class="text-danger">*</span></label>
-                              <input type="tel" class="form-control" id="phone2" name="Số điện thoại" required>
-                          </div>
-                           <div class="d-grid">
-                               <button type="submit" class="btn btn-warning btn-lg">Xác Nhận Đăng Ký Tham Gia</button>
-                           </div>
-                           <p class="text-center mt-3"><small>Chúng tôi cam kết bảo mật thông tin của bạn.</small></p>
-                           <div id="result2" class="mt-3 text-center form-submission-result"></div>
-                       </form>
-                 </div>
-             </div>
-         </div>
-     </section>
-
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4 text-white">Hoàn Tất Đăng Ký Tham Gia Tại Đây</h2>
+                    <p class="lead mb-4 text-white">Điền đầy đủ thông tin bên dưới để xác nhận việc tham gia Workshop.</p>
+                     <div id="zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4" class="zoho-embed-form">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="organizer" class="section-padding">
         <div class="container">
@@ -338,32 +296,297 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Script cuộn mượt khi click link neo
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+    <button id="zf_button_571131" style="display: none;">Trigger Zoho Form Popup</button>
 
-                if (targetElement) {
-                     // Tính toán vị trí cuộn để form không bị ẩn dưới header nếu có header cố định
-                     const offset = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
-                     const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                     const offsetPosition = elementPosition - offset;
+    <script type="text/javascript">(function() {
+        try{
+            if( document.readyState == "complete" ){
+                onloadActions_571131();
+            } else {
+                window.addEventListener('load', function (){
+                    onloadActions_571131();
+                }, false);
+            }
 
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+            function onloadActions_571131(){
+                // Remove the automatic showZForm call if you don't want popup on page load
+                // showZForm_571131(); // Comment out or remove this line if it exists in your original script
+            }
+
+            function constructDiv_571131(){
+                var iframeDiv = document.createElement("div");
+                // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
+                iframeDiv.setAttribute('id','n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131');
+                iframeDiv.setAttribute('class','zf_main_id_571131');
+
+                var closeFormDiv = document.createElement("div");
+                closeFormDiv.setAttribute('id','deleteform_571131');
+                closeFormDiv.setAttribute('class','zf_lb_closeform_571131');
+
+
+                var containerDiv = document.createElement("div");
+                containerDiv.setAttribute('id','containerDiv_571131');
+                containerDiv.setAttribute('class','zf_lB_Container_571131 fadeIn'); // fadeIn requires CSS
+                containerDiv.appendChild(iframeDiv);
+                containerDiv.appendChild(closeFormDiv);
+
+                var wrapperDiv = document.createElement("div");
+                wrapperDiv.setAttribute('class','zf_lB_Wrapper_571131');
+                wrapperDiv.appendChild(containerDiv);
+
+
+                var dimmerDiv = document.createElement("div");
+                dimmerDiv.setAttribute('class','zf_lB_Dimmer_571131');
+                dimmerDiv.setAttribute('elname','popup_box');
+
+                var mainDiv = document.createElement("div");
+                mainDiv.setAttribute('id','formsLightBox_571131');
+                mainDiv.style.display = "none"; // Popup is hidden by default
+                mainDiv.appendChild(wrapperDiv);
+                mainDiv.appendChild(dimmerDiv);
+
+                document.body.appendChild(mainDiv);
+
+                 // Attach close event listener
+                 var deleteForm = document.getElementById("deleteform_571131");
+                    deleteForm.onclick = function deleteZForm_571131() {
+                        var divCont = document.getElementById("formsLightBox_571131");
+                        divCont.style.display="none";
+                        document.body.style.overflow = ""; // Restore scrolling
+
+                        // Optional: Remove iframe to prevent background activity/memory leak
+                        var iframe = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131").getElementsByTagName("iframe")[0];
+                         if (iframe) { iframe.remove(); }
+                    }
+
+            }
+
+            // Function to show the Zoho form popup
+            function showZForm_571131(){
+                 // Reconstruct iframe each time to fix potential issues
+                 var iframeHolder = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131"); // !!! ID này phải khớp !!!
+                 if (!iframeHolder || iframeHolder.getElementsByTagName("iframe").length === 0) {
+                      // Construct main div and iframe if not already there or removed
+                      var mainDiv = document.getElementById('formsLightBox_571131');
+                      if (!mainDiv) {
+                          constructDiv_571131(); // Reconstruct dimmer, container etc.
+                          mainDiv = document.getElementById('formsLightBox_570298'); // Get it after constructing
+                           // Re-attach close listener if div was reconstructed
+                          var deleteForm = document.getElementById("deleteform_571131");
+                            deleteForm.onclick = function deleteZForm_571131() {
+                                var divCont = document.getElementById("formsLightBox_571131");
+                                divCont.style.display="none";
+                                document.body.style.overflow = ""; // Restore scrolling
+                                var iframe = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131").getElementsByTagName("iframe")[0];
+                                 if (iframe) { iframe.remove(); }
+                            }
+                      } else {
+                         // Just create/load the iframe if the main structure exists
+                         loadZForm_571131();
+                      }
+                 }
+
+
+                document.getElementById("formsLightBox_571131").style.display = "block";
+                document.body.style.overflow = "hidden"; // Prevent scrolling background
+            }
+
+            // Function to load the iframe content
+            function loadZForm_571131() {
+                 // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
+                var iframeHolder = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131");
+                 if (!iframeHolder) {
+                     // This shouldn't happen if constructDiv was called, but as a safeguard
+                     console.error("Zoho iframe holder div not found!");
+                     return;
+                 }
+
+                var iframe = iframeHolder.getElementsByTagName("iframe")[0];
+
+                if(iframe == undefined ||iframe.length == 0){
+                    var f = document.createElement("iframe");
+                    // !!! Cập nhật SRC này bằng URL form POPUP của bạn từ Zoho !!!
+                    f.src = getsrcurlZForm_571131('https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1');
+
+                    f.style.border="none";
+                    f.style.minWidth="100%";
+                    f.style.overflow="hidden";
+                    f.setAttribute("aria-label", '\u0110\u0103ng\x20K\xFD\x20Tham\x20Gia\x20Workshop\x20Ngay'); // Add ARIA label
+                    iframeHolder.appendChild(f);
+
+                    // Message listener from iframe (for height adjustments, etc.)
+                    window.addEventListener('message', function (event){
+                        var evntData = event.data;
+                        if( evntData && evntData.constructor == String ){
+                            var zf_ifrm_data = evntData.split("|");
+                            if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                                var zf_perma = zf_ifrm_data[0];
+                                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+                                // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
+                                var currentIframe = document.getElementById("n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_571131").getElementsByTagName("iframe")[0];
+                                if ( currentIframe && (currentIframe.src).indexOf('formperma') > 0 && (currentIframe.src).indexOf(zf_perma) > 0 ) {
+                                    var prevIframeHeight = currentIframe.style.height;
+
+                                    var zf_tout = false;
+                                    if( zf_ifrm_data.length == 3 ) {
+                                        // currentIframe.scrollIntoView(); // May not want to scroll when in popup
+                                        zf_tout = true;
+                                    }
+
+                                    if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                                        if( zf_tout ) {
+                                            setTimeout(function(){
+                                                currentIframe.style.minHeight = zf_ifrm_ht_nw;
+                                                // Adjust container height if needed
+                                                var containerDiv = document.getElementById("containerDiv_571131");
+                                                if (containerDiv) { containerDiv.style.height=zf_ifrm_ht_nw; } // Keep container height in sync
+                                            },500);
+                                        } else {
+                                            currentIframe.style.minHeight = zf_ifrm_ht_nw;
+                                             var containerDiv = document.getElementById("containerDiv_571131");
+                                            if (containerDiv) { containerDiv.style.height=zf_ifrm_ht_nw; } // Keep container height in sync
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }, false);
                 }
-            });
-        });
+            }
 
-        // Hiệu ứng xuất hiện khi cuộn trang (Nếu muốn dùng thư viện như AOS thì include CDN và script tại đây)
+            // Function to get Zoho source URL (often includes UTM tracking)
+            function getsrcurlZForm_571131(zf_src) {
+                try {
+                    // Zoho's built-in tracking logic - Keep this as is
+                    if ( typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined" ) {
+                        for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+                            var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+                            var utmVal = zfutm_zfAdvLead.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
+                            if ( typeof utmVal !== "undefined" ) {
+                                if ( utmVal != "" ){
+                                    if(zf_src.indexOf('?') > 0){
+                                        zf_src = zf_src+'&'+utmPm+'='+utmVal;//No I18N
+                                    }else{
+                                        zf_src = zf_src+'?'+utmPm+'='+utmVal;//No I18N
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if ( typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined" ) {
+                        for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+                            var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+                            var utmVal = zfutm_zfLead.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
+                            if ( typeof utmVal !== "undefined" ) {
+                                if ( utmVal != "" ){
+                                    if(zf_src.indexOf('?') > 0){
+                                        zf_src = zf_src+'&'+utmPm+'='+utmVal;//No I18N
+                                    }else{
+                                        zf_src = zf_src+'?'+utmPm+'='+utmVal;//No I18N
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }catch(e){}
+                return zf_src;
+            }
+
+            // Ensure the main popup div structure exists when the script runs initially
+             constructDiv_571131(); // Call constructDiv right away
+
+
+            // Add listener to the hidden Zoho button. This is what our CTAs will trigger.
+            var buttonElem = document.getElementById("zf_button_571131");
+             // buttonElem.style.display = "block"; // Keep it hidden
+            buttonElem.addEventListener("click", showZForm_571131);
+
+
+        }catch(e){ console.error("Error in Zoho Popup Script:", e); }
+    })();
     </script>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openPopupButtons = document.querySelectorAll('.open-zoho-popup');
+            const zohoTriggerButton = document.getElementById('zf_button_571131');
+
+            if (!zohoTriggerButton) {
+                console.error("Zoho trigger button #zf_button_571131 not found!");
+                return; // Stop if the required Zoho button is missing
+            }
+
+            openPopupButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    // Programmatically click the hidden Zoho button
+                    zohoTriggerButton.click();
+                });
+            });
+             console.log("Custom JS for triggering Zoho popup initialized.");
+        });
+
+        // Optional: Re-initialize AOS or other scripts if needed after DOMContentLoaded
+    </script>
+
+
+    <script type="text/javascript">(function() {
+    try{
+        // !!! Cập nhật ID div target nếu nó khác trong mã Zoho của bạn !!!
+        var targetDivId = "zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4";
+        var targetDiv = document.getElementById(targetDivId);
+
+        if (targetDiv && targetDiv.getElementsByTagName("iframe").length === 0) { // Only embed if div exists and no iframe is already inside
+            var f = document.createElement("iframe");
+            // !!! Cập nhật SRC này bằng URL form EMBED của bạn từ Zoho !!!
+            f.src = 'https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1';
+            f.style.border="none";
+            f.style.width="100%"; // Use 100% width to be responsive within container
+            f.style.minHeight="600px"; // Initial minimum height, will be adjusted by Zoho script
+            f.style.overflow="hidden";
+            f.style.transition="all 0.5s ease";
+            f.setAttribute("aria-label", '\u0110\u0103ng\x20K\xFD\x20Tham\x20Gia\x20Workshop\x20Ngay'); // Add ARIA label
+
+            targetDiv.appendChild(f);
+
+            window.addEventListener('message', function (event){
+                var evntData = event.data;
+                if( evntData && evntData.constructor == String ){
+                    var zf_ifrm_data = evntData.split("|");
+                    if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                        var zf_perma = zf_ifrm_data[0];
+                        var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+                         // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
+                        var iframe = document.getElementById("zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4").getElementsByTagName("iframe")[0];
+                        if ( iframe && (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                            var prevIframeHeight = iframe.style.height;
+                            var zf_tout = false;
+                            if( zf_ifrm_data.length == 3 ) {
+                                iframe.scrollIntoView({ behavior: 'smooth' }); // Keep scrollIntoView for embed
+                                zf_tout = true;
+                            }
+                            if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                                if( zf_tout ) {
+                                    setTimeout(function(){
+                                        iframe.style.height = zf_ifrm_ht_nw;
+                                    },500);
+                                } else {
+                                    iframe.style.height = zf_ifrm_ht_nw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }, false);
+             console.log("Zoho Embed Script initialized.");
+        } else if (!targetDiv) {
+             console.error("Zoho embed target div #" + targetDivId + " not found!");
+        }
+
+    }catch(e){ console.error("Error in Zoho Embed Script:", e); }
+    })();
+    </script>
+
 
 </body>
 </html>
