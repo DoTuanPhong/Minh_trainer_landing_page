@@ -1,3 +1,5 @@
+/* Existing CSS from previous example */
+
 /* General Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -30,19 +32,47 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-.hero-section .btn-primary {
-    background-color: #ffc107; /* Màu vàng nổi bật */
-    border-color: #ffc107;
-    font-size: 1.2rem;
-    padding: 12px 30px;
+/* Updated Primary CTA Button Style (Used by open-zoho-popup) */
+.btn-primary, .btn-success {
+    /* Bootstrap default styles are applied first */
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.hero-section .btn-primary:hover {
+.btn-primary {
+     background-color: #007bff; /* Màu xanh Bootstrap */
+     border-color: #007bff;
+}
+.btn-primary:hover {
+     background-color: #0056b3;
+     border-color: #004085;
+}
+
+.btn-success {
+    background-color: #28a745; /* Màu xanh lá Bootstrap */
+    border-color: #28a745;
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Style for the specific CTA button color */
+.hero-section .btn-primary,
+.section-padding .btn-warning { /* Apply to buttons with .btn-warning in any section-padding */
+     background-color: #ffc107; /* Màu vàng nổi bật */
+     border-color: #ffc107;
+     font-size: 1.2rem;
+     padding: 12px 30px;
+     font-weight: bold;
+}
+
+.hero-section .btn-primary:hover,
+.section-padding .btn-warning:hover {
     background-color: #e0a800;
     border-color: #d39e00;
 }
+
 
 .workshop-info-summary {
     font-size: 1.1rem;
@@ -74,6 +104,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .benefit-list i, .gift-list i {
     font-size: 1.2rem; /* Kích thước icons */
+}
+
+/* Call to Action Sections (replacing old form-section-alt) */
+#call-to-action-1 {
+     background-color: #007bff; /* Màu nền khác cho section CTA giữa trang */
+     color: white;
+}
+#call-to-action-1 h2 {
+    color: white;
 }
 
 
@@ -108,43 +147,24 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
 }
 
-/* Form Section */
-.form-section-alt {
-     background-color: #007bff; /* Màu nền khác cho form giữa trang */
-     color: white;
-}
-
+/* Form Section (Contains Embedded Form) */
 .form-section-main {
      background-color: #28a745; /* Màu nền nổi bật cho form chính */
      color: white;
+     text-align: center; /* Căn giữa nội dung trong section form */
 }
 
-.form-section-alt h2, .form-section-main h2 {
+.form-section-main h2, .form-section-main p {
     color: white;
 }
 
-.form-section-alt .form-control,
-.form-section-main .form-control {
-    border-radius: 0.25rem;
-    border: 1px solid #ced4da;
-    padding: 10px 15px;
-    font-size: 1rem;
-}
-
-.form-section-alt .btn-warning,
-.form-section-main .btn-warning {
-    background-color: #ffc107; /* Màu vàng nổi bật */
-    border-color: #ffc107;
-    font-size: 1.3rem;
-    padding: 12px 30px;
-    font-weight: bold;
-     transition: background-color 0.3s ease;
-}
-
-.form-section-alt .btn-warning:hover,
-.form-section-main .btn-warning:hover {
-     background-color: #e0a800;
-     border-color: #d39e00;
+/* Style for the div holding the embedded form */
+.zoho-embed-form {
+    margin-top: 30px; /* Space above the embedded form */
+    /* Ensure the iframe inside is centered if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -156,3 +176,170 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+
+/* --- Zoho Popup CSS --- */
+/* Copy the CSS from your Zoho popup script's <style> block here */
+
+.zf_lB_Dimmer_571131{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgb(0, 0, 0);
+    opacity: 0.8;
+    z-index: 10000000;
+}
+
+.zf_lB_Container_571131{
+	position: fixed;
+	background-color: white;
+	margin: 0;
+	margin-right: 0px;
+	padding: 0;
+	/* height: 767px; Remove fixed height, let iframe determine or use max-height */
+	width: 70%; /* Adjust as needed, or use max-width */
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	border: 7px solid none; /* Seems odd, check if this is intentional */
+	max-height: calc(100% - 60px); /* Limit max height */
+    overflow-y: auto; /* Add scrolling if content exceeds max-height */
+	z-index: 99999999; /* Ensure it's below dimmer but high */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Add shadow */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+
+.zf_lB_Wrapper_571131{
+	position: fixed; /* Wrapper should also be fixed relative to viewport */
+    top: 50%;
+    left: 50%;
+    /* margin-left: 0; Remove fixed margins */
+    /* margin-top: -180px; Remove fixed margins */
+    transform: translate(-50%, -50%); /* Center using transform */
+    z-index: 10000001; /* Wrapper above dimmer */
+    /* No explicit width/height here, let container determine size */
+}
+
+.zf_main_id_571131{
+	height: 100%; /* Allow iframe holder to take full container height */
+	display: flex;
+	overflow-y: hidden; /* Overflow handled by container */
+	overflow-x: hidden;
+    padding: 20px; /* Add padding inside the container */
+    box-sizing: border-box; /* Include padding in height/width */
+}
+
+.zf_main_id_571131 iframe {
+     display: block; /* Ensure iframe is block */
+     width: 100%; /* Iframe takes full width of its container */
+     min-height: 100%; /* Ensure iframe starts with minimum height */
+     height: auto !important; /* Let Zoho script control height */
+}
+
+
+.zf_lb_closeform_571131 {
+    position: absolute;
+    right: -15px; /* Adjust position */
+    background: #2f2e2e;
+    padding: 0;
+    border-radius: 50%;
+    width: 30px; /* Adjust size */
+    height: 30px; /* Adjust size */
+    top: -15px; /* Adjust position */
+    cursor: pointer;
+    border: 2px solid #d9d9d9;
+    z-index: 100000000; /* Ensure close button is on top */
+}
+.zf_lb_closeform_571131:before, .zf_lb_closeform_571131:after {
+    position: absolute;
+    left: 12px; /* Adjust position based on new width */
+    content: ' ';
+    height: 15px; /* Adjust height */
+    width: 2px;
+    top: 6px; /* Adjust position based on new height */
+    background-color: #f7f7f7;
+}
+
+.zf_lb_closeform_571131:before {
+  transform: rotate(45deg);
+}
+.zf_lb_closeform_571131:after {
+  transform: rotate(-45deg);
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s; /* Make animation faster */
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: block !important;
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Media Queries for Responsive Popup Size */
+/* Adjusted based on typical screen breakpoints */
+@media (max-width: 575.98px) { /* Extra small devices */
+    .zf_lB_Container_571131 {
+        width: 95%; /* Take almost full width on small screens */
+        max-height: calc(100% - 40px);
+    }
+    .zf_main_id_571131 {
+        padding: 15px;
+    }
+     .zf_lb_closeform_571131 {
+         right: 5px; /* Adjust position */
+         top: 5px; /* Adjust position */
+     }
+      .zf_lb_closeform_571131:before, .zf_lb_closeform_571131:after {
+         left: 10px;
+         top: 5px;
+         height: 12px;
+     }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { /* Small devices */
+     .zf_lB_Container_571131 {
+        width: 85%;
+        max-height: calc(100% - 50px);
+    }
+     .zf_main_id_571131 {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* Medium devices */
+    .zf_lB_Container_571131 {
+        width: 75%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { /* Large devices */
+     .zf_lB_Container_571131 {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) { /* Extra large devices */
+     .zf_lB_Container_571131 {
+        width: 50%; /* Or your preferred max width */
+    }
+}
+
+/* You can adjust the media queries above based on your specific needs and the Zoho styles */
+/* The original Zoho media queries were based on device-width which is often less reliable than just width */
+
+/* --- End Zoho Popup CSS --- */
