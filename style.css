@@ -218,8 +218,8 @@ footer a:hover {
 .zf_main_id_19499{
 	height: 100%; /* Allow iframe holder to take full container height */
 	display: flex;
-	overflow-y: hidden; /* Overflow handled by container */
-	overflow-x: hidden;
+	overflow-y: auto; /* Overflow handled by container */
+	overflow-x: auto;
     padding: 20px; /* Add padding inside the container */
     box-sizing: border-box; /* Include padding in height/width */
 }
