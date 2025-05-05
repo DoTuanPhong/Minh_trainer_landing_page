@@ -326,7 +326,18 @@
           // !!! Cập nhật ID nút đóng nếu nó khác trong mã Zoho của bạn !!!
           var closeButtonId = 'deleteform_19499';
           // Construct the necessary divs immediately when script runs
-          constructDiv_19499();
+          			if( document.readyState == "complete" ){ 
+          				onloadActions_19499();
+          			}  else {
+          			  	window.addEventListener('load', function (){
+          			  		onloadActions_19499();
+          			  	}, false);
+          			}
+          
+          			function onloadActions_19499(){
+          				constructDiv_19499();
+          				showZForm_19499();
+          			}
           console.log("Popup divs constructed.");
 
        function constructDiv_19499(){
