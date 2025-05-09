@@ -3,14 +3,153 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Kỹ Năng Nói Trước Công Chúng - Đăng ký ngay!</title>
+    <title>Workshop Kỹ Năng Nói Tự Tin và Thuyết Phục như TED Talks</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      /* Custom styles for this page - Can be moved to style.css */
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 1.6;
+          color: #333;
+      }
+      .hero-section {
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') no-repeat center center; /* Replace with your background image */
+          background-size: cover;
+          min-height: 70vh;
+          padding: 100px 0;
+          position: relative;
+      }
+       .hero-section h1 {
+          color: #fff;
+          font-size: 2.8em;
+          margin-bottom: 20px;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+      .hero-section .lead {
+           color: #eee;
+           font-size: 1.25em;
+           margin-bottom: 30px;
+      }
+      .section-padding {
+          padding: 60px 0;
+      }
+      .problem-list li,
+      .benefit-list li,
+      .gift-list li,
+      .faq-list li {
+          margin-bottom: 15px;
+          font-size: 1.1em;
+      }
+      .problem-list i {
+          color: #dc3545; /* Bootstrap danger color */
+      }
+      .benefit-list i,
+      .gift-list i,
+      .faq-list i {
+          color: #28a745; /* Bootstrap success color */
+      }
+      .trainer-img {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          border: 5px solid #fff;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      .testimonial-box {
+          background: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          height: 100%; /* Make boxes equal height */
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .testimonial-box p {
+          flex-grow: 1; /* Allow text to take up space */
+          margin-bottom: 15px;
+      }
+      .testimonial-box .feedback-img {
+           width: 80px;
+           height: 80px;
+           object-fit: cover;
+      }
+      .gallery img {
+          transition: transform 0.3s ease;
+      }
+      .gallery img:hover {
+          transform: scale(1.05);
+      }
+      .pricing-card {
+           border: 1px solid #ddd;
+           border-radius: 8px;
+           padding: 20px;
+           margin-bottom: 20px;
+           background-color: #fff;
+           box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+           height: 100%; /* Equal height cards */
+           display: flex;
+           flex-direction: column;
+      }
+      .pricing-card h3 {
+          color: #007bff;
+          margin-bottom: 15px;
+          text-align: center;
+      }
+       .pricing-card .price {
+          font-size: 2em;
+          font-weight: bold;
+          color: #28a745;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+       .pricing-card .price small {
+           font-size: 0.6em;
+           font-weight: normal;
+           color: #666;
+       }
+      .pricing-card ul {
+          list-style: none;
+          padding: 0;
+          margin-bottom: 20px;
+          flex-grow: 1; /* Allow list to take up space */
+      }
+      .pricing-card ul li {
+          margin-bottom: 10px;
+           font-size: 1em;
+          line-height: 1.4;
+      }
+      .pricing-card ul li i {
+          color: #28a745;
+          margin-right: 5px;
+      }
+       .pricing-card .btn {
+           margin-top: auto; /* Push button to the bottom */
+       }
+       .faq-item {
+           margin-bottom: 25px;
+           padding-bottom: 15px;
+           border-bottom: 1px dashed #eee;
+       }
+       .faq-item h4 {
+           color: #007bff;
+           margin-bottom: 10px;
+       }
+        .faq-item p {
+            margin-left: 20px; /* Indent answer */
+        }
+       .logo {
+           max-height: 50px; /* Adjust logo size */
+           display: block;
+           margin: 0 auto;
+       }
+    </style>
     </head>
   <body>
-    <header class="py-3">
+    <header class="py-3 bg-light">
       <div class="container">
         <img src="images/logo.jpg" alt="Logo Trainer/Tổ chức" class="logo">
       </div>
@@ -19,11 +158,21 @@
     <section id="hero" class="hero-section text-white text-center d-flex align-items-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto" data-aos="fade-up"> <h1 class="display-4 mb-3">Biến Sợ Hãi Thành Tự Tin Chỉ Sau 1 Buổi Workshop!</h1>
-            <p class="lead mb-4">Tham gia Workshop Chuyên Sâu 'Kỹ Năng Nói Trước Công Chúng' cùng Trainer Đặng Văn Minh để kiến tạo sự tự tin, thuyết phục và tỏa sáng.</p>
-            <a href="#" class="btn btn-primary btn-lg mb-3 open-zoho-popup" data-aos="zoom-in" data-aos-delay="300">Đăng ký Tham gia Workshop Ngay!</a> <p class="workshop-info-summary" data-aos="fade-up" data-aos-delay="400"> Thời gian: <strong>[Ngày, Giờ]</strong> | Địa điểm: <strong>[Địa chỉ cụ thể]</strong> | Chi phí: <strong>[Giá vé]</strong>
+          <div class="col-lg-10 mx-auto" data-aos="fade-up">
+            <!-- Phần 1: Tên Workshop -->
+            <h1 class="display-4 mb-3">Workshop "Gỡ bỏ rào cản tâm lý. Tự tin chia sẻ và Lập luận thuyết phục.”</h1>
+            <!-- Phần 2: Vấn đề - Đoạn mở đầu -->
+            <p class="lead mb-4">
+              Bạn muốn nói tự tin, rành mạch, và thuyết phục? Tham gia Workshop chuyên sâu cùng Trainer Đặng Văn Minh để biến ý tưởng thành lời nói 'sắc' và 'cháy lòng' người nghe!
+              <br>
+              Nếu bạn cũng có cảm giác dưới đây như nhiều người ngoài kia thì Workshop này dành cho bạn.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg mb-3 open-zoho-popup" data-aos="zoom-in" data-aos-delay="300">Đăng ký Tham gia Workshop Ngay!</a>
+            <p class="workshop-info-summary" data-aos="fade-up" data-aos-delay="400">
+               <!-- Thông tin thời gian từ Phần 1 -->
+               Thời gian: <strong>20h - 22h15, thứ 7 & CN (21-22/06/2025)</strong> | Địa điểm: <strong>Online qua Zoom</strong> | Chi phí: <strong>Xem chi tiết bên dưới</strong>
                <br>
-               <small>Số lượng chỗ có hạn!</small>
+               <small>Số lượng chỗ có hạn! Đăng ký ngay để nhận ưu đãi!</small>
             </p>
           </div>
         </div>
@@ -34,46 +183,58 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2 class="text-center mb-4" data-aos="fade-down">Bạn có đang gặp phải những vấn đề này?</h2> <ul class="list-unstyled problem-list">
-              <li data-aos="fade-up" data-aos-delay="100"> <i class="fas fa-times-circle me-2 text-danger"></i> Bạn run sợ, lo lắng mỗi khi phải phát biểu trước đám đông?
+            <h2 class="text-center mb-4" data-aos="fade-down">Bạn có đang gặp phải những vấn đề này?</h2>
+            <ul class="list-unstyled problem-list">
+               <!-- Nội dung từ Phần 2: Vấn đề -->
+              <li data-aos="fade-up" data-aos-delay="100"> <i class="fas fa-times-circle me-2 text-danger"></i> Đứng trước thầy cô, sếp hay đồng nghiệp là run lắm. Chỉ sợ mọi người nhìn rồi phán xét, kiểu "nói gì chán ngắt vậy?"
               </li>
               <li data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Có ý tưởng hay nhưng không thể truyền đạt mạch lạc, cuốn hút?
+                <i class="fas fa-times-circle me-2 text-danger"></i> Ý tưởng thì có rồi nhưng mở miệng ra nói lại bị rối các ý, không sao rành mạch được.
               </li>
               <li data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Thiếu tự tin khi đứng trước sếp, đồng nghiệp hay khách hàng?
+                <i class="fas fa-times-circle me-2 text-danger"></i> Hay bị lủng củng khi trình bày, lập luận thiếu chặt chẽ. Hay bị chê là nói chung chung, lan man, thiếu trọng tâm.
               </li>
               <li data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Cảm thấy bế tắc trong các buổi họp, thuyết trình quan trọng?
+                <i class="fas fa-times-circle me-2 text-danger"></i> Từng xem và lưu lại nhiều clip Tiktok nhưng vẫn mơ hồ. Biết thì biết nhưng áp dụng sao cho đúng thì chịu.
               </li>
               <li data-aos="fade-up" data-aos-delay="500">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Bỏ lỡ cơ hội thể hiện bản thân và thăng tiến trong sự nghiệp?
+                <i class="fas fa-times-circle me-2 text-danger"></i> Rất muốn truyền cảm hứng và làm cho khán giả "wow" nhưng vẫn chưa tìm ra cách làm hiệu quả.
+              </li>
+               <li data-aos="fade-up" data-aos-delay="600">
+                <i class="fas fa-times-circle me-2 text-danger"></i> Thấy người ta nói thì mê nhưng vẫn chưa hiểu được tinh thần và ý nghĩa thực sự của kỹ năng này...
               </li>
             </ul>
-            <p class="text-center lead mt-4" data-aos="fade-up" data-aos-delay="600">Nếu đây là những gì bạn đang trải qua, thì Workshop này chính là giải pháp dành cho bạn!</p> </div>
+             <!-- Đoạn kết từ Phần 2: Vấn đề -->
+            <p class="text-center lead mt-4" data-aos="fade-up" data-aos-delay="700">Nếu bạn cũng có cảm giác trên như nhiều người ngoài kia thì Workshop này dành cho bạn.</p>
+             </div>
         </div>
       </div>
     </section>
 
     <section id="overview" class="section-padding bg-light">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Thông Tin Chi Tiết Workshop</h2> <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100"> <div class="col-lg-8">
+        <h2 class="text-center mb-4" data-aos="fade-down">Thông Tin Chi Tiết Workshop</h2>
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+           <div class="col-lg-8">
             <dl class="row info-list">
+              <!-- Thông tin từ Phần 1 -->
               <dt class="col-sm-4">
                 <i class="fas fa-calendar-alt me-2"></i> Thời gian:
               </dt>
-              <dd class="col-sm-8">[Ngày, Giờ bắt đầu] - [Giờ kết thúc]</dd>
+              <dd class="col-sm-8">20h - 22h15, thứ 7 và CN (21-22/06/2025)</dd>
+              <!-- Thông tin từ Phần 9 (FAQ) -->
               <dt class="col-sm-4">
                 <i class="fas fa-map-marker-alt me-2"></i> Địa điểm:
               </dt>
-              <dd class="col-sm-8">[Địa chỉ đầy đủ] </dd>
+              <dd class="col-sm-8">Online qua Zoom</dd>
+               <!-- Giá vé được đưa xuống phần riêng -->
               <dt class="col-sm-4">
                 <i class="fas fa-dollar-sign me-2"></i> Chi phí tham dự:
               </dt>
               <dd class="col-sm-8">
-                <strong>[Mức giá]</strong>
-                <span class="badge bg-success">[Ưu đãi nếu có, ví dụ: Early Bird]</span>
+                <strong>Xem mục "Giá vé" chi tiết bên dưới</strong>
               </dd>
+               <!-- Thông tin từ Phần 6 -->
               <dt class="col-sm-4">
                 <i class="fas fa-user-tie me-2"></i> Trainer:
               </dt>
@@ -86,79 +247,181 @@
 
     <section id="knowledge" class="section-padding">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Những Kiến Thức Giá Trị Bạn Sẽ Nắm Vững</h2> <div class="row">
+         <!-- Tiêu đề từ Phần 4 -->
+        <h2 class="text-center mb-4" data-aos="fade-down">Tham gia Workshop, bạn sẽ nhận lại được gì?</h2>
+        <div class="row">
           <div class="col-md-6">
             <ul class="list-unstyled benefit-list">
+               <!-- Nội dung từ Phần 4: Kết quả đạt được (5 mục đầu) -->
               <li data-aos="fade-right" data-aos-delay="100"> <i class="fas fa-check-circle me-2 text-success"></i>
-                <strong>Vượt qua nỗi sợ hãi sân khấu:</strong> Học cách kiểm soát tâm lý, biến sự lo lắng thành năng lượng tích cực, giúp bạn tự tin hơn khi bước lên!
+                Gỡ khỏi não mấy suy nghĩ kiểu: “Tôi nói dở lắm” - ai rồi cũng nói hay nếu biết cách
               </li>
               <li data-aos="fade-right" data-aos-delay="200">
                 <i class="fas fa-check-circle me-2 text-success"></i>
-                <strong>Cấu trúc bài nói mạch lạc:</strong> Nắm vững công thức xây dựng nội dung logic, dễ theo dõi. Khán giả sẽ hiểu và bị thuyết phục bởi thông điệp của bạn.
+                "Nói đâu phải để flex" - Hiểu đúng về tinh thần thực sự của việc nói trước đám đông
               </li>
               <li data-aos="fade-right" data-aos-delay="300">
                 <i class="fas fa-check-circle me-2 text-success"></i>
-                <strong>Kỹ thuật giọng nói & ngôn ngữ cơ thể:</strong> Luyện tập để có giọng nói truyền cảm và phong thái tự tin, chuyên nghiệp. Bạn sẽ thu hút và tạo ấn tượng mạnh mẽ hơn.
+                Bỏ túi công thức lập luận - nói logic, chặt chẽ nhưng đầy cảm hứng
+              </li>
+               <li data-aos="fade-right" data-aos-delay="400">
+                <i class="fas fa-check-circle me-2 text-success"></i>
+                Né ngay 3 lỗi ngụy biện hay gặp - đỡ bị bắt bẻ, tăng sức thuyết phục
+              </li>
+               <li data-aos="fade-right" data-aos-delay="500">
+                <i class="fas fa-check-circle me-2 text-success"></i>
+                 Biết cách “bật” ra thông điệp đắt giá khiến người ta nhớ mãi
               </li>
             </ul>
           </div>
           <div class="col-md-6">
             <ul class="list-unstyled benefit-list">
+               <!-- Nội dung từ Phần 4: Kết quả đạt được (5 mục cuối) -->
               <li data-aos="fade-left" data-aos-delay="100"> <i class="fas fa-check-circle me-2 text-success"></i>
-                <strong>Tương tác hiệu quả với khán giả:</strong> Bí quyết giữ chân sự chú ý và xử lý các câu hỏi khó. Buổi nói chuyện của bạn sẽ sống động và thành công hơn.
+                Có ngay 10 tuyệt chiêu luyện nói lên trình vèo vèo
               </li>
               <li data-aos="fade-left" data-aos-delay="200">
                 <i class="fas fa-check-circle me-2 text-success"></i>
-                <strong>Nghệ thuật kể chuyện (Storytelling):</strong> Sử dụng câu chuyện để kết nối cảm xúc, làm bài nói của bạn hấp dẫn và đáng nhớ hơn.
+                Học tới đâu thực hành liền tới đó - khỏi lo nghe xong rồi quên
               </li>
               <li data-aos="fade-left" data-aos-delay="300">
                 <i class="fas fa-check-circle me-2 text-success"></i>
-                <strong>Thực hành & nhận phản hồi trực tiếp:</strong> Được luyện tập trong môi trường an toàn và nhận góp ý từ Trainer cùng học viên khác. Bạn biết điểm mạnh, điểm yếu và cách cải thiện ngay lập tức.
+                Hỏi đáp luôn 1-1 với diễn giả – hỏi gì cũng được, không sợ “quê”
+              </li>
+               <li data-aos="fade-left" data-aos-delay="400">
+                <i class="fas fa-check-circle me-2 text-success"></i>
+                Học xong còn rinh ngay BỘ QUÀ TẶNG
+              </li>
+               <li data-aos="fade-left" data-aos-delay="500">
+                <i class="fas fa-check-circle me-2 text-success"></i>
+                Gặp gỡ "đồng âm đồng vibe" - toàn người trẻ đam mê nói, siêu dễ thương
               </li>
             </ul>
           </div>
         </div>
-        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="400"> <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn làm chủ kỹ năng này! Đăng ký ngay!</a>
+        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="600"> <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn nhận kết quả này! Đăng ký ngay!</a>
         </div>
       </div>
     </section>
 
-    <section id="call-to-action-1" class="section-padding bg-primary text-white text-center">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8" data-aos="fade-up"> <h2 class="text-center mb-4 text-white">Sẵn Sàng Tỏa Sáng?</h2>
-            <p class="lead mb-4 text-white">Click vào nút bên dưới để đăng ký ngay và nhận bộ quà tặng đặc biệt!</p>
-            <a href="#" class="btn btn-warning btn-lg open-zoho-popup" data-aos="zoom-in" data-aos-delay="200">Nhận Vé Tham Gia Workshop</a> </div>
+     <!-- Thêm phần Giá vé từ Phần 8 -->
+     <section id="pricing" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down">Đầu tư cho kỹ năng - Nhận lại giá trị gấp bội</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <h3>VÉ CẠ CỨNG</h3>
+                        <div class="price">50k <small>/ người</small></div>
+                        <ul>
+                            <li><i class="fas fa-check-circle me-2"></i> Đi từ 2 người trở lên là auto giảm liền tay</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Bộ template PowerPoint</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Voucher đặc biệt các khóa học của Trainer</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký ngay!</a>
+                    </div>
+                </div>
+                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card">
+                        <h3>VÉ SĂN SỚM</h3>
+                        <div class="price">55k <small>/ người</small></div>
+                         <p class="text-center"><small>(Đăng ký từ 22/02 - 12/03/2025)</small></p>
+                        <ul>
+                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Săn vé sớm!</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <h3>VÉ TIÊU CHUẨN</h3>
+                        <div class="price">60k <small>/ người</small></div>
+                         <p class="text-center"><small>(Đăng ký từ 13/03 - 19/03/2025)</small></p>
+                        <ul>
+                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
+                             <li><i class="fas fa-check-circle me-2"></i> Bộ template PowerPoint</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký ngay!</a>
+                    </div>
+                </div>
+                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="pricing-card">
+                        <h3>VÉ NƯỚC ĐẾN CHÂN</h3>
+                        <div class="price">70k <small>/ người</small></div>
+                         <p class="text-center"><small>(Đăng ký từ 20/03 - 23/03/2025)</small></p>
+                        <ul>
+                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký gấp!</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="pricing-card">
+                        <h3>VÉ VIP PRO MAX</h3>
+                        <div class="price">199k <small>/ người</small></div>
+                         <p class="text-center"><small>(Ưu đãi tốt nhất)</small></p>
+                        <ul>
+                             <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                            <li><i class="fas fa-check-circle me-2"></i> <strong>2 cuốn Ebooks Hùng biện</strong></li>
+                            <li><i class="fas fa-check-circle me-2"></i> Bộ template PowerPoint</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
+                            <li><i class="fas fa-check-circle me-2"></i> <strong>Tài liệu tự học IELTS lên Band nhẹ nhàng</strong></li>
+                             <li><i class="fas fa-check-circle me-2"></i> Voucher đặc biệt các khóa học của Trainer</li>
+                            <li><i class="fas fa-check-circle me-2"></i> <strong>Tặng 1 buổi Group Coaching riêng với Trainer</strong></li>
+                             <li><i class="fas fa-check-circle me-2"></i> <strong>Được hỏi riêng Trainer về Hùng biện & Thần số học kể cả sau Workshop</strong></li>
+                        </ul>
+                        <a href="#" class="btn btn-warning btn-lg open-zoho-popup">Nâng cấp VIP ngay!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="600">
+                 <p class="lead">Chọn gói phù hợp và bấm Đăng ký để nhận ưu đãi sớm!</p>
+                 <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Tôi đã chọn vé, đăng ký ngay!</a>
+            </div>
         </div>
-      </div>
-    </section>
+     </section>
+
 
     <section id="gifts" class="section-padding">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Đăng Ký Hôm Nay, Nhận Ngay Quà Tặng Hấp Dẫn!</h2> <div class="row justify-content-center">
+         <!-- Tiêu đề từ Phần 5 -->
+        <h2 class="text-center mb-4" data-aos="fade-down">Đăng Ký Hôm Nay, Rinh Ngay Quà Xịn Về!</h2>
+        <div class="row justify-content-center">
           <div class="col-lg-10">
             <ul class="list-unstyled gift-list row">
+               <!-- Nội dung từ Phần 5: Quà tặng -->
               <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="100"> <i class="fas fa-gift me-2 text-warning"></i>
-                <strong>Ebook "10 Bước Chuẩn Bị Bài Thuyết Trình Hoàn Hảo"</strong>
+                Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV
               </li>
               <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-gift me-2 text-warning"></i>
-                <strong>Bộ Checklist Luyện Tập Kỹ Năng Nói Hàng Ngày</strong>
+                2 cuốn Ebooks Hùng biện - nói nhiều không bằng nói có chiều sâu (Hạng vé VIP)
               </li>
               <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="300">
                 <i class="fas fa-gift me-2 text-warning"></i>
-                <strong>Voucher Giảm Giá Khóa Học Chuyên Sâu [Giá trị]</strong>
+                Bộ template PowerPoint - khỏi mất thời gian nghĩ bố cục
               </li>
               <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-users me-2 text-warning"></i>
-                <strong>Tham gia Cộng Đồng Học Viên Độc Quyền</strong>
+                <i class="fas fa-gift me-2 text-warning"></i>
+                 Trọn bộ Slide + Video record buổi học - lỡ bận việc khác vẫn có cái ôn lại
               </li>
               <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="500">
-                <i class="fas fa-video me-2 text-warning"></i>
-                <strong>Bonus: Ghi hình buổi thực hành của bạn để xem lại</strong>
+                <i class="fas fa-gift me-2 text-warning"></i>
+                 Tài liệu tự học IELTS lên Band nhẹ nhàng (Hạng vé VIP)
+              </li>
+               <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="600">
+                <i class="fas fa-gift me-2 text-warning"></i>
+                 Được hỏi riêng Diễn giả về Hùng biện và Thần số học kể cả khi Workshop đã kết thúc (Hạng vé VIP)
               </li>
             </ul>
-            <p class="text-center mt-4 lead" data-aos="fade-up" data-aos-delay="600">Tổng giá trị quà tặng lên đến <strong>[Tổng giá trị]</strong>! </p> </div>
+             <!-- Xóa dòng tổng giá trị quà tặng -->
+            <!-- <p class="text-center mt-4 lead" data-aos="fade-up" data-aos-delay="600">Tổng giá trị quà tặng lên đến <strong>[Tổng giá trị]</strong>! </p> -->
+             </div>
         </div>
         <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="700"> <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký & Nhận Quà Ngay!</a>
         </div>
@@ -167,15 +430,28 @@
 
     <section id="trainer" class="section-padding bg-light">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Gặp Gỡ Trainer Của Bạn: Đặng Văn Minh</h2> <div class="row align-items-center">
+         <!-- Tiêu đề từ Phần 6 -->
+        <h2 class="text-center mb-4" data-aos="fade-down">Gặp Gỡ Trainer Của Bạn: Đặng Văn Minh</h2>
+        <div class="row align-items-center">
+           <!-- Giữ ảnh trainer -->
           <div class="col-md-4 text-center mb-4 mb-md-0" data-aos="fade-right"> <img src="images/trainer-minh.jpg" alt="Trainer Đặng Văn Minh" class="img-fluid rounded-circle trainer-img">
           </div>
-          <div class="col-md-8" data-aos="fade-left" data-aos-delay="200"> <p class="lead">Trainer Đặng Văn Minh là chuyên gia hàng đầu trong lĩnh vực...</p>
-            <p>[Mô tả chi tiết về kinh nghiệm, thành tích, các tổ chức/khách hàng đã làm việc, triết lý đào tạo...]</p>
-            <p>Với hơn [Số] năm kinh nghiệm đào tạo và diễn thuyết, anh đã giúp hàng ngàn người [Nêu bật kết quả cụ thể mà Trainer giúp được].</p>
-            <blockquote data-aos="fade-up" data-aos-delay="400"> <em>"[Một trích dẫn tâm đắc của Trainer về kỹ năng nói hoặc về giá trị buổi workshop]"</em>
+          <div class="col-md-8" data-aos="fade-left" data-aos-delay="200">
+             <!-- Nội dung từ Phần 6: Trainer -->
+             <p class="lead">Thành tích nổi bật của Trainer Đặng Văn Minh:</p>
+            <ul>
+                <li>Nhà sáng lập CLB Nhà Hùng biện Tương lai (FSO)</li>
+                <li>Thực hành và luận giải thần số học chuyên sâu</li>
+                <li>Nhà đào tạo nghệ thuật Hùng biện - Giao tiếp & Thấu hiểu bản thân</li>
+                <li>Diễn giả của hàng trăm Workshop về Hùng biện - Giao tiếp & Thần số học</li>
+                <li>Quán quân Tôi Lên Tiếng, Quý Quân cuộc thi "Thành phố an toàn cho em gái"</li>
+                <li>Giám khảo các cuộc thi "Tôi lên tiếng", "Tôi bản lĩnh", "The Speaker", "Beyond Your Limits"......</li>
+                <li>Cố vấn cho nhiều thí sinh giành giải cao tại các cuộc thi Hùng biện…</li>
+            </ul>
+             <!-- Không có trích dẫn cụ thể, giữ lại cấu trúc blockquote trống hoặc xóa -->
+            <!-- <blockquote> <em>"[Một trích dẫn tâm đắc của Trainer về kỹ năng nói hoặc về giá trị buổi workshop]"</em>
               <footer class="blockquote-footer">Trainer Đặng Văn Minh</footer>
-            </blockquote>
+            </blockquote> -->
           </div>
         </div>
       </div>
@@ -183,40 +459,47 @@
 
     <section id="testimonials" class="section-padding">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Học Viên Nói Gì Sau Khi Tham Gia Workshop?</h2> <div class="row">
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+         <!-- Tiêu đề từ Phần 7 -->
+        <h2 class="text-center mb-4" data-aos="fade-down">Cảm nhận chân thật đến từ các bạn tham dự Workshop trước đó</h2>
+        <div class="row">
+           <!-- Feedback 1 từ Phần 7 -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-box text-center">
+               <!-- Giữ ảnh feedback -->
               <img src="images/feedback (1).png" alt="Ảnh học viên 1" class="img-fluid rounded-circle mb-3 feedback-img">
-              <p class="fst-italic">"[Trích dẫn feedback của học viên 1 - Ngắn gọn, chân thực, nêu bật lợi ích]"</p>
+              <p class="fst-italic">"Em cảm thấy biết ơn vì đã học hỏi rất nhiều kiến thức mà trước đây chưa từng biết đến. Trước kia, em là một người nhút nhát và thiếu tự tin nhưng sau 2 lần tham dự hội thảo về Hùng biện của anh Văn Minh và nhà FSO, em đã có nhiều sự thay đổi lớn. Em đã dần tự tin hơn, bắt đầu nhận thuyết trình trước lớp. Lúc đó mặc dù rất run nhưng em vẫn cố gắng từng chút thôi dẫn dần có sự cải thiện rõ rệt. Và đặc biệt, môn kỹ năng giao tiếp thuyết trình em đã được điểm tuyệt đối vì môn phương pháp hùng biện và các thủ thuật tranh biện em đạt 9+..."</p>
               <p>
-                <strong>[Tên Học Viên 1]</strong>
-                <br>
-                <small>[Chức danh/Nghề nghiệp nếu có]</small>
+                <strong>Bạn Bùi Xuân Trường</strong>
+                <!-- <br> <small>[Chức danh/Nghề nghiệp nếu có]</small> -->
               </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+           <!-- Feedback 2 từ Phần 7 -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="testimonial-box text-center">
+               <!-- Giữ ảnh feedback -->
               <img src="images/feedback (2).png" alt="Ảnh học viên 2" class="img-fluid rounded-circle mb-3 feedback-img">
-              <p class="fst-italic">"[Trích dẫn feedback của học viên 2]"</p>
+              <p class="fst-italic">"Khi được nghe anh Văn Minh chia sẻ trong buổi hội thảo Thuyết trình - Hùng biện, tâm trí em được mở rộng ra một vùng tri thức mới. Trước đây, em nghĩ Hùng biện là phải có giọng nói hay, có ngoại hình đẹp, có các kĩ năng mới có thể nói được. Nhưng sau khi được anh Minh chia sẻ em hiểu được rằng Hùng biện không chỉ vậy, mà Hùng biện còn là khả năng phản biện và tư duy sâu sắc trước các vấn đề. Muốn hùng biện hay, trước hết phải trang bị cho mình một tâm thức sâu sắc. Và trong hội thảo, anh cũng dạy làm sao để nâng cấp tư duy của mình..."</p>
               <p>
-                <strong>[Tên Học Viên 2]</strong>
-                <br>
-                <small>[Chức danh/Nghề nghiệp nếu có]</small>
+                <strong>Bạn Đỗ Thị Thùy Dương</strong>
+                 <!-- <br> <small>[Chức danh/Nghề nghiệp nếu có]</small> -->
               </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+           <!-- Feedback 3 từ Phần 7 -->
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-box text-center">
+               <!-- Giữ ảnh feedback -->
               <img src="images/feedback (3).png" alt="Ảnh học viên 3" class="img-fluid rounded-circle mb-3 feedback-img">
-              <p class="fst-italic">"[Trích dẫn feedback của học viên 3]"</p>
+              <p class="fst-italic">"Mình vốn là người hướng nội từ bé, bản thân lại có định kiến sợ sai nên những bài thuyết trình trên lớp là “cực hình” với mình. Tuy nhiên, sau một lần tình cờ tham gia hội thảo Thuyết trình - Hùng biện của anh Văn Minh thì mình đã học được rất nhiều kiến thức mới và quan trọng nhất là suy nghĩ của mình đã thay đổi. Mình nhận ra hướng nội không đồng nghĩa với việc ăn nói kém, mà đôi khi là lý do mình đặt ra để trốn tránh việc đối diện với một kỹ năng mà bản thân còn yếu. Từ đó mình đã cố gắng áp dụng dần những điều học được để phát triển khả năng ăn nói và đang dần thấy được những thay đổi tích cực sau một thời gian luyện tập..."</p>
               <p>
-                <strong>[Tên Học Viên 3]</strong>
-                <br>
-                <small>[Chức danh/Nghề nghiệp nếu có]</small>
+                <strong>Ngô Quang Việt</strong>
+                 <!-- <br> <small>[Chức danh/Nghề nghiệp nếu có]</small> -->
               </p>
             </div>
           </div>
+           <!-- Giữ cấu trúc cột thứ 4 nhưng không điền nội dung feedback nếu chỉ có 3 feedback -->
+           <!--
           <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
             <div class="testimonial-box text-center">
               <img src="images/feedback (4).png" alt="Ảnh học viên 4" class="img-fluid rounded-circle mb-3 feedback-img">
@@ -228,15 +511,18 @@
               </p>
             </div>
           </div>
+           -->
         </div>
-        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="500"> <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn có kết quả như họ! Đăng ký ngay!</a>
+        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="400"> <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn có kết quả như họ! Đăng ký ngay!</a>
         </div>
       </div>
     </section>
 
     <section id="gallery" class="section-padding bg-light">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Không Khí Các Buổi Workshop Trước</h2> <div class="row g-3">
+        <h2 class="text-center mb-4" data-aos="fade-down">Không Khí Các Buổi Workshop Trước</h2>
+        <div class="row g-3">
+           <!-- Giữ nguyên ảnh gallery -->
           <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
             <img src="images/workshop1.jpg" alt="Workshop ảnh 1" class="img-fluid rounded shadow-sm">
           </div>
@@ -258,11 +544,60 @@
       </div>
     </section>
 
+    <!-- Thêm phần Câu hỏi thường gặp từ Phần 9 -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down">Câu hỏi thường gặp (FAQs)</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <ul class="list-unstyled faq-list">
+                        <!-- Nội dung từ Phần 9: FAQs -->
+                        <li class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Workshop này hợp với ai hả?</h4>
+                           <p>Dành cho bất kỳ ai muốn "level up" kỹ năng nói, gỡ sạch rào cản để tự tin bắn ý tưởng trước đám đông. Newbie hay Pro đều học được.</p>
+                        </li>
+                         <li class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Có được thực hành hay chỉ ngồi nghe lý thuyết thôi?</h4>
+                           <p>Thực hành xịn xò sau từng phần học luôn nhé. Feedback trực tiếp từ anh Trainer siêu có tâm.</p>
+                        </li>
+                         <li class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Lỡ bận không tham gia được thì sao?</h4>
+                           <p>Không lo! Bạn sẽ nhận video record + slide đầy đủ để xem lại. Không bỏ lỡ gì hết.</p>
+                        </li>
+                         <li class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Workshop kéo dài bao lâu? Học ở đâu nhỉ?</h4>
+                           <p>Chừng 2-2.5 tiếng siêu hào hứng, học online qua Zoom, chỉ cần ngồi nhà là chiến được.</p>
+                        </li>
+                         <li class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Giá vé bao nhiêu, có deal hời nào không?</h4>
+                           <p>Siêu hời nè. Chỉ 50k/1 người nếu rủ hội bạn đăng ký cùng. Còn VÉ SUPER VIP và mấy hạng vé khác để bạn thoải mái chọn. Chi tiết xem mục "Giá vé" bên trên nhé!</p>
+                        </li>
+                         <li class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Mình chưa biết gì về hùng biện, học nổi không?</h4>
+                           <p>Dễ luôn. Bài giảng siêu dễ nhớ, đầy hình ảnh và công thức được đơn giản hóa, cả newbie lẫn "cứng" đều bắt sóng được.</p>
+                        </li>
+                        <li class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Workshop này khác gì mấy nguồn trên mạng?</h4>
+                           <p>Khác một trời một vực. Học tư duy gốc rễ, đi vào bản chất nhất. Được thực hành tại chỗ, nhận bí kíp thực chiến từ Trainer Đặng Văn Minh, cộng thêm những câu chuyện thực tế đầy cảm hứng hùng biện từ anh ấy.</p>
+                        </li>
+                        <li class="faq-item" data-aos="fade-up" data-aos-delay="800">
+                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Rủ cả nhóm đi để nhận vé ưu đãi nhóm thì đăng ký kiểu gì?</h4>
+                           <p>Bạn cứ điền Form, ghi Họ tên + SĐT của bạn và hội bạn vào phần "ghi chú", xong là nhà FSO chủ động liên hệ. Quá đơn giản.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="form-section" class="section-padding form-section-main bg-success text-white">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8 text-center" data-aos="fade-up"> <h2 class="mb-4 text-white">Hoàn Tất Đăng Ký Tham Gia Tại Đây</h2>
-            <p class="lead mb-4 text-white">Điền đầy đủ thông tin bên dưới để xác nhận việc tham gia Workshop.</p>
+          <div class="col-lg-8 text-center" data-aos="fade-up">
+             <!-- Tiêu đề và mô tả -->
+            <h2 class="mb-4 text-white">Nâng Cấp Kỹ Năng Nói Của Bạn Ngay Hôm Nay!</h2>
+            <p class="lead mb-4 text-white">Điền đầy đủ thông tin bên dưới để hoàn tất đăng ký và sẵn sàng "bật mode" tự tin!</p>
+             <!-- KHÔNG thay đổi ID div này - nó liên kết với script Zoho -->
             <div id="zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4" class="zoho-embed-form" data-aos="zoom-in" data-aos-delay="200"></div>
           </div>
         </div>
@@ -271,19 +606,27 @@
 
     <section id="organizer" class="section-padding">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Thông Tin Ban Tổ Chức</h2> <div class="row justify-content-center">
-          <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="100"> <p>
-              <strong>[Tên đơn vị tổ chức]</strong>
+         <!-- Tiêu đề -->
+        <h2 class="text-center mb-4" data-aos="fade-down">Thông Tin Liên Hệ Ban Tổ Chức</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="100">
+             <!-- Thông tin từ Phần 10: Liên hệ -->
+             <p>Đừng bỏ lỡ cơ hội có 1-0-2 này từ nhà FSO nhé.</p>
+            <p>
+              <strong>CLB Nhà Hùng biện Tương lai (FSO)</strong>
+            </p>
+             <!-- Xóa mục địa chỉ -->
+            <!-- <p> <i class="fas fa-map-marker-alt me-2"></i> Địa chỉ: [Địa chỉ (nếu có)] </p> -->
+            <p>
+              <i class="fas fa-phone me-2"></i> Zalo trợ giúp: 039.719.3232
             </p>
             <p>
-              <i class="fas fa-map-marker-alt me-2"></i> Địa chỉ: [Địa chỉ (nếu có)]
+              <i class="fas fa-envelope me-2"></i> Email: fso.contact.info@gmail.com
             </p>
-            <p>
-              <i class="fas fa-phone me-2"></i> Hotline: [Số điện thoại liên hệ hỗ trợ]
-            </p>
-            <p>
-              <i class="fas fa-envelope me-2"></i> Email: [Email liên hệ hỗ trợ]
-            </p>
+             <!-- Thêm thông tin Fanpage nếu muốn hiển thị rõ -->
+             <p>
+                 <i class="fab fa-facebook me-2"></i> Fanpage: CLB Nhà Hùng biện Tương lai (FSO)
+             </p>
           </div>
         </div>
       </div>
@@ -291,7 +634,9 @@
 
     <footer class="bg-dark text-white text-center py-4">
       <div class="container">
-        <p class="mb-0">&copy; 2023 [Tên Trainer hoặc Tổ chức]. All rights reserved.</p>
+         <!-- Cập nhật tên tổ chức -->
+        <p class="mb-0">© 2024 CLB Nhà Hùng biện Tương lai (FSO). All rights reserved.</p>
+         <!-- Giữ nguyên link chính sách -->
         <p class="mb-0">
           <a href="#" class="text-white me-3">Chính sách bảo mật</a>
           <a href="#" class="text-white">Điều khoản sử dụng</a>
@@ -299,6 +644,7 @@
       </div>
     </footer>
 
+    <!-- KHÔNG thay đổi các script bên dưới trừ khi có hướng dẫn cụ thể -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
@@ -311,7 +657,7 @@
       });
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts Zoho Forms - KHÔNG thay đổi các ID, URL form perma hay cấu trúc script -->
     <button id="zf_button_19499" style="display: none;">Trigger Zoho Form Popup</button>
     <script type="text/javascript">
       (function() {
@@ -326,20 +672,20 @@
           // !!! Cập nhật ID nút đóng nếu nó khác trong mã Zoho của bạn !!!
           var closeButtonId = 'deleteform_19499';
           // Construct the necessary divs immediately when script runs
-          			if( document.readyState == "complete" ){ 
+          			if( document.readyState == "complete" ){
           				onloadActions_19499();
           			}  else {
           			  	window.addEventListener('load', function (){
           			  		onloadActions_19499();
           			  	}, false);
           			}
-          
+
           			function onloadActions_19499(){
           				constructDiv_19499();
-                  loadZForm_19499();
-          				// showZForm_19499();
+                  // Removed showZForm_19499() from onload - only show on click or timed below
+          				// showZForm_19499(); // Removed automatic show on load
           			}
-          console.log("Popup divs constructed.");
+          console.log("Popup divs ready for construction/trigger.");
 
        function constructDiv_19499(){
                  // Check if the main lightbox div already exists
@@ -381,25 +727,15 @@
 
                 document.body.appendChild(mainDiv);
                 console.log("Zoho Popup: Popup structure added to body. Main lightbox ID:", mainLightboxId);
-                console.log("Zoho Popup: Dimmer element reference:", dimmerDiv); // Log the actual reference
 
 
                 // *** THÊM BỘ LẮNG NGHE CLICK VÀO DIMMER TẠI ĐÂY ***
                 if (dimmerDiv) { // Ensure dimmerDiv reference is valid
                     dimmerDiv.addEventListener('click', function(event) {
-                        console.log("--- Zoho Popup: Click on Dimmer Detected ---");
-                        console.log("Zoho Popup: Event target:", event.target); // Should be the dimmer div itself
-                        console.log("Zoho Popup: Current Dimmer element:", dimmerDiv); // Should match target if click was direct
-
                         // Kiểm tra xem click có *trực tiếp* trên element dimmer không
                         if (event.target === dimmerDiv) {
-                             console.log("Zoho Popup: Direct click on dimmer confirmed. Calling deleteZForm_19499().");
                              deleteZForm_19499(); // Call the close function
-                        } else {
-                             console.log("Zoho Popup: Click detected within mainDiv but not directly on dimmer. Target was:", event.target);
-                             // Điều này xảy ra nếu có element con của mainDiv (không phải dimmer) nằm trên nó và nhận click
                         }
-                        console.log("--- Zoho Popup: End Dimmer Click Logic ---");
                     });
                     console.log("Zoho Popup: Dimmer click listener attached directly.");
                 } else {
@@ -408,96 +744,73 @@
                 // *** KẾT THÚC BỘ LẮNG NGHE CLICK DIMMER ***
 
 
+
                  // Attach close event listener for the close button AFTER creating the close button div
                  var deleteForm = document.getElementById(closeButtonId);
                     if (deleteForm) {
                          deleteForm.onclick = function deleteZForm_19499() {
-                             console.log("--- Zoho Popup: deleteZForm_19499 called ---");
                              var divCont = document.getElementById(mainLightboxId);
                              if (divCont) {
                                  divCont.style.display="none";
                                  document.body.style.overflow = ""; // Restore scrolling
-                                 console.log("Zoho Popup: Popup hidden, body scrolling restored.");
-                             } else {
-                                 console.error("Zoho Popup: deleteZForm_19499: Main lightbox div not found!");
                              }
 
-                             // Optional: Remove iframe content on close to prevent background activity/memory leak
-                             // This also ensures loadZForm creates a new iframe next time
+                             // Remove iframe content on close
                              var iframeHolder = document.getElementById(iframeHolderId);
                              if (iframeHolder) {
                                  var iframe = iframeHolder.getElementsByTagName("iframe")[0];
                                  if (iframe) {
-                                     iframe.remove();
-                                     console.log("Zoho Popup: Iframe removed from popup.");
-                                 } else {
-                                      console.log("Zoho Popup: deleteZForm_19499: No iframe found to remove.");
+                                     iframe.remove(); // Removes the iframe element
                                  }
-                             } else {
-                                  console.error("Zoho Popup: deleteZForm_19499: Iframe holder div not found!");
                              }
-                              console.log("--- Zoho Popup: End deleteZForm_19499 ---");
                          }
                          console.log("Zoho Popup: Close button listener attached.");
                     } else {
                         console.error("Zoho Popup: Close button element not found after constructing!");
                     }
             }
-          
+
           // Function to hide the Zoho form popup
             function deleteZForm_19499() {
-                console.log("--- Zoho Popup: deleteZForm_19499 called ---"); // <-- Thêm log này
                 var divCont = document.getElementById(mainLightboxId);
                 if (divCont) {
                     divCont.style.display="none";
                     document.body.style.overflow = ""; // Restore scrolling
-                    console.log("Zoho Popup: Popup hidden, body scrolling restored."); // <-- Thêm log này
-                } else {
-                    console.error("Zoho Popup: deleteZForm_19499: Main lightbox div not found!"); // <-- Thêm log này
                 }
 
-                // Optional: Remove iframe content on close to prevent background activity/memory leak
+                // Remove iframe content on close to prevent background activity/memory leak
                 var iframeHolder = document.getElementById(iframeHolderId); // Use the variable
                  if (iframeHolder) { // Check if holder exists
                     var iframe = iframeHolder.getElementsByTagName("iframe")[0];
                     if (iframe) {
                         iframe.remove();
-                        console.log("Zoho Popup: Iframe removed from popup."); // <-- Thêm log này
-                    } else {
-                         console.log("Zoho Popup: deleteZForm_19499: No iframe found to remove."); // <-- Thêm log này
                     }
-                 } else {
-                      console.error("Zoho Popup: deleteZForm_19499: Iframe holder div not found!"); // <-- Thêm log này
                  }
-                console.log("--- Zoho Popup: End deleteZForm_19499 ---"); // <-- Thêm log này
             }
 
-          
+
           // Function to show the Zoho form popup
           function showZForm_19499() {
-            console.log("showZForm_19499 called.");
             // Ensure the main popup div structure exists
             var mainDiv = document.getElementById(mainLightboxId);
             if (!mainDiv) {
-              console.log("Main lightbox div not found, constructing...");
+              // console.log("Main lightbox div not found, constructing...");
               constructDiv_19499();
               mainDiv = document.getElementById(mainLightboxId); // Get it after constructing
             }
             if (mainDiv) {
               // Load or reload the iframe content if it's not present
               loadZForm_19499();
-              console.log("loadZForm_19499 called.");
               // Display the main lightbox div (makes dimmer and container visible)
               mainDiv.style.display = "block";
               document.body.style.overflow = "hidden"; // Prevent scrolling background
-              console.log("Popup main div set to display: block.");
             } else {
               console.error("Failed to show popup: Main lightbox div not found after construction attempt.");
             }
           }
           // Function to load the iframe content inside the popup
           function loadZForm_19499() {
-            console.log("loadZForm_19499 called.");
+            // console.log("loadZForm_19499 called.");
             // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
             var iframeHolder = document.getElementById(iframeHolderId);
             if (!iframeHolder) {
@@ -505,9 +818,9 @@
               return; // Cannot load iframe if holder is missing
             }
             var iframe = iframeHolder.getElementsByTagName("iframe")[0];
-            console.log("Checking for existing iframe:", iframe);
+            // console.log("Checking for existing iframe:", iframe);
             if (iframe == undefined) { // Check if iframe element exists
-              console.log("Iframe not found, creating new iframe.");
+              // console.log("Iframe not found, creating new iframe.");
               var f = document.createElement("iframe");
               // !!! Cập nhật SRC này bằng URL form POPUP của bạn từ Zoho !!!
               f.src = getsrcurlZForm_19499('https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1');
@@ -515,17 +828,17 @@
               f.style.minWidth = "100%";
               f.style.overflow = "auto";
               // f.style.height = "auto"; // Let message listener handle height
+               f.style.width = "100%"; // Explicitly set width
+               f.style.height = "100%"; // Set initial height, will be adjusted by message listener
               f.setAttribute("aria-label", 'Đăng Ký Tham Gia Workshop Ngay'); // Add ARIA label
               iframeHolder.appendChild(f);
-              console.log("New iframe created and appended to holder.");
+              // console.log("New iframe created and appended to holder.");
+
               // Message listener from iframe (for height adjustments, etc.) - Attach only once per iframe creation
               window.addEventListener('message', function(event) {
-                // console.log("Message received from iframe", event.data); // Optional: log all messages
                 var evntData = event.data;
                 if (evntData && evntData.constructor == String) {
                   var zf_ifrm_data = evntData.split("|");
-                  // Ensure message is the correct format and from the expected form
-                  // Check zf_perma and iframe src if you have multiple Zoho forms
                   if (zf_ifrm_data.length >= 2) { // zf_ifrm_data.length == 2 or 3
                     var zf_perma = zf_ifrm_data[0];
                     var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
@@ -533,62 +846,48 @@
                       var zf_ifrm_ht_nw = (zf_ifrm_ht_px + 15) + "px"; // Add margin/padding as Zoho does
                       // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
                       var currentIframe = document.getElementById(iframeHolderId).getElementsByTagName("iframe")[0];
-                      // You might want to check the iframe's src to ensure it matches the expected form
-                      // if (currentIframe && currentIframe.src.includes(zf_perma)) { // Check perma ID
                       if (currentIframe) { // Simpler check
                         var prevIframeHeight = currentIframe.style.height;
-                        // console.log("Received height:", zf_ifrm_ht_nw, "Current height:", prevIframeHeight); // Log height updates
-                        // This part seems to handle scrolling and timed height update
                         var zf_tout = false;
                         if (zf_ifrm_data.length == 3) { // This might indicate a need to scroll parent
-                          // currentIframe.scrollIntoView(); // May not want to scroll when in popup
-                          zf_tout = true;
+                           zf_tout = true;
                         }
                         if (prevIframeHeight != zf_ifrm_ht_nw) {
                           if (zf_tout) {
                             setTimeout(function() {
-                              currentIframe.style.minHeight = zf_ifrm_ht_nw; // Use minHeight or height? Zoho uses minHeight sometimes
-                              currentIframe.style.height = zf_ifrm_ht_nw; // Also set height for consistency
-                              // Adjust container height if needed - the original Zoho CSS does this
-                              var containerDiv = document.getElementById(containerDivId);
-                              if (containerDiv) {
-                                containerDiv.style.height = zf_ifrm_ht_nw;
-                              } // Keep container height in sync
-                              console.log("Iframe/Container height updated (timed):", zf_ifrm_ht_nw);
+                              currentIframe.style.minHeight = zf_ifrm_ht_nw;
+                              currentIframe.style.height = zf_ifrm_ht_nw;
+                               var containerDiv = document.getElementById(containerDivId);
+                               if (containerDiv) {
+                                 containerDiv.style.height = zf_ifrm_ht_nw;
+                               }
                             }, 500); // Delay the height update
                           } else {
                             currentIframe.style.minHeight = zf_ifrm_ht_nw;
                             currentIframe.style.height = zf_ifrm_ht_nw;
-                            var containerDiv = document.getElementById(containerDivId);
-                            if (containerDiv) {
-                              containerDiv.style.height = zf_ifrm_ht_nw;
-                            } // Keep container height in sync
-                            console.log("Iframe/Container height updated:", zf_ifrm_ht_nw);
+                             var containerDiv = document.getElementById(containerDivId);
+                               if (containerDiv) {
+                                 containerDiv.style.height = zf_ifrm_ht_nw;
+                               }
                           }
                         }
                       }
-                    } else {
-                      console.warn("Received non-numeric height from iframe:", zf_ifrm_data[1]);
                     }
                   }
                 }
               }, false);
-              console.log("Message listener attached to window.");
+              // console.log("Message listener attached to window.");
             } else {
-              console.log("Iframe already exists, no need to create.");
-              // If iframe exists but the source was potentially removed on close, reload it?
-              // Or ensure the remove() function in close listener removes the iframe element itself.
-              // The provided deleteZForm_19499 function *does* remove the element.
-              // So this 'else' block might not be strictly necessary if remove() works correctly.
-              // But if the iframe exists but is blank, you might need to set its src again here.
-              // iframe.src = getsrcurlZForm_19499('https://forms.zohopublic.com/...'); // Uncomment if needed
+              // console.log("Iframe already exists, no need to create.");
+               // If iframe exists but its src might be gone (e.g., after manual close), reload it.
+               // This relies on deleteZForm_19499 removing the *element*, not just hiding.
+               // If you want to *always* reload on show, uncomment this:
+               // iframe.src = getsrcurlZForm_19499('https://forms.zohopublic.com/...');
             }
           }
           // Function to get Zoho source URL (often includes UTM tracking)
           function getsrcurlZForm_19499(zf_src) {
-            // console.log("getsrcurlZForm_19499 called with:", zf_src);
             try {
-              // Zoho's built-in tracking logic - Keep this as is
               if (typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined") {
                 for (var prmIdx = 0; prmIdx < ZFAdvLead.utmPNameArr.length; prmIdx++) {
                   var utmPm = ZFAdvLead.utmPNameArr[prmIdx];
@@ -622,12 +921,14 @@
             } catch (e) {
               console.error("Error in getsrcurlZForm_19499:", e);
             }
-            // console.log("Returning src:", zf_src);
             return zf_src;
           }
-          			setTimeout(function (){
-          		  		showZForm_19499();
-          			}, 60*1000);
+
+          // Optional: Add a timed popup trigger after some seconds/minutes
+          // setTimeout(function (){
+          // showZForm_19499();
+          // }, 60*1000); // Example: show popup after 60 seconds
+
           // Add listener to the hidden Zoho button. This is what our CTAs will trigger.
           // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
           var buttonElem = document.getElementById("zf_button_19499");
@@ -645,7 +946,7 @@
     </script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        console.log("Custom JS: DOMContentLoaded.");
+        // console.log("Custom JS: DOMContentLoaded.");
         const openPopupButtons = document.querySelectorAll('.open-zoho-popup');
         // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
         const zohoTriggerButton = document.getElementById('zf_button_19499');
@@ -653,18 +954,18 @@
           console.error("Custom JS: Zoho trigger button #zf_button_19499 not found! Cannot attach listeners.");
           return; // Stop if the required Zoho button is missing
         }
-        console.log("Custom JS: Zoho trigger button found.");
+        // console.log("Custom JS: Zoho trigger button found.");
         openPopupButtons.forEach(button => {
           button.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
-            console.log("Custom JS: Button .open-zoho-popup clicked.");
+            // console.log("Custom JS: Button .open-zoho-popup clicked.");
             // Programmatically click the hidden Zoho button
             zohoTriggerButton.click();
-            console.log("Custom JS: Trigger button clicked programmatically.");
+            // console.log("Custom JS: Trigger button clicked programmatically.");
           });
-          console.log("Custom JS: Listener attached to button", button);
+          // console.log("Custom JS: Listener attached to button", button);
         });
-        console.log("Custom JS for triggering Zoho popup initialized.");
+        // console.log("Custom JS for triggering Zoho popup initialized.");
       });
       // Optional: Re-initialize AOS or other scripts if needed after DOMContentLoaded
     </script>
@@ -722,6 +1023,8 @@
             console.log("Zoho Embed Script initialized.");
           } else if (!targetDiv) {
             console.error("Zoho embed target div #" + targetDivId + " not found!");
+          } else {
+              console.log("Zoho embed target div already contains an iframe. Skipping embed script execution.");
           }
         } catch (e) {
           console.error("Error in Zoho Embed Script:", e);
