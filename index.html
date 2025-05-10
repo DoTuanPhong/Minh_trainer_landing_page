@@ -1,1035 +1,1419 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Kỹ Năng Nói Tự Tin và Thuyết Phục như TED Talks</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-      /* Custom styles for this page - Can be moved to style.css */
-      body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          line-height: 1.6;
-          color: #333;
-      }
-      .hero-section {
-          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') no-repeat center center; /* Replace with your background image */
-          background-size: cover;
-          min-height: 70vh;
-          padding: 100px 0;
-          position: relative;
-      }
-       .hero-section h1 {
-          color: #fff;
-          font-size: 2.8em;
-          margin-bottom: 20px;
-          text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-      }
-      .hero-section .lead {
-           color: #eee;
-           font-size: 1.25em;
-           margin-bottom: 30px;
-      }
-      .section-padding {
-          padding: 60px 0;
-      }
-      .problem-list li,
-      .benefit-list li,
-      .gift-list li,
-      .faq-list li {
-          margin-bottom: 15px;
-          font-size: 1.1em;
-      }
-      .problem-list i {
-          color: #dc3545; /* Bootstrap danger color */
-      }
-      .benefit-list i,
-      .gift-list i,
-      .faq-list i {
-          color: #28a745; /* Bootstrap success color */
-      }
-      .trainer-img {
-          width: 200px;
-          height: 200px;
-          object-fit: cover;
-          border: 5px solid #fff;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      }
-      .testimonial-box {
-          background: #fff;
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-          height: 100%; /* Make boxes equal height */
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-      }
-      .testimonial-box p {
-          flex-grow: 1; /* Allow text to take up space */
-          margin-bottom: 15px;
-      }
-      .testimonial-box .feedback-img {
-           width: 80px;
-           height: 80px;
-           object-fit: cover;
-      }
-      .gallery img {
-          transition: transform 0.3s ease;
-      }
-      .gallery img:hover {
-          transform: scale(1.05);
-      }
-      .pricing-card {
-           border: 1px solid #ddd;
-           border-radius: 8px;
-           padding: 20px;
-           margin-bottom: 20px;
-           background-color: #fff;
-           box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-           height: 100%; /* Equal height cards */
-           display: flex;
-           flex-direction: column;
-      }
-      .pricing-card h3 {
-          color: #007bff;
-          margin-bottom: 15px;
-          text-align: center;
-      }
-       .pricing-card .price {
-          font-size: 2em;
-          font-weight: bold;
-          color: #28a745;
-          text-align: center;
-          margin-bottom: 20px;
-      }
-       .pricing-card .price small {
-           font-size: 0.6em;
-           font-weight: normal;
-           color: #666;
-       }
-      .pricing-card ul {
-          list-style: none;
-          padding: 0;
-          margin-bottom: 20px;
-          flex-grow: 1; /* Allow list to take up space */
-      }
-      .pricing-card ul li {
-          margin-bottom: 10px;
-           font-size: 1em;
-          line-height: 1.4;
-      }
-      .pricing-card ul li i {
-          color: #28a745;
-          margin-right: 5px;
-      }
-       .pricing-card .btn {
-           margin-top: auto; /* Push button to the bottom */
-       }
-       .faq-item {
-           margin-bottom: 25px;
-           padding-bottom: 15px;
-           border-bottom: 1px dashed #eee;
-       }
-       .faq-item h4 {
-           color: #007bff;
-           margin-bottom: 10px;
-       }
-        .faq-item p {
-            margin-left: 20px; /* Indent answer */
-        }
-       .logo {
-           max-height: 50px; /* Adjust logo size */
-           display: block;
-           margin: 0 auto;
-       }
-    </style>
-    </head>
-  <body>
-    <header class="py-3 bg-light">
-      <div class="container">
-        <img src="images/logo.jpg" alt="Logo Trainer/Tổ chức" class="logo">
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Xây Dựng Lập Luận Thuyết Phục</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --dark-blue: #04153D;
+      --title-blue: #1D3C82;
+      --button-red: #DA0529;
+      --light-bg: #fbfbfb;
+      --light-bg-alt: #f0f2f5;
+      --text-light: #ffffff;
+      --text-dark: #343a40;
+      --primary-gold: #DDB04D; 
+      --border-radius: 0.5rem;
+      --green-check: #28a745; /* Bootstrap success green */
+    }
 
-    <section id="hero" class="hero-section text-white text-center d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto" data-aos="fade-up">
-            <!-- Phần 1: Tên Workshop -->
-            <h1 class="display-4 mb-3">Workshop "Gỡ bỏ rào cản tâm lý. Tự tin chia sẻ và Lập luận thuyết phục.”</h1>
-            <!-- Phần 2: Vấn đề - Đoạn mở đầu -->
-            <p class="lead mb-4">
-              Bạn muốn nói tự tin, rành mạch, và thuyết phục? Tham gia Workshop chuyên sâu cùng Trainer Đặng Văn Minh để biến ý tưởng thành lời nói 'sắc' và 'cháy lòng' người nghe!
-              <br>
-              Nếu bạn cũng có cảm giác dưới đây như nhiều người ngoài kia thì Workshop này dành cho bạn.
-            </p>
-            <a href="#" class="btn btn-primary btn-lg mb-3 open-zoho-popup" data-aos="zoom-in" data-aos-delay="300">Đăng ký Tham gia Workshop Ngay!</a>
-            <p class="workshop-info-summary" data-aos="fade-up" data-aos-delay="400">
-               <!-- Thông tin thời gian từ Phần 1 -->
-               Thời gian: <strong>20h - 22h15, thứ 7 & CN (21-22/06/2025)</strong> | Địa điểm: <strong>Online qua Zoom</strong> | Chi phí: <strong>Xem chi tiết bên dưới</strong>
-               <br>
-               <small>Số lượng chỗ có hạn! Đăng ký ngay để nhận ưu đãi!</small>
-            </p>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--title-blue);
+      font-weight: 700;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: 900;
+      color: var(--title-blue);
+    }
+    .section-title.red-title {
+        color: var(--button-red);
+    }
+
+
+    .btn-brand {
+      background-color: var(--button-red);
+      color: var(--text-light);
+      padding: 12px 30px;
+      border-radius: var(--border-radius);
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: none; /* Ensure button style consistency */
+    }
+    .btn-brand:hover {
+      background-color: #b00420;
+      color: var(--text-light);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: var(--dark-blue); /* Fallback color */
+      background-image: linear-gradient(rgba(4, 21, 61, 0.65), rgba(4, 21, 61, 0.65)), url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAESAAAACBnVFJDAAAESAAAACBiVFJDAAAESAAAACBjaGFkAAAEVAAAACRjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAESAAAACBnVFJDAAAESAAAACBiVFJDAAAESAAAACBjaGFkAAAEVAAAACRjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAESAAAACBnVFJDAAAESAAAACBiVFJDAAAESAAAACBjaGFkAAAEVAAAACRjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAESAAAACBnVFJDAAAESAAAACBiVFJDAAAESAAAACBjaGFkAAAEVAAAACQAAAAAABgAAAAB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8AAEQgCwAUAAwEiAAIRAQMRAf/EAB0AAAEFAQEBAQAAAAAAAAAAAAABAgMEBQYHCAj/xABSEAABAwMBAwYJCQQGCgEGBwEBAAIDBBEFEiExBkFRBxMiYXGBkRShsdEHFSMzQlJUcpLBJDVicqKy0uEXJTRDY4OjwvAmNERUZHSUo9Pi8v/EABsBAQEBAQEBAQEAAAAAAAAAAAABAgMEBQYH/8QAPBEBAAIBAgMCCQsDBQEAAAAAAAECEQMSITFBUQQFYXGRExQiMoGhsdFCUnKS4fAVI8HxCDNiojQlQ1P/2gAMAwEAAhEDEQA/AP0BERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/AP/APEQFADs='); /* Hero section background image */
+      background-size: cover;
+      background-position: center;
+      color: var(--text-light);
+      padding: 100px 0 60px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-section .pill-title {
+      display: inline-block;
+      border: 2px solid var(--primary-gold);
+      color: var(--primary-gold);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 1.1rem; /* Increased size slightly */
+      font-weight: 700;
+      margin-bottom: 25px; /* Increased margin */
+      background-color: rgba(255,255,255,0.1);
+      text-transform: uppercase; /* Added for pill title */
+      font-family: 'Montserrat', sans-serif; /* Ensured Montserrat */
+    }
+.hero-section .main-slogan {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 0.05rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+}
+    .workshop-details-hero {
+        margin-top: 30px;
+    }
+    .workshop-details-hero .detail-item {
+        display: flex;
+        align-items: flex-start; 
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    .workshop-details-hero .detail-item i {
+        color: var(--primary-gold);
+        font-size: 1.5rem;
+        margin-right: 15px;
+        width: 30px;
+        text-align: center;
+        flex-shrink: 0; 
+        margin-top: 3px; 
+    }
+    .hero-trainer-info {
+      text-align: center;
+    }
+    .hero-trainer-info img {
+      max-width: 250px;
+      border-radius: 50%;
+      border: 5px solid var(--primary-gold);
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(221, 176, 77, 0.5);
+    }
+    .hero-trainer-name-plate {
+      background-color: var(--primary-gold);
+      color: var(--dark-blue);
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: var(--border-radius);
+      clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+    }
+    .hero-trainer-name-plate h3 {
+      margin-bottom: 0;
+      font-size: 1.5rem;
+      color: var(--dark-blue);
+    }
+    .hero-trainer-titles p {
+      margin-bottom: 5px;
+      font-size: 1rem;
+      color: var(--text-light);
+      opacity: 0.9;
+    }
+
+    /* Problem Section */
+    .problem-section .speech-bubble {
+      background-color: var(--title-blue);
+      color: var(--text-light);
+      padding: 20px 30px;
+      border-radius: var(--border-radius);
+      position: relative;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .problem-section .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50px;
+      border-width: 15px 15px 0;
+      border-style: solid;
+      border-color: var(--title-blue) transparent;
+    }
+    .problem-list li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    .problem-list li i {
+      color: var(--button-red);
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    .highlight-text {
+      font-weight: 700;
+      color: var(--title-blue);
+      background-color: #ffe066;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    
+    /* General List Styling */
+    .styled-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    .styled-list li {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        padding-left: 35px;
+        position: relative;
+    }
+    .styled-list li::before {
+        content: "\f058"; 
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: var(--green-check); 
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 1.3rem;
+    }
+
+    /* Gifts Section */
+    .gift-card {
+      background-color: var(--text-light);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gift-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+    .gift-card .gift-icon {
+      font-size: 3.5rem;
+      color: var(--button-red);
+      margin-bottom: 20px;
+    }
+    .gift-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--title-blue);
+    }
+    .gift-card .vip-tag {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: var(--primary-gold);
+      display: block;
+      margin-top: 5px;
+    }
+
+    /* Trainer Section (Phần 6) */
+    .trainer-section-content img {
+      max-width: 250px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .trainer-section-content ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .trainer-section-content ul li {
+        padding-left: 25px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+     .trainer-section-content ul li::before {
+        content: "\f005"; 
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: var(--primary-gold);
+        position: absolute;
+        left: 0;
+        top: 5px;
+     }
+
+    /* Testimonials */
+    .testimonial-card {
+      background-color: var(--text-light);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .testimonial-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid var(--primary-gold);
+    }
+    .testimonial-card .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    .testimonial-card .testimonial-author {
+      font-weight: 700;
+      color: var(--title-blue);
+    }
+
+    /* Pricing Section - Integrating provided styles */
+    .pricing-section { background-color: var(--light-bg-alt); }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1200px; 
+      margin: 0 auto; 
+    }
+    .ticket-card {
+      background: var(--text-light);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .ticket-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .ticket-header {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .ticket-header h3 {
+      margin: 0 0 8px;
+      font-size: 1.4rem; 
+      color: var(--title-blue);
+    }
+    .ticket-header .requirements {
+      font-size: 0.9rem; 
+      color: #777;
+      margin-bottom: 10px;
+    }
+    .ticket-header .price {
+      font-size: 2rem; 
+      font-weight: bold;
+      color: var(--button-red);
+    }
+    .accordion { flex-grow: 1; }
+    .accordion-item { border-top: 1px solid #eee; }
+    .accordion-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .accordion-toggle:hover { background: #f9f9f9; }
+    .accordion-toggle .gift-label {
+      font-weight: bold;
+      color: var(--title-blue); 
+      display: flex;
+      align-items: center;
+    }
+    .accordion-toggle .gift-label i { margin-right: 8px; }
+    .arrow-btn {
+      background-color: white;
+      border: 1px solid var(--button-red);
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .arrow-btn i { color: var(--button-red); transition: transform 0.3s; }
+    .accordion-toggle.active .arrow-btn i { transform: rotate(180deg); }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 20px;
+    }
+    .accordion-content ul {
+      list-style: none;
+      padding: 15px 0;
+      margin: 0;
+    }
+    .accordion-content ul li {
+      padding: 8px 0; 
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.95rem; 
+    }
+    .accordion-content ul li:last-child { border-bottom: none; }
+    .check-icon { color: var(--green-check); margin-right: 5px; } 
+    .ticket-footer {
+      padding: 20px; 
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+    .ticket-footer button {
+      background: var(--button-red);
+      color: #fff;
+      border: none;
+      border-radius: var(--border-radius); 
+      padding: 10px 25px;
+      cursor: pointer;
+      font-size: 1rem; 
+      font-weight: 700;
+      text-transform: uppercase;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .ticket-footer button:hover {
+      background: #b00420; 
+      transform: translateY(-2px);
+    }
+
+    /* Gallery Section */
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* FAQ Section */
+    .faq-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .faq-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .faq-item h4 {
+        font-size: 1.25rem;
+        color: var(--title-blue);
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .faq-item h4 .faq-icon {
+        transition: transform 0.3s ease;
+    }
+    .faq-item .faq-answer {
+        padding-left: 20px;
+        font-size: 1rem;
+        line-height: 1.7;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+     .faq-item.active .faq-answer {
+        max-height: 500px; 
+        padding-top: 10px;
+     }
+    .faq-item.active h4 .faq-icon {
+        transform: rotate(180deg);
+    }
+    .faq-highlight-final {
+        font-weight: bold;
+        color: var(--text-light); 
+        background-color: var(--button-red); 
+        padding: 10px 15px;
+        border-radius: var(--border-radius);
+        display: inline-block; 
+        margin-top: 20px;
+    }
+    
+    /* Form Section */
+    .form-section {
+        background-color: var(--title-blue);
+        color: var(--text-light);
+    }
+    .form-section .section-title, .form-section p {
+        color: var(--text-light);
+    }
+    #zoho-form-embed-container iframe {
+        border-radius: var(--border-radius);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+
+    /* Contact Section */
+    .contact-section {
+      background-color: var(--dark-blue);
+      color: var(--text-light);
+    }
+    .contact-section .section-title, .contact-section p, .contact-section .contact-item .fas {
+      color: var(--text-light);
+    }
+    .contact-section .contact-item {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+
+    }
+    .contact-section .contact-item i.fa-envelope { 
+      color: var(--primary-gold);
+      margin-right: 10px;
+    }
+    .contact-social-icons {
+        margin-bottom: 20px;
+    }
+    .social-icon-link {
+        display: inline-block;
+        margin: 0 15px;
+    }
+    .social-icon-large {
+        font-size: 3rem; 
+        color: var(--primary-gold);
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .social-icon-large:hover {
+        color: var(--text-light);
+        transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #020e27; 
+      color: rgba(255,255,255,0.7);
+      padding: 30px 0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--text-light);
+    }
+
+    /* Zoho Popup Styles */
+    .zf_lB_Dimmer_918683{ 
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: rgb(0, 0, 0);
+        opacity: 0.8;
+        z-index: 10000000;
+    }
+    .zf_lB_Container_918683{
+        position: fixed;
+        background-color: white;
+        margin: 0;
+        margin-right: 0px;
+        padding: 0;
+        /* height: 1533px; /* Will be adjusted by Zoho script */
+        width:  70%;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        max-height: calc(100% - 60px);
+        z-index: 10000001; /* Ensure container is on top of dimmer via wrapper */
+        transition: height 0.5s ease;
+        overflow-y: auto; 
+        display: flex; /* To make iframe fill height */
+        flex-direction: column; /* To make iframe fill height */
+
+    }
+    .zf_lB_Wrapper_918683{ 
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000001;
+    }
+    .zf_main_id_918683{ 
+        height: 100%; 
+        width: 100%;
+        display: flex; 
+    }
+    .zf_main_id_918683 iframe {
+        width: 100% !important; 
+        height: 100% !important; 
+        border: none;
+    }
+    .zf_lb_closeform_918683 {
+        position: absolute;
+        right: -20px;
+        background: #2f2e2e;
+        padding: 0;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        top: -15px;
+        cursor: pointer;
+        border: 2px solid #d9d9d9;
+        z-index: 10000002; /* Above container */
+    }
+    .zf_lb_closeform_918683:before, .zf_lb_closeform_918683:after {
+        position: absolute;
+        left: 15px; 
+        content: ' ';
+        height: 19px;
+        width: 2px;
+        top: 7px;
+        background-color: #f7f7f7;
+    }
+    .zf_lb_closeform_918683:before { transform: rotate(45deg); }
+    .zf_lb_closeform_918683:after { transform: rotate(-45deg); } 
+    .fadeIn {
+        -webkit-animation-name: fadeIn; animation-name: fadeIn;
+        -webkit-animation-duration: 1s; animation-duration: 1s;
+        -webkit-animation-fill-mode: both; animation-fill-mode: both;
+        /* display: block !important; /* Managed by JS */
+    }
+
+/* CSS để căn chỉnh khối bao bọc các mục liên hệ và căn giữa nó */
+.contact-items-grid-container {
+  max-width: 500px; /* Đặt chiều rộng tối đa cho khối */
+  margin: auto; /* Căn giữa khối trong container */
+  /* text-align: left; */ /* Không cần thiết ở đây vì đã dùng Grid */
+}
+
+/* Áp dụng Grid cho các thẻ <a> bên trong contact-item */
+.contact-item a {
+  display: grid; /* Chuyển <a> thành Grid container */
+  grid-template-columns: auto 1fr; /* Tạo 2 cột: icon (auto width) và text (fill remaining space) */
+  gap: 10px; /* Khoảng cách giữa icon và text */
+  align-items: center; /* Căn icon và text theo chiều dọc ở giữa */
+
+  text-decoration: none; /* Loại bỏ gạch chân */
+  color: inherit; /* Kế thừa màu chữ từ phần tử cha (<p>) */
+  /* Các thuộc tính khác cho link khi hover nếu muốn */
+}
+
+/* Đảm bảo icon nằm gọn trong cột 1 của Grid */
+.contact-item a svg,
+.contact-item a i {
+    /* Không cần vertical-align nữa vì đã dùng align-items: center trên grid container */
+    display: block; /* Đảm bảo icon là block element trong grid cell */
+    width: 24px; /* Thiết lập kích thước icon */
+    height: 24px; /* Thiết lập kích thước icon */
+}
+
+/* Đảm bảo văn bản nằm gọn trong cột 2 của Grid */
+.contact-item a span {
+    display: block; /* Đảm bảo span là block element trong grid cell */
+}
+
+/* Optional: Thêm hiệu ứng hover cho toàn bộ dòng */
+.contact-item a:hover {
+  opacity: 0.8; /* Ví dụ: Giảm độ mờ khi di chuột qua */
+  /* color: #0056b3; */ /* Ví dụ: Đổi màu chữ khi hover */
+}
+
+
+    @-webkit-keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
+    @keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} } 
+    @media screen and (min-device-width: 10px) and (max-device-width: 380px) { .zf_lB_Container_918683 { width: 90% !important; max-height: calc(100% - 20px); } .zf_lb_closeform_918683 { right: -10px; top: -10px;} }
+    @media screen and (min-device-width: 360px) and (max-device-width: 480px) { .zf_lB_Container_918683 { width: 90% !important; max-height: calc(100% - 20px); } .zf_lb_closeform_918683 { right: -10px; top: -10px;} }
+    @media screen and (min-device-width: 440px) and (max-device-width: 500px) { .zf_lB_Container_918683 { width: 85% !important; } }
+    @media only screen and (min-width:500px) and (max-width:600px)  { .zf_lB_Container_918683 { width: 80%; } }
+    @media only screen and (min-width:601px) and (max-width:700px)  { .zf_lB_Container_918683 { width: 75%; } }
+    @media only screen and (min-width:700px) and (max-width:800px)  { .zf_lB_Container_918683 { width: 70%; } }
+    @media screen and (min-device-width: 801px) and (max-device-width: 1268px) { .zf_lB_Container_918683 { width: 70% !important; } }
+
+
+    @media (max-width: 991.98px) {
+      .hero-section .main-slogan { font-size: 1.8rem; } 
+      .hero-trainer-info { margin-top: 40px; }
+      .section-title { font-size: 2rem; }
+    }
+    @media (max-width: 767.98px) {
+      .hero-section { padding: 60px 0 40px; text-align: center;}
+      .hero-section .text-content { margin-bottom: 40px; }
+      .workshop-details-hero .detail-item { justify-content: center; }
+      .problem-section .speech-bubble { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Phần 1: Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 text-content" data-aos="fade-right">
+          <p class="pill-title">WORKSHOP NÓI TRƯỚC CÔNG CHÚNG</p>
+          <h2 class="main-slogan">TỪ ẤP ÚNG ĐẾN TỰ TIN</h2>        
+          <h2 class="main-slogan">TỪ LỦNG CỦNG ĐẾN LẬP LUẬN THUYẾT PHỤC</h2>
+          
+          <div class="workshop-details-hero">
+            <div class="detail-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Thời gian:</strong> 20h - 22h15, thứ 7 và CN (21-22/06/2025)<br>(Chọn 1 trong 2 buổi để tham gia)</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-video"></i>
+              <span><strong>Địa điểm:</strong> Online qua Zoom</span>
+            </div>
+          </div>
+          <button class="btn btn-brand mt-4 trigger-zoho-popup">Đăng Ký Ngay</button>
+        </div>
+        <div class="col-lg-5 hero-trainer-info" data-aos="fade-left" data-aos-delay="200">
+          <img src="https://i.ibb.co/wz90fKj/trainer-minh-hero.png" alt="Trainer Đặng Văn Minh">
+          <div class="hero-trainer-name-plate">
+            <h3>Đặng Văn Minh</h3>
+          </div>
+          <div class="hero-trainer-titles mt-2">
+            <p>Nhà sáng lập FSO</p>
+            <p>Quán quân Tôi Lên Tiếng</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="problem" class="section-padding">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="text-center mb-4" data-aos="fade-down">Bạn có đang gặp phải những vấn đề này?</h2>
-            <ul class="list-unstyled problem-list">
-               <!-- Nội dung từ Phần 2: Vấn đề -->
-              <li data-aos="fade-up" data-aos-delay="100"> <i class="fas fa-times-circle me-2 text-danger"></i> Đứng trước thầy cô, sếp hay đồng nghiệp là run lắm. Chỉ sợ mọi người nhìn rồi phán xét, kiểu "nói gì chán ngắt vậy?"
-              </li>
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Ý tưởng thì có rồi nhưng mở miệng ra nói lại bị rối các ý, không sao rành mạch được.
-              </li>
-              <li data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Hay bị lủng củng khi trình bày, lập luận thiếu chặt chẽ. Hay bị chê là nói chung chung, lan man, thiếu trọng tâm.
-              </li>
-              <li data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Từng xem và lưu lại nhiều clip Tiktok nhưng vẫn mơ hồ. Biết thì biết nhưng áp dụng sao cho đúng thì chịu.
-              </li>
-              <li data-aos="fade-up" data-aos-delay="500">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Rất muốn truyền cảm hứng và làm cho khán giả "wow" nhưng vẫn chưa tìm ra cách làm hiệu quả.
-              </li>
-               <li data-aos="fade-up" data-aos-delay="600">
-                <i class="fas fa-times-circle me-2 text-danger"></i> Thấy người ta nói thì mê nhưng vẫn chưa hiểu được tinh thần và ý nghĩa thực sự của kỹ năng này...
-              </li>
-            </ul>
-             <!-- Đoạn kết từ Phần 2: Vấn đề -->
-            <p class="text-center lead mt-4" data-aos="fade-up" data-aos-delay="700">Nếu bạn cũng có cảm giác trên như nhiều người ngoài kia thì Workshop này dành cho bạn.</p>
-             </div>
+  <!-- Phần 2: Vấn đề -->
+  <section class="section-padding problem-section" style="background-color: var(--light-bg);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 text-center">
+          <div class="speech-bubble mx-auto" data-aos="zoom-in">Mình biết kỹ năng nói quan trọng lắm, nhưng...</div>
         </div>
       </div>
-    </section>
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8">
+          <ul class="list-unstyled problem-list">
+            <li data-aos="fade-up"><i class="fas fa-times-circle"></i>Đứng trước thầy cô, sếp hay đồng nghiệp là run lắm. Chỉ sợ mọi người nhìn rồi phán xét, kiểu "nói gì chán ngắt vậy?"</li>
+            <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-times-circle"></i>Ý tưởng thì có rồi nhưng mở miệng ra nói lại bị rối các ý, không sao rành mạch được</li>
+            <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-times-circle"></i>Hay bị lủng củng khi trình bày, lập luận thiếu chặt chẽ. Hay bị chê là nói chung chung, lan man, thiếu trọng tâm</li>
+            <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-times-circle"></i>Từng xem và lưu lại nhiều clip Tiktok nhưng vẫn mơ hồ. Biết thì biết nhưng áp dụng sao cho đúng thì chịu</li>
+            <li data-aos="fade-up" data-aos-delay="400"><i class="fas fa-times-circle"></i>Rất muốn truyền cảm hứng và làm cho khán giả "wow" nhưng vẫn chưa tìm ra cách làm hiệu quả</li>
+            <li data-aos="fade-up" data-aos-delay="500"><i class="fas fa-times-circle"></i>Thấy người ta nói thì mê nhưng vẫn chưa hiểu được tinh thần và ý nghĩa thực sự của kỹ năng này...</li>
+          </ul>
+          <p class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
+            <span class="highlight-text" style="font-family: 'Montserrat', sans-serif; font-weight: bold;">Nếu bạn cũng có cảm giác trên như nhiều người ngoài kia thì Workshop này dành cho bạn.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="overview" class="section-padding bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Thông Tin Chi Tiết Workshop</h2>
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-           <div class="col-lg-8">
-            <dl class="row info-list">
-              <!-- Thông tin từ Phần 1 -->
-              <dt class="col-sm-4">
-                <i class="fas fa-calendar-alt me-2"></i> Thời gian:
-              </dt>
-              <dd class="col-sm-8">20h - 22h15, thứ 7 và CN (21-22/06/2025)</dd>
-              <!-- Thông tin từ Phần 9 (FAQ) -->
-              <dt class="col-sm-4">
-                <i class="fas fa-map-marker-alt me-2"></i> Địa điểm:
-              </dt>
-              <dd class="col-sm-8">Online qua Zoom</dd>
-               <!-- Giá vé được đưa xuống phần riêng -->
-              <dt class="col-sm-4">
-                <i class="fas fa-dollar-sign me-2"></i> Chi phí tham dự:
-              </dt>
-              <dd class="col-sm-8">
-                <strong>Xem mục "Giá vé" chi tiết bên dưới</strong>
-              </dd>
-               <!-- Thông tin từ Phần 6 -->
-              <dt class="col-sm-4">
-                <i class="fas fa-user-tie me-2"></i> Trainer:
-              </dt>
-              <dd class="col-sm-8">Đặng Văn Minh</dd>
-            </dl>
+  <!-- Phần 3: TỚI WORKSHOP, LĨNH HỘI ĐƯỢC GÌ NHỈ? -->
+  <section class="section-padding" style="background-color: var(--light-bg-alt);">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-down">TỚI WORKSHOP, LĨNH HỘI ĐƯỢC GÌ NHỈ?</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <ul class="styled-list">
+            <li data-aos="fade-up">Xóa tan 3 MINDSET SAI LẦM khiến bạn mãi cứ ngại nói</li>
+            <li data-aos="fade-up" data-aos-delay="100">Hiểu đúng "BẢN CHẤT" của việc nói trước đám đông</li>
+            <li data-aos="fade-up" data-aos-delay="200">Hack công thức lập luận P.R.E.P cùng các biến thể</li>
+            <li data-aos="fade-up" data-aos-delay="300">Bắt bài ngay 3 LỖI NGỤY BIỆN "quen mặt" mà ai cũng từng dính</li>
+            <li data-aos="fade-up" data-aos-delay="400">Làm chủ công thức tạo ra thông điệp "cháy lòng" người nghe</li>
+            <li data-aos="fade-up" data-aos-delay="500">Bỏ túi checklist 10 cách rèn kỹ năng nói mà không cần sân khấu</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần 4: HỌC XONG, NHẬN LẠI ĐƯỢC GÌ NHỈ? -->
+  <section class="section-padding" style="background-color: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-down">HỌC XONG, NHẬN LẠI ĐƯỢC GÌ NHỈ?</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <ul class="styled-list">
+            <li data-aos="fade-up">Gỡ khỏi não mấy suy nghĩ kiểu: “Tôi nói dở lắm” - ai rồi cũng nói hay nếu biết cách</li>
+            <li data-aos="fade-up" data-aos-delay="50">"Nói đâu phải để flex" - Hiểu đúng về tinh thần thực sự của việc nói trước đám đông</li>
+            <li data-aos="fade-up" data-aos-delay="100">Bỏ túi công thức lập luận - nói logic, chặt chẽ nhưng đầy cảm hứng</li>
+            <li data-aos="fade-up" data-aos-delay="150">Né ngay 3 lỗi ngụy biện hay gặp - đỡ bị bắt bẻ, tăng sức thuyết phục</li>
+            <li data-aos="fade-up" data-aos-delay="200">Biết cách “bật” ra thông điệp đắt giá khiến người ta nhớ mãi</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <ul class="styled-list">
+            <li data-aos="fade-up" data-aos-delay="250">Có ngay 10 tuyệt chiêu luyện nói lên trình vèo vèo</li>
+            <li data-aos="fade-up" data-aos-delay="300">Học tới đâu thực hành liền tới đó - khỏi lo nghe xong rồi quên</li>
+            <li data-aos="fade-up" data-aos-delay="350">Hỏi đáp luôn 1-1 với diễn giả – hỏi gì cũng được, không sợ “quê”</li>
+            <li data-aos="fade-up" data-aos-delay="400">Học xong còn rinh ngay BỘ QUÀ TẶNG</li>
+            <li data-aos="fade-up" data-aos-delay="450">Gặp gỡ "đồng âm đồng vibe" - toàn người trẻ đam mê nói, siêu dễ thương</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-5" data-aos="zoom-in">
+        <button class="btn btn-brand trigger-zoho-popup">Tôi muốn nhận những điều này!</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần 5: QUÀ "XỊN" RINH VỀ SAU WORKSHOP -->
+  <section class="section-padding" style="background-color: var(--light-bg-alt);">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-down">QUÀ "XỊN" RINH VỀ SAU WORKSHOP</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="gift-card">
+            <i class="fas fa-certificate gift-icon"></i>
+            <h4>Giấy chứng nhận (bản mềm)</h4>
+            <p>Để “khoe nhẹ” trên CV</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="gift-card">
+            <i class="fas fa-book-open gift-icon"></i>
+            <h4>2 cuốn Ebooks Hùng biện</h4>
+            <p>Nói nhiều không bằng nói có chiều sâu</p>
+            <span class="vip-tag"></span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="gift-card">
+            <i class="fas fa-file-powerpoint gift-icon"></i>
+            <h4>Bộ template PowerPoint</h4>
+            <p>Khỏi mất thời gian nghĩ bố cục</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="gift-card">
+            <i class="fas fa-video gift-icon"></i>
+            <h4>Trọn bộ Slide + Video record</h4>
+            <p>Lỡ bận việc khác vẫn có cái ôn lại</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="gift-card">
+            <i class="fas fa-graduation-cap gift-icon"></i>
+            <h4>Tài liệu tự học IELTS</h4>
+            <p>Lên Band nhẹ nhàng</p>
+            <span class="vip-tag"></span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="gift-card">
+            <i class="fas fa-comments gift-icon"></i>
+            <h4>Hỏi riêng Diễn giả</h4>
+            <p>Về Hùng biện & Thần số học (kể cả sau WS)</p>
+            <span class="vip-tag"></span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="knowledge" class="section-padding">
-      <div class="container">
-         <!-- Tiêu đề từ Phần 4 -->
-        <h2 class="text-center mb-4" data-aos="fade-down">Tham gia Workshop, bạn sẽ nhận lại được gì?</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <ul class="list-unstyled benefit-list">
-               <!-- Nội dung từ Phần 4: Kết quả đạt được (5 mục đầu) -->
-              <li data-aos="fade-right" data-aos-delay="100"> <i class="fas fa-check-circle me-2 text-success"></i>
-                Gỡ khỏi não mấy suy nghĩ kiểu: “Tôi nói dở lắm” - ai rồi cũng nói hay nếu biết cách
-              </li>
-              <li data-aos="fade-right" data-aos-delay="200">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                "Nói đâu phải để flex" - Hiểu đúng về tinh thần thực sự của việc nói trước đám đông
-              </li>
-              <li data-aos="fade-right" data-aos-delay="300">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                Bỏ túi công thức lập luận - nói logic, chặt chẽ nhưng đầy cảm hứng
-              </li>
-               <li data-aos="fade-right" data-aos-delay="400">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                Né ngay 3 lỗi ngụy biện hay gặp - đỡ bị bắt bẻ, tăng sức thuyết phục
-              </li>
-               <li data-aos="fade-right" data-aos-delay="500">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                 Biết cách “bật” ra thông điệp đắt giá khiến người ta nhớ mãi
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <ul class="list-unstyled benefit-list">
-               <!-- Nội dung từ Phần 4: Kết quả đạt được (5 mục cuối) -->
-              <li data-aos="fade-left" data-aos-delay="100"> <i class="fas fa-check-circle me-2 text-success"></i>
-                Có ngay 10 tuyệt chiêu luyện nói lên trình vèo vèo
-              </li>
-              <li data-aos="fade-left" data-aos-delay="200">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                Học tới đâu thực hành liền tới đó - khỏi lo nghe xong rồi quên
-              </li>
-              <li data-aos="fade-left" data-aos-delay="300">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                Hỏi đáp luôn 1-1 với diễn giả – hỏi gì cũng được, không sợ “quê”
-              </li>
-               <li data-aos="fade-left" data-aos-delay="400">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                Học xong còn rinh ngay BỘ QUÀ TẶNG
-              </li>
-               <li data-aos="fade-left" data-aos-delay="500">
-                <i class="fas fa-check-circle me-2 text-success"></i>
-                Gặp gỡ "đồng âm đồng vibe" - toàn người trẻ đam mê nói, siêu dễ thương
-              </li>
-            </ul>
-          </div>
+  <!-- Phần 6: Trainer -->
+  <section class="section-padding trainer-section-content" style="background-color: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-down">Thành Tích Nổi Bật của Trainer Đặng Văn Minh</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center" data-aos="fade-right">
+          <img src="https://i.ibb.co/wz90fKj/trainer-minh-hero.png" alt="Trainer Đặng Văn Minh" class="img-fluid mb-3">
         </div>
-        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="600"> <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn nhận kết quả này! Đăng ký ngay!</a>
+        <div class="col-md-8" data-aos="fade-left">
+          <ul>
+            <li>Nhà sáng lập CLB Nhà Hùng biện Tương lai (FSO)</li>
+            <li>Thực hành và luận giải thần số học chuyên sâu</li>
+            <li>Nhà đào tạo nghệ thuật Hùng biện - Giao tiếp & Thấu hiểu bản thân</li>
+            <li>Diễn giả của hàng trăm Workshop về Hùng biện - Giao tiếp & Thần số học</li>
+            <li>Quán quân Tôi Lên Tiếng, Quý Quân cuộc thi "Thành phố an toàn cho em gái"</li>
+            <li>Giám khảo các cuộc thi "Tôi lên tiếng", "Tôi bản lĩnh", "The Speaker", "Beyond Your Limits"...</li>
+            <li>Cố vấn cho nhiều thí sinh giành giải cao tại các cuộc thi Hùng biện…</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-     <!-- Thêm phần Giá vé từ Phần 8 -->
-     <section id="pricing" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-down">Đầu tư cho kỹ năng - Nhận lại giá trị gấp bội</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-card">
-                        <h3>VÉ CẠ CỨNG</h3>
-                        <div class="price">50k <small>/ người</small></div>
-                        <ul>
-                            <li><i class="fas fa-check-circle me-2"></i> Đi từ 2 người trở lên là auto giảm liền tay</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Bộ template PowerPoint</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Voucher đặc biệt các khóa học của Trainer</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký ngay!</a>
-                    </div>
+  <!-- Phần 7: Cảm nhận -->
+  <section class="section-padding" style="background-color: var(--light-bg-alt);">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-down">Cảm Nhận Chân Thật Từ Học Viên</h2>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="testimonial-card text-center">
+            <img src="https://via.placeholder.com/100x100.png?text=User1" alt="Bùi Xuân Trường" class="mx-auto">
+            <p class="testimonial-text">"Em cảm thấy biết ơn vì đã học hỏi rất nhiều kiến thức mà trước đây chưa từng biết đến... sau 2 lần tham dự... em đã có nhiều sự thay đổi lớn. Em đã dần tự tin hơn... môn kỹ năng giao tiếp thuyết trình em đã được điểm tuyệt đối..."</p>
+            <p class="testimonial-author">Bạn Bùi Xuân Trường</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card text-center">
+            <img src="https://via.placeholder.com/100x100.png?text=User2" alt="Đỗ Thị Thùy Dương" class="mx-auto">
+            <p class="testimonial-text">"Khi được nghe anh Văn Minh chia sẻ... tâm trí em được mở rộng ra một vùng tri thức mới... em hiểu được rằng Hùng biện không chỉ vậy, mà Hùng biện còn là khả năng phản biện và tư duy sâu sắc... Muốn hùng biện hay, trước hết phải trang bị cho mình một tâm thức sâu sắc..."</p>
+            <p class="testimonial-author">Bạn Đỗ Thị Thùy Dương</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card text-center">
+            <img src="https://via.placeholder.com/100x100.png?text=User3" alt="Ngô Quang Việt" class="mx-auto">
+            <p class="testimonial-text">"Mình vốn là người hướng nội... những bài thuyết trình trên lớp là “cực hình”... sau một lần tình cờ tham gia hội thảo... suy nghĩ của mình đã thay đổi. Mình nhận ra hướng nội không đồng nghĩa với việc ăn nói kém... Từ đó mình đã cố gắng áp dụng dần những điều học được..."</p>
+            <p class="testimonial-author">Bạn Ngô Quang Việt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần 8: Giá vé -->
+  <section class="section-padding pricing-section">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-down">Giá Vé Ưu Đãi</h2>
+      <div class="grid-container">
+        <!-- VÉ CẠ CỨNG -->
+        <div class="ticket-card" data-aos="fade-up">
+          <div class="ticket-header">
+            <h3>VÉ CẠ CỨNG</h3>
+            <div class="requirements">Đi từ 2 người trở lên là auto giảm liền tay</div>
+            <div class="price">50k<small>/người</small></div>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-toggle">
+                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
+                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Voucher đặc biệt các khóa học của Trainer Đặng Văn Minh</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-footer">
+            <button class="trigger-zoho-popup">Đặt vé</button>
+          </div>
+        </div>
+        <!-- VÉ SĂN SỚM -->
+        <div class="ticket-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="ticket-header">
+            <h3>VÉ SĂN SỚM</h3>
+            <div class="requirements">Đặt sớm từ 22/02 - 12/03/2025</div>
+            <div class="price">55k<small>/người</small></div>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-toggle">
+                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
+                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-footer">
+             <button class="trigger-zoho-popup">Đặt vé</button>
+          </div>
+        </div>
+        <!-- VÉ TIÊU CHUẨN -->
+        <div class="ticket-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="ticket-header">
+            <h3>VÉ TIÊU CHUẨN</h3>
+            <div class="requirements">Đặt vé từ 13/03 - 19/03/2025</div>
+            <div class="price">60k<small>/người</small></div>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-toggle">
+                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
+                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-footer">
+            <button class="trigger-zoho-popup">Đặt vé</button>
+          </div>
+        </div>
+        <!-- VÉ NƯỚC ĐẾN CHÂN -->
+        <div class="ticket-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="ticket-header">
+            <h3>VÉ NƯỚC ĐẾN CHÂN</h3>
+            <div class="requirements">Đặt vé sát ngay từ 20/03 - 23/03/2025</div>
+            <div class="price">70k<small>/người</small></div>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-toggle">
+                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
+                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-footer">
+            <button class="trigger-zoho-popup">Đặt vé</button>
+          </div>
+        </div>
+        <!-- VÉ VIP PRO MAX -->
+        <div class="ticket-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="ticket-header">
+            <h3>VÉ VIP PRO MAX</h3>
+            <div class="requirements">Trải nghiệm trọn vẹn nhất!</div>
+            <div class="price">199k<small>/người</small></div>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-toggle">
+                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
+                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm)</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> 2 cuốn Ebooks Hùng biện</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Tài liệu tự học IELTS</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Voucher đặc biệt các khóa học</li>
+                  <li><i class="fa-solid fa-check check-icon"></i> Tặng thêm 1 buổi Group Coaching riêng</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-footer">
+            <button class="trigger-zoho-popup">Đặt vé VIP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Phần 9: Không khí workshop -->
+  <section class="section-padding" style="background-color: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-down">Không Khí Các Buổi Workshop Trước</h2>
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in"><img src="https://via.placeholder.com/400x300.png?text=Workshop+Ảnh+1" alt="Workshop 1" class="gallery-img"></div>
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100"><img src="https://via.placeholder.com/400x300.png?text=Workshop+Ảnh+2" alt="Workshop 2" class="gallery-img"></div>
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200"><img src="https://via.placeholder.com/400x300.png?text=Workshop+Ảnh+3" alt="Workshop 3" class="gallery-img"></div>
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300"><img src="https://via.placeholder.com/400x300.png?text=Workshop+Ảnh+4" alt="Workshop 4" class="gallery-img"></div>
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400"><img src="https://via.placeholder.com/400x300.png?text=Workshop+Ảnh+5" alt="Workshop 5" class="gallery-img"></div>
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500"><img src="https://via.placeholder.com/400x300.png?text=Workshop+Ảnh+6" alt="Workshop 6" class="gallery-img"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần 10: FAQ -->
+  <section class="section-padding" style="background-color: var(--light-bg-alt);">
+    <div class="container">
+      <h2 class="section-title red-title text-center" data-aos="fade-down">HỎI GÌ ĐÁP NẤY</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="faq-list-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <h4>1. Workshop này hợp với ai hả? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Dành cho bất kỳ ai muốn "level up" kỹ năng nói, gỡ sạch rào cản để tự tin bắn ý tưởng trước đám đông. Newbie hay Pro đều học được.</div>
                 </div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-card">
-                        <h3>VÉ SĂN SỚM</h3>
-                        <div class="price">55k <small>/ người</small></div>
-                         <p class="text-center"><small>(Đăng ký từ 22/02 - 12/03/2025)</small></p>
-                        <ul>
-                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Săn vé sớm!</a>
-                    </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <h4>2. Có được thực hành hay chỉ ngồi nghe lý thuyết thôi? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Thực hành xịn xò sau từng phần học luôn nhé. Feedback trực tiếp từ anh Trainer siêu có tâm.</div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing-card">
-                        <h3>VÉ TIÊU CHUẨN</h3>
-                        <div class="price">60k <small>/ người</small></div>
-                         <p class="text-center"><small>(Đăng ký từ 13/03 - 19/03/2025)</small></p>
-                        <ul>
-                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
-                             <li><i class="fas fa-check-circle me-2"></i> Bộ template PowerPoint</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký ngay!</a>
-                    </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <h4>3. Lỡ bận không tham gia được thì sao? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Không lo! Bạn sẽ nhận video record + slide đầy đủ để xem lại. Không bỏ lỡ gì hết.</div>
                 </div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="pricing-card">
-                        <h3>VÉ NƯỚC ĐẾN CHÂN</h3>
-                        <div class="price">70k <small>/ người</small></div>
-                         <p class="text-center"><small>(Đăng ký từ 20/03 - 23/03/2025)</small></p>
-                        <ul>
-                            <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký gấp!</a>
-                    </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <h4>4. Workshop kéo dài bao lâu? Học ở đâu nhỉ? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Chừng 2-2.5 tiếng siêu hào hứng, học online qua Zoom, chỉ cần ngồi nhà là chiến được.</div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="pricing-card">
-                        <h3>VÉ VIP PRO MAX</h3>
-                        <div class="price">199k <small>/ người</small></div>
-                         <p class="text-center"><small>(Ưu đãi tốt nhất)</small></p>
-                        <ul>
-                             <li><i class="fas fa-check-circle me-2"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                            <li><i class="fas fa-check-circle me-2"></i> <strong>2 cuốn Ebooks Hùng biện</strong></li>
-                            <li><i class="fas fa-check-circle me-2"></i> Bộ template PowerPoint</li>
-                            <li><i class="fas fa-check-circle me-2"></i> Trọn bộ Slide + Video record buổi học</li>
-                            <li><i class="fas fa-check-circle me-2"></i> <strong>Tài liệu tự học IELTS lên Band nhẹ nhàng</strong></li>
-                             <li><i class="fas fa-check-circle me-2"></i> Voucher đặc biệt các khóa học của Trainer</li>
-                            <li><i class="fas fa-check-circle me-2"></i> <strong>Tặng 1 buổi Group Coaching riêng với Trainer</strong></li>
-                             <li><i class="fas fa-check-circle me-2"></i> <strong>Được hỏi riêng Trainer về Hùng biện & Thần số học kể cả sau Workshop</strong></li>
-                        </ul>
-                        <a href="#" class="btn btn-warning btn-lg open-zoho-popup">Nâng cấp VIP ngay!</a>
-                    </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <h4>5. Giá vé bao nhiêu, có deal hời nào không? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Siêu hời nè. Chỉ 50k/1 người nếu rủ hội bạn đăng ký cùng. Còn VÉ SUPER VIP và mấy hạng vé khác để bạn thoải mái chọn. Chi tiết xem mục "Giá vé" bên trên nhé!</div>
+                </div>
+                 <div class="faq-item" data-aos="fade-up">
+                    <h4>6. Mình chưa biết gì về hùng biện, học nổi không? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Dễ luôn. Bài giảng siêu dễ nhớ, đầy hình ảnh và công thức được đơn giản hóa, cả newbie lẫn "cứng" đều bắt sóng được.</div>
+                </div>
+                 <div class="faq-item" data-aos="fade-up">
+                    <h4>7. Workshop này khác gì mấy nguồn trên mạng? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Khác một trời một vực. Học tư duy gốc rễ, đi vào bản chất nhất. Được thực hành tại chỗ, nhận bí kíp thực chiến từ Trainer Đặng Văn Minh, cộng thêm những câu chuyện thực tế đầy cảm hứng hùng biện từ anh ấy.</div>
+                </div>
+                 <div class="faq-item" data-aos="fade-up">
+                    <h4>8. Rủ cả nhóm đi để nhận vé ưu đãi nhóm thì đăng ký kiểu gì? <i class="fas fa-chevron-down faq-icon"></i></h4>
+                    <div class="faq-answer">Bạn cứ điền Form, ghi Họ tên + SĐT của bạn và hội bạn vào phần "ghi chú", xong là nhà FSO chủ động liên hệ. Quá đơn giản.</div>
                 </div>
             </div>
-            <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="600">
-                 <p class="lead">Chọn gói phù hợp và bấm Đăng ký để nhận ưu đãi sớm!</p>
-                 <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Tôi đã chọn vé, đăng ký ngay!</a>
-            </div>
-        </div>
-     </section>
-
-
-    <section id="gifts" class="section-padding">
-      <div class="container">
-         <!-- Tiêu đề từ Phần 5 -->
-        <h2 class="text-center mb-4" data-aos="fade-down">Đăng Ký Hôm Nay, Rinh Ngay Quà Xịn Về!</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <ul class="list-unstyled gift-list row">
-               <!-- Nội dung từ Phần 5: Quà tặng -->
-              <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="100"> <i class="fas fa-gift me-2 text-warning"></i>
-                Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV
-              </li>
-              <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-gift me-2 text-warning"></i>
-                2 cuốn Ebooks Hùng biện - nói nhiều không bằng nói có chiều sâu (Hạng vé VIP)
-              </li>
-              <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-gift me-2 text-warning"></i>
-                Bộ template PowerPoint - khỏi mất thời gian nghĩ bố cục
-              </li>
-              <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-gift me-2 text-warning"></i>
-                 Trọn bộ Slide + Video record buổi học - lỡ bận việc khác vẫn có cái ôn lại
-              </li>
-              <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="500">
-                <i class="fas fa-gift me-2 text-warning"></i>
-                 Tài liệu tự học IELTS lên Band nhẹ nhàng (Hạng vé VIP)
-              </li>
-               <li class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="600">
-                <i class="fas fa-gift me-2 text-warning"></i>
-                 Được hỏi riêng Diễn giả về Hùng biện và Thần số học kể cả khi Workshop đã kết thúc (Hạng vé VIP)
-              </li>
-            </ul>
-             <!-- Xóa dòng tổng giá trị quà tặng -->
-            <!-- <p class="text-center mt-4 lead" data-aos="fade-up" data-aos-delay="600">Tổng giá trị quà tặng lên đến <strong>[Tổng giá trị]</strong>! </p> -->
-             </div>
-        </div>
-        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="700"> <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Đăng ký & Nhận Quà Ngay!</a>
+          <p class="text-center faq-highlight-final" data-aos="fade-up">Đừng bỏ lỡ cơ hội có 1-0-2 này từ nhà FSO nhé.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="trainer" class="section-padding bg-light">
-      <div class="container">
-         <!-- Tiêu đề từ Phần 6 -->
-        <h2 class="text-center mb-4" data-aos="fade-down">Gặp Gỡ Trainer Của Bạn: Đặng Văn Minh</h2>
-        <div class="row align-items-center">
-           <!-- Giữ ảnh trainer -->
-          <div class="col-md-4 text-center mb-4 mb-md-0" data-aos="fade-right"> <img src="images/trainer-minh.jpg" alt="Trainer Đặng Văn Minh" class="img-fluid rounded-circle trainer-img">
-          </div>
-          <div class="col-md-8" data-aos="fade-left" data-aos-delay="200">
-             <!-- Nội dung từ Phần 6: Trainer -->
-             <p class="lead">Thành tích nổi bật của Trainer Đặng Văn Minh:</p>
-            <ul>
-                <li>Nhà sáng lập CLB Nhà Hùng biện Tương lai (FSO)</li>
-                <li>Thực hành và luận giải thần số học chuyên sâu</li>
-                <li>Nhà đào tạo nghệ thuật Hùng biện - Giao tiếp & Thấu hiểu bản thân</li>
-                <li>Diễn giả của hàng trăm Workshop về Hùng biện - Giao tiếp & Thần số học</li>
-                <li>Quán quân Tôi Lên Tiếng, Quý Quân cuộc thi "Thành phố an toàn cho em gái"</li>
-                <li>Giám khảo các cuộc thi "Tôi lên tiếng", "Tôi bản lĩnh", "The Speaker", "Beyond Your Limits"......</li>
-                <li>Cố vấn cho nhiều thí sinh giành giải cao tại các cuộc thi Hùng biện…</li>
-            </ul>
-             <!-- Không có trích dẫn cụ thể, giữ lại cấu trúc blockquote trống hoặc xóa -->
-            <!-- <blockquote> <em>"[Một trích dẫn tâm đắc của Trainer về kỹ năng nói hoặc về giá trị buổi workshop]"</em>
-              <footer class="blockquote-footer">Trainer Đặng Văn Minh</footer>
-            </blockquote> -->
-          </div>
-        </div>
+  <!-- Phần 11: Form đăng ký -->
+  <section id="form-section-target" class="section-padding form-section" data-aos="fade-in">
+    <div class="container">
+      <h2 class="section-title text-center">Nâng Cấp Kỹ Năng Nói Của Bạn Ngay Hôm Nay!</h2>
+      <p class="text-center lead mb-5">Điền thông tin vào form dưới đây để giữ chỗ và nhận ngay ưu đãi!</p>
+      <div id="zoho-form-embed-container" class="mx-auto" style="max-width: 700px; min-height: 750px; background-color: #fff; border-radius: var(--border-radius);">
+        <iframe frameborder="0" style="height:100%;width:100%;border:none; min-height: 750px;" 
+                src="https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1"
+                title="Form Đăng Ký Workshop"></iframe>
       </div>
-    </section>
+    </div>
+  </section>
+<!-- Phần 12: Liên hệ -->
+<section class="section-padding contact-section">
+  <div class="container">
+    <!-- Giữ tiêu đề căn giữa -->
+    <h2 class="section-title text-center" data-aos="fade-down">Liên hệ với nhà FSO</h2>
 
-    <section id="testimonials" class="section-padding">
-      <div class="container">
-         <!-- Tiêu đề từ Phần 7 -->
-        <h2 class="text-center mb-4" data-aos="fade-down">Cảm nhận chân thật đến từ các bạn tham dự Workshop trước đó</h2>
-        <div class="row">
-           <!-- Feedback 1 từ Phần 7 -->
-          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-box text-center">
-               <!-- Giữ ảnh feedback -->
-              <img src="images/feedback (1).png" alt="Ảnh học viên 1" class="img-fluid rounded-circle mb-3 feedback-img">
-              <p class="fst-italic">"Em cảm thấy biết ơn vì đã học hỏi rất nhiều kiến thức mà trước đây chưa từng biết đến. Trước kia, em là một người nhút nhát và thiếu tự tin nhưng sau 2 lần tham dự hội thảo về Hùng biện của anh Văn Minh và nhà FSO, em đã có nhiều sự thay đổi lớn. Em đã dần tự tin hơn, bắt đầu nhận thuyết trình trước lớp. Lúc đó mặc dù rất run nhưng em vẫn cố gắng từng chút thôi dẫn dần có sự cải thiện rõ rệt. Và đặc biệt, môn kỹ năng giao tiếp thuyết trình em đã được điểm tuyệt đối vì môn phương pháp hùng biện và các thủ thuật tranh biện em đạt 9+..."</p>
-              <p>
-                <strong>Bạn Bùi Xuân Trường</strong>
-                <!-- <br> <small>[Chức danh/Nghề nghiệp nếu có]</small> -->
-              </p>
-            </div>
-          </div>
-           <!-- Feedback 2 từ Phần 7 -->
-          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-box text-center">
-               <!-- Giữ ảnh feedback -->
-              <img src="images/feedback (2).png" alt="Ảnh học viên 2" class="img-fluid rounded-circle mb-3 feedback-img">
-              <p class="fst-italic">"Khi được nghe anh Văn Minh chia sẻ trong buổi hội thảo Thuyết trình - Hùng biện, tâm trí em được mở rộng ra một vùng tri thức mới. Trước đây, em nghĩ Hùng biện là phải có giọng nói hay, có ngoại hình đẹp, có các kĩ năng mới có thể nói được. Nhưng sau khi được anh Minh chia sẻ em hiểu được rằng Hùng biện không chỉ vậy, mà Hùng biện còn là khả năng phản biện và tư duy sâu sắc trước các vấn đề. Muốn hùng biện hay, trước hết phải trang bị cho mình một tâm thức sâu sắc. Và trong hội thảo, anh cũng dạy làm sao để nâng cấp tư duy của mình..."</p>
-              <p>
-                <strong>Bạn Đỗ Thị Thùy Dương</strong>
-                 <!-- <br> <small>[Chức danh/Nghề nghiệp nếu có]</small> -->
-              </p>
-            </div>
-          </div>
-           <!-- Feedback 3 từ Phần 7 -->
-          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-box text-center">
-               <!-- Giữ ảnh feedback -->
-              <img src="images/feedback (3).png" alt="Ảnh học viên 3" class="img-fluid rounded-circle mb-3 feedback-img">
-              <p class="fst-italic">"Mình vốn là người hướng nội từ bé, bản thân lại có định kiến sợ sai nên những bài thuyết trình trên lớp là “cực hình” với mình. Tuy nhiên, sau một lần tình cờ tham gia hội thảo Thuyết trình - Hùng biện của anh Văn Minh thì mình đã học được rất nhiều kiến thức mới và quan trọng nhất là suy nghĩ của mình đã thay đổi. Mình nhận ra hướng nội không đồng nghĩa với việc ăn nói kém, mà đôi khi là lý do mình đặt ra để trốn tránh việc đối diện với một kỹ năng mà bản thân còn yếu. Từ đó mình đã cố gắng áp dụng dần những điều học được để phát triển khả năng ăn nói và đang dần thấy được những thay đổi tích cực sau một thời gian luyện tập..."</p>
-              <p>
-                <strong>Ngô Quang Việt</strong>
-                 <!-- <br> <small>[Chức danh/Nghề nghiệp nếu có]</small> -->
-              </p>
-            </div>
-          </div>
-           <!-- Giữ cấu trúc cột thứ 4 nhưng không điền nội dung feedback nếu chỉ có 3 feedback -->
-           <!--
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="testimonial-box text-center">
-              <img src="images/feedback (4).png" alt="Ảnh học viên 4" class="img-fluid rounded-circle mb-3 feedback-img">
-              <p class="fst-italic">"[Trích dẫn feedback của học viên 4]"</p>
-              <p>
-                <strong>[Tên Học Viên 4]</strong>
-                <br>
-                <small>[Chức danh/Nghề nghiệp nếu có]</small>
-              </p>
-            </div>
-          </div>
-           -->
-        </div>
-        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="400"> <a href="#" class="btn btn-success btn-lg open-zoho-popup">Tôi muốn có kết quả như họ! Đăng ký ngay!</a>
-        </div>
-      </div>
-    </section>
+    <!-- Xóa bỏ phần icon mạng xã hội lớn -->
+    <!-- <div class="contact-social-icons" data-aos="fade-up"> ... </div> -->
 
-    <section id="gallery" class="section-padding bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-down">Không Khí Các Buổi Workshop Trước</h2>
-        <div class="row g-3">
-           <!-- Giữ nguyên ảnh gallery -->
-          <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <img src="images/workshop1.jpg" alt="Workshop ảnh 1" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/workshop2.jpg" alt="Workshop ảnh 2" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="300">
-            <img src="images/workshop3.jpg" alt="Workshop ảnh 3" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-sm-6 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <img src="images/workshop4.jpg" alt="Workshop ảnh 4" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-sm-6 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-            <img src="images/workshop5.jpg" alt="Workshop ảnh 5" class="img-fluid rounded shadow-sm">
-          </div>
-        </div>
-        <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="600"> <a href="#" class="btn btn-primary btn-lg open-zoho-popup">Tham gia ngay buổi Workshop tiếp theo!</a>
-        </div>
-      </div>
-    </section>
+    <!-- Các mục liên hệ nhỏ, được căn trái và thẳng hàng -->
+    <div class="contact-items-grid-container"> <!-- Thêm một div bao bọc cho các mục liên hệ -->
 
-    <!-- Thêm phần Câu hỏi thường gặp từ Phần 9 -->
-    <section id="faq" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-down">Câu hỏi thường gặp (FAQs)</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <ul class="list-unstyled faq-list">
-                        <!-- Nội dung từ Phần 9: FAQs -->
-                        <li class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Workshop này hợp với ai hả?</h4>
-                           <p>Dành cho bất kỳ ai muốn "level up" kỹ năng nói, gỡ sạch rào cản để tự tin bắn ý tưởng trước đám đông. Newbie hay Pro đều học được.</p>
-                        </li>
-                         <li class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Có được thực hành hay chỉ ngồi nghe lý thuyết thôi?</h4>
-                           <p>Thực hành xịn xò sau từng phần học luôn nhé. Feedback trực tiếp từ anh Trainer siêu có tâm.</p>
-                        </li>
-                         <li class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Lỡ bận không tham gia được thì sao?</h4>
-                           <p>Không lo! Bạn sẽ nhận video record + slide đầy đủ để xem lại. Không bỏ lỡ gì hết.</p>
-                        </li>
-                         <li class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Workshop kéo dài bao lâu? Học ở đâu nhỉ?</h4>
-                           <p>Chừng 2-2.5 tiếng siêu hào hứng, học online qua Zoom, chỉ cần ngồi nhà là chiến được.</p>
-                        </li>
-                         <li class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Giá vé bao nhiêu, có deal hời nào không?</h4>
-                           <p>Siêu hời nè. Chỉ 50k/1 người nếu rủ hội bạn đăng ký cùng. Còn VÉ SUPER VIP và mấy hạng vé khác để bạn thoải mái chọn. Chi tiết xem mục "Giá vé" bên trên nhé!</p>
-                        </li>
-                         <li class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Mình chưa biết gì về hùng biện, học nổi không?</h4>
-                           <p>Dễ luôn. Bài giảng siêu dễ nhớ, đầy hình ảnh và công thức được đơn giản hóa, cả newbie lẫn "cứng" đều bắt sóng được.</p>
-                        </li>
-                        <li class="faq-item" data-aos="fade-up" data-aos-delay="700">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Workshop này khác gì mấy nguồn trên mạng?</h4>
-                           <p>Khác một trời một vực. Học tư duy gốc rễ, đi vào bản chất nhất. Được thực hành tại chỗ, nhận bí kíp thực chiến từ Trainer Đặng Văn Minh, cộng thêm những câu chuyện thực tế đầy cảm hứng hùng biện từ anh ấy.</p>
-                        </li>
-                        <li class="faq-item" data-aos="fade-up" data-aos-delay="800">
-                           <h4><i class="fas fa-question-circle me-2 text-primary"></i> Rủ cả nhóm đi để nhận vé ưu đãi nhóm thì đăng ký kiểu gì?</h4>
-                           <p>Bạn cứ điền Form, ghi Họ tên + SĐT của bạn và hội bạn vào phần "ghi chú", xong là nhà FSO chủ động liên hệ. Quá đơn giản.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- Mục Fanpage Facebook - Thẳng hàng, có thể nhấp -->
+      <p class="contact-item" data-aos="fade-up" data-aos-delay="100">
+        <a href="https://www.facebook.com/groups/fso.speak" target="_blank" title="Facebook FSO"> <!-- Thẻ <a> là grid container -->
+           <!-- Icon Facebook - cột 1 -->
+           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 40 40">
+             <circle cx="20" cy="20" r="18.5" fill="#98ccfd" stroke="#4788c7" stroke-miterlimit="10"></circle>
+             <path fill="#fff" d="M25.368,20H22v12h-5V20h-3v-4h3v-2.41C17.002,10.082,18.459,8,22.592,8H26v4h-2.287	C22.104,12,22,12.6,22,13.723V16h4L25.368,20z"></path>
+           </svg>
+           <!-- Văn bản - cột 2 -->
+           <span>Fanpage CLB Nhà Hùng biện Tương lai (FSO)</span>
+        </a>
+      </p>
 
-    <section id="form-section" class="section-padding form-section-main bg-success text-white">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center" data-aos="fade-up">
-             <!-- Tiêu đề và mô tả -->
-            <h2 class="mb-4 text-white">Nâng Cấp Kỹ Năng Nói Của Bạn Ngay Hôm Nay!</h2>
-            <p class="lead mb-4 text-white">Điền đầy đủ thông tin bên dưới để hoàn tất đăng ký và sẵn sàng "bật mode" tự tin!</p>
-             <!-- KHÔNG thay đổi ID div này - nó liên kết với script Zoho -->
-            <div id="zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4" class="zoho-embed-form" data-aos="zoom-in" data-aos-delay="200"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- Mục Zalo trợ giúp - Thẳng hàng, có thể nhấp -->
+      <p class="contact-item" data-aos="fade-up" data-aos-delay="150">
+        <a href="https://zalo.me/0397193232" target="_blank" title="Zalo FSO"> <!-- Thẻ <a> là grid container -->
+          <!-- Icon Zalo - cột 1 -->
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+            <path fill="#2962ff" d="M15,36V6.827l-1.211-0.811C8.64,8.083,5,13.112,5,19v10c0,7.732,6.268,14,14,14h10	c4.722,0,8.883-2.348,11.417-5.931V36H15z"></path>
+            <path fill="#eee" d="M29,5H19c-1.845,0-3.601,0.366-5.214,1.014C10.453,9.25,8,14.528,8,19	c0,6.771,0.936,10.735,3.712,14.607c0.216,0.301,0.357,0.653,0.376,1.022c0.043,0.835-0.129,2.365-1.634,3.742	c-0.162,0.148-0.059,0.419,0.16,0.428c0.942,0.041,2.843-0.014,4.797-0.877c0.557-0.246,1.191-0.203,1.729,0.083	C20.453,39.764,24.333,40,28,40c4.676,0,9.339-1.04,12.417-2.916C42.038,34.799,43,32.014,43,29V19C43,11.268,36.732,5,29,5z"></path>
+            <path fill="#2962ff" d="M36.75,27C34.683,27,33,25.317,33,23.25s1.683-3.75,3.75-3.75s3.75,1.683,3.75,3.75	S38.817,27,36.75,27z M36.75,21c-1.24,0-2.25,1.01-2.25,2.25s1.01,2.25,2.25,2.25S39,24.49,39,23.25S37.99,21,36.75,21z"></path>
+            <path fill="#2962ff" d="M31.5,27h-1c-0.276,0-0.5-0.224-0.5-0.5V18h1.5V27z"></path>
+            <path fill="#2962ff" d="M27,19.75v0.519c-0.629-0.476-1.403-0.769-2.25-0.769c-2.067,0-3.75,1.683-3.75,3.75	S22.683,27,24.75,27c0.847,0,1.621-0.293,2.25-0.769V26.5c0,0.276,0.224,0.5,0.5,0.5h1v-7.25H27z M24.75,25.5	c-1.24,0-2.25-1.01-2.25-2.25S23.51,21,24.75,21S27,22.01,27,23.25S25.99,25.5,24.75,25.5z"></path>
+            <path fill="#2962ff" d="M21.25,18h-8v1.5h5.321L13,26h0.026c-0.163,0.211-0.276,0.463-0.276,0.75V27h7.5	c0.276,0,0.5-0.224,0.5-0.5v-1h-5.321L21,19h-0.026c0.163-0.211,0.276-0.463,0.276-0.75V18z"></path>
+          </svg>
+          <!-- Văn bản - cột 2 -->
+          <span>Zalo trợ giúp: 039,719,3232</span>
+        </a>
+      </p>
 
-    <section id="organizer" class="section-padding">
-      <div class="container">
-         <!-- Tiêu đề -->
-        <h2 class="text-center mb-4" data-aos="fade-down">Thông Tin Liên Hệ Ban Tổ Chức</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="100">
-             <!-- Thông tin từ Phần 10: Liên hệ -->
-             <p>Đừng bỏ lỡ cơ hội có 1-0-2 này từ nhà FSO nhé.</p>
-            <p>
-              <strong>CLB Nhà Hùng biện Tương lai (FSO)</strong>
-            </p>
-             <!-- Xóa mục địa chỉ -->
-            <!-- <p> <i class="fas fa-map-marker-alt me-2"></i> Địa chỉ: [Địa chỉ (nếu có)] </p> -->
-            <p>
-              <i class="fas fa-phone me-2"></i> Zalo trợ giúp: 039.719.3232
-            </p>
-            <p>
-              <i class="fas fa-envelope me-2"></i> Email: fso.contact.info@gmail.com
-            </p>
-             <!-- Thêm thông tin Fanpage nếu muốn hiển thị rõ -->
-             <p>
-                 <i class="fab fa-facebook me-2"></i> Fanpage: CLB Nhà Hùng biện Tương lai (FSO)
-             </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- Mục Email - Thẳng hàng, có thể nhấp -->
+      <p class="contact-item" data-aos="fade-up" data-aos-delay="200">
+        <a href="mailto:fso.contact.info@gmail.com"> <!-- Thẻ <a> là grid container -->
+          <!-- Icon Email - cột 1 -->
+          <i class="fas fa-envelope"></i>
+          <!-- Văn bản - cột 2 -->
+          <span>Email: fso.contact.info@gmail.com</span>
+        </a>
+      </p>
 
-    <footer class="bg-dark text-white text-center py-4">
-      <div class="container">
-         <!-- Cập nhật tên tổ chức -->
-        <p class="mb-0">© 2024 CLB Nhà Hùng biện Tương lai (FSO). All rights reserved.</p>
-         <!-- Giữ nguyên link chính sách -->
-        <p class="mb-0">
-          <a href="#" class="text-white me-3">Chính sách bảo mật</a>
-          <a href="#" class="text-white">Điều khoản sử dụng</a>
-        </p>
-      </div>
-    </footer>
+    </div> <!-- End contact-items-grid-container -->
 
-    <!-- KHÔNG thay đổi các script bên dưới trừ khi có hướng dẫn cụ thể -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  </div>
+</section>
+  <footer>
+    <div class="container text-center">
+      <p>© 2024 CLB Nhà Hùng biện Tương lai (FSO). All Rights Reserved.</p>
+    </div>
+  </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800, // Thời gian animation (ms)
-        once: true,    // Chỉ chạy animation một lần khi scroll qua
-        // Thêm các cấu hình khác nếu cần
-      });
-    </script>
+  <!-- Zoho Popup Button (Hidden) -->
+  <button id="zf_button_918683" style="display: none;">Form</button>
 
-    <!-- Scripts Zoho Forms - KHÔNG thay đổi các ID, URL form perma hay cấu trúc script -->
-    <button id="zf_button_19499" style="display: none;">Trigger Zoho Form Popup</button>
-    <script type="text/javascript">
-      (function() {
-        try {
-          console.log("Zoho Popup Script Initializing...");
-          // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
-          var iframeHolderId = 'n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4_19499';
-          // !!! Cập nhật ID container nếu nó khác trong mã Zoho của bạn !!!
-          var containerDivId = 'containerDiv_19499';
-          // !!! Cập nhật ID lightbox chính nếu nó khác trong mã Zoho của bạn !!!
-          var mainLightboxId = 'formsLightBox_19499';
-          // !!! Cập nhật ID nút đóng nếu nó khác trong mã Zoho của bạn !!!
-          var closeButtonId = 'deleteform_19499';
-          // Construct the necessary divs immediately when script runs
-          			if( document.readyState == "complete" ){
-          				onloadActions_19499();
-          			}  else {
-          			  	window.addEventListener('load', function (){
-          			  		onloadActions_19499();
-          			  	}, false);
-          			}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Zoho Popup Script -->
+  <script type="text/javascript">(function() {
+    try{
 
-          			function onloadActions_19499(){
-          				constructDiv_19499();
-                  // Removed showZForm_19499() from onload - only show on click or timed below
-          				// showZForm_19499(); // Removed automatic show on load
-          			}
-          console.log("Popup divs ready for construction/trigger.");
+            if( document.readyState == "complete" ){ 
+                onloadActions_918683();
+            }  else {
+                window.addEventListener('load', function (){
+                    onloadActions_918683();
+                }, false);
+            }
 
-       function constructDiv_19499(){
-                 // Check if the main lightbox div already exists
-                 if (document.getElementById(mainLightboxId)) {
-                     // console.log("Zoho Popup: Main lightbox div already exists. Skipping construction.");
-                     return; // Do not reconstruct if it's already there
-                 }
+            function onloadActions_918683(){
+                constructDiv_918683();
+            }
 
-                console.log("Zoho Popup: Constructing popup divs...");
+            function constructDiv_918683(){
+                if (document.getElementById('formsLightBox_918683')) return; 
 
                 var iframeDiv = document.createElement("div");
-                // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
-                iframeDiv.setAttribute('id', iframeHolderId);
-                iframeDiv.setAttribute('class','zf_main_id_19499'); // Class name from your Zoho code
+                iframeDiv.setAttribute('id','RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683');
+                iframeDiv.setAttribute('class','zf_main_id_918683');
 
                 var closeFormDiv = document.createElement("div");
-                closeFormDiv.setAttribute('id', closeButtonId);
-                closeFormDiv.setAttribute('class','zf_lb_closeform_19499'); // Class name from your Zoho code
-
+                closeFormDiv.setAttribute('id','deleteform_918683');
+                closeFormDiv.setAttribute('class','zf_lb_closeform_918683');
+                
                 var containerDiv = document.createElement("div");
-                containerDiv.setAttribute('id', containerDivId);
-                containerDiv.setAttribute('class','zf_lB_Container_19499 fadeIn'); // Class name from your Zoho code + animation
+                containerDiv.setAttribute('id','containerDiv_918683');
+                containerDiv.setAttribute('class','zf_lB_Container_918683'); 
                 containerDiv.appendChild(iframeDiv);
                 containerDiv.appendChild(closeFormDiv);
-
+                
                 var wrapperDiv = document.createElement("div");
-                wrapperDiv.setAttribute('class','zf_lB_Wrapper_19499'); // Class name from your Zoho code
+                wrapperDiv.setAttribute('class','zf_lB_Wrapper_918683');
                 wrapperDiv.appendChild(containerDiv);
 
                 var dimmerDiv = document.createElement("div");
-                dimmerDiv.setAttribute('class','zf_lB_Dimmer_19499'); // Class name from your Zoho code
-                dimmerDiv.setAttribute('elname','popup_box'); // As in Zoho code
+                dimmerDiv.setAttribute('class','zf_lB_Dimmer_918683');
+                dimmerDiv.setAttribute('elname','popup_box');
+                dimmerDiv.onclick = function() { deleteZForm_918683(); }; 
+
 
                 var mainDiv = document.createElement("div");
-                mainDiv.setAttribute('id', mainLightboxId);
-                mainDiv.style.display = "none"; // Popup is hidden by default
+                mainDiv.setAttribute('id','formsLightBox_918683');
+                mainDiv.style.display = "none";
                 mainDiv.appendChild(wrapperDiv);
                 mainDiv.appendChild(dimmerDiv);
 
                 document.body.appendChild(mainDiv);
-                console.log("Zoho Popup: Popup structure added to body. Main lightbox ID:", mainLightboxId);
-
-
-                // *** THÊM BỘ LẮNG NGHE CLICK VÀO DIMMER TẠI ĐÂY ***
-                if (dimmerDiv) { // Ensure dimmerDiv reference is valid
-                    dimmerDiv.addEventListener('click', function(event) {
-                        // Kiểm tra xem click có *trực tiếp* trên element dimmer không
-                        if (event.target === dimmerDiv) {
-                             deleteZForm_19499(); // Call the close function
-                        }
-                    });
-                    console.log("Zoho Popup: Dimmer click listener attached directly.");
-                } else {
-                    console.error("Zoho Popup: Dimmer element reference is invalid after construction!");
-                }
-                // *** KẾT THÚC BỘ LẮNG NGHE CLICK DIMMER ***
-
-
-
-                 // Attach close event listener for the close button AFTER creating the close button div
-                 var deleteForm = document.getElementById(closeButtonId);
-                    if (deleteForm) {
-                         deleteForm.onclick = function deleteZForm_19499() {
-                             var divCont = document.getElementById(mainLightboxId);
-                             if (divCont) {
-                                 divCont.style.display="none";
-                                 document.body.style.overflow = ""; // Restore scrolling
-                             }
-
-                             // Remove iframe content on close
-                             var iframeHolder = document.getElementById(iframeHolderId);
-                             if (iframeHolder) {
-                                 var iframe = iframeHolder.getElementsByTagName("iframe")[0];
-                                 if (iframe) {
-                                     iframe.remove(); // Removes the iframe element
-                                 }
-                             }
-                         }
-                         console.log("Zoho Popup: Close button listener attached.");
-                    } else {
-                        console.error("Zoho Popup: Close button element not found after constructing!");
-                    }
             }
 
-          // Function to hide the Zoho form popup
-            function deleteZForm_19499() {
-                var divCont = document.getElementById(mainLightboxId);
+            window.showZForm_918683 = function (){ 
+                var mainDiv = document.getElementById("formsLightBox_918683");
+                if (!mainDiv) constructDiv_918683(); 
+                mainDiv = document.getElementById("formsLightBox_918683");
+
+                var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+                var iframe = iframeHolder ? iframeHolder.getElementsByTagName("iframe")[0] : undefined;
+
+                if(iframe == undefined || iframe.length == 0 || iframe.src === 'about:blank' || iframe.src === ''){
+                    loadZForm_918683(); // Load or reload if cleared
+                } else if (!iframe.src.includes('formperma')) { // If wrong src, reload
+                    loadZForm_918683();
+                }
+
+                mainDiv.style.display = "block"; 
+                setTimeout(function() {
+                    document.getElementById('containerDiv_918683').classList.add('fadeIn');
+                }, 10);
+                document.body.style.overflow = "hidden";
+            }
+            
+            window.deleteZForm_918683 = function() { 
+                var divCont = document.getElementById("formsLightBox_918683");
+                var containerDiv = document.getElementById('containerDiv_918683');
+                if (containerDiv) containerDiv.classList.remove('fadeIn');
+
                 if (divCont) {
                     divCont.style.display="none";
-                    document.body.style.overflow = ""; // Restore scrolling
                 }
+                document.body.style.overflow = "";
 
-                // Remove iframe content on close to prevent background activity/memory leak
-                var iframeHolder = document.getElementById(iframeHolderId); // Use the variable
-                 if (iframeHolder) { // Check if holder exists
+                var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+                if (iframeHolder) {
                     var iframe = iframeHolder.getElementsByTagName("iframe")[0];
                     if (iframe) {
-                        iframe.remove();
+                        iframe.src = 'about:blank'; 
                     }
-                 }
+                }
             }
 
+            function loadZForm_918683() {
+                var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+                if (!iframeHolder) return;
 
-          // Function to show the Zoho form popup
-          function showZForm_19499() {
-            // Ensure the main popup div structure exists
-            var mainDiv = document.getElementById(mainLightboxId);
-            if (!mainDiv) {
-              // console.log("Main lightbox div not found, constructing...");
-              constructDiv_19499();
-              mainDiv = document.getElementById(mainLightboxId); // Get it after constructing
-            }
-            if (mainDiv) {
-              // Load or reload the iframe content if it's not present
-              loadZForm_19499();
-              // Display the main lightbox div (makes dimmer and container visible)
-              mainDiv.style.display = "block";
-              document.body.style.overflow = "hidden"; // Prevent scrolling background
-            } else {
-              console.error("Failed to show popup: Main lightbox div not found after construction attempt.");
-            }
-          }
-          // Function to load the iframe content inside the popup
-          function loadZForm_19499() {
-            // console.log("loadZForm_19499 called.");
-            // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
-            var iframeHolder = document.getElementById(iframeHolderId);
-            if (!iframeHolder) {
-              console.error("Iframe holder div #" + iframeHolderId + " not found!");
-              return; // Cannot load iframe if holder is missing
-            }
-            var iframe = iframeHolder.getElementsByTagName("iframe")[0];
-            // console.log("Checking for existing iframe:", iframe);
-            if (iframe == undefined) { // Check if iframe element exists
-              // console.log("Iframe not found, creating new iframe.");
-              var f = document.createElement("iframe");
-              // !!! Cập nhật SRC này bằng URL form POPUP của bạn từ Zoho !!!
-              f.src = getsrcurlZForm_19499('https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1');
-              f.style.border = "none";
-              f.style.minWidth = "100%";
-              f.style.overflow = "auto";
-              // f.style.height = "auto"; // Let message listener handle height
-               f.style.width = "100%"; // Explicitly set width
-               f.style.height = "100%"; // Set initial height, will be adjusted by message listener
-              f.setAttribute("aria-label", 'Đăng Ký Tham Gia Workshop Ngay'); // Add ARIA label
-              iframeHolder.appendChild(f);
-              // console.log("New iframe created and appended to holder.");
+                var oldIframe = iframeHolder.getElementsByTagName("iframe")[0];
+                if (oldIframe) oldIframe.remove();
 
-              // Message listener from iframe (for height adjustments, etc.) - Attach only once per iframe creation
-              window.addEventListener('message', function(event) {
-                var evntData = event.data;
-                if (evntData && evntData.constructor == String) {
-                  var zf_ifrm_data = evntData.split("|");
-                  if (zf_ifrm_data.length >= 2) { // zf_ifrm_data.length == 2 or 3
-                    var zf_perma = zf_ifrm_data[0];
-                    var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
-                    if (!isNaN(zf_ifrm_ht_px)) {
-                      var zf_ifrm_ht_nw = (zf_ifrm_ht_px + 15) + "px"; // Add margin/padding as Zoho does
-                      // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!!
-                      var currentIframe = document.getElementById(iframeHolderId).getElementsByTagName("iframe")[0];
-                      if (currentIframe) { // Simpler check
-                        var prevIframeHeight = currentIframe.style.height;
-                        var zf_tout = false;
-                        if (zf_ifrm_data.length == 3) { // This might indicate a need to scroll parent
-                           zf_tout = true;
+
+                var f = document.createElement("iframe");
+                f.src = getsrcurlZForm_918683('https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1');
+                f.setAttribute("aria-label", "Form Đăng Ký");
+                iframeHolder.appendChild(f);
+
+                var deleteFormBtn = document.getElementById("deleteform_918683");
+                deleteFormBtn.onclick = function() { deleteZForm_918683(); }
+
+                window.addEventListener('message', function (event){ 
+                    var evntData = event.data;
+                    if( evntData && evntData.constructor == String ){
+                        var zf_ifrm_data = evntData.split("|");
+                        if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                            var zf_perma = zf_ifrm_data[0];
+                            var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
+                            if (isNaN(zf_ifrm_ht_px)) return;
+
+                            var current_iframe = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683").getElementsByTagName("iframe")[0];
+                            if (!current_iframe || !current_iframe.src) return;
+
+
+                            if ( (current_iframe.src).indexOf('formperma') > 0 && (current_iframe.src).indexOf(zf_perma) > 0 ) {
+                                var zf_ifrm_ht_nw = ( zf_ifrm_ht_px + 30 ) + "px"; // Added a bit more padding
+                                var containerToResize = document.getElementById("containerDiv_918683");
+                                
+                                var updateHeight = function() {
+                                   if(containerToResize) containerToResize.style.height = zf_ifrm_ht_nw;
+                                   // The iframe itself should fill its container (zf_main_id_918683) via CSS.
+                                   // current_iframe.style.minHeight = zf_ifrm_ht_nw; // Not needed if container is sized
+                                };
+
+                                if(zf_ifrm_data.length == 3) {
+                                    setTimeout(updateHeight, 500);
+                                } else {
+                                    updateHeight();
+                                }
+                            }
                         }
-                        if (prevIframeHeight != zf_ifrm_ht_nw) {
-                          if (zf_tout) {
-                            setTimeout(function() {
-                              currentIframe.style.minHeight = zf_ifrm_ht_nw;
-                              currentIframe.style.height = zf_ifrm_ht_nw;
-                               var containerDiv = document.getElementById(containerDivId);
-                               if (containerDiv) {
-                                 containerDiv.style.height = zf_ifrm_ht_nw;
-                               }
-                            }, 500); // Delay the height update
-                          } else {
-                            currentIframe.style.minHeight = zf_ifrm_ht_nw;
-                            currentIframe.style.height = zf_ifrm_ht_nw;
-                             var containerDiv = document.getElementById(containerDivId);
-                               if (containerDiv) {
-                                 containerDiv.style.height = zf_ifrm_ht_nw;
-                               }
-                          }
+                    }
+                }, false);
+            }
+
+            function getsrcurlZForm_918683(zf_src) {
+                try {
+                    if ( typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined" ) {
+                        for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+                            var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+                            var utmVal = zfutm_zfAdvLead.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
+                            if ( typeof utmVal !== "undefined" && utmVal != "" ){
+                                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
+                            }
                         }
-                      }
                     }
-                  }
-                }
-              }, false);
-              // console.log("Message listener attached to window.");
-            } else {
-              // console.log("Iframe already exists, no need to create.");
-               // If iframe exists but its src might be gone (e.g., after manual close), reload it.
-               // This relies on deleteZForm_19499 removing the *element*, not just hiding.
-               // If you want to *always* reload on show, uncomment this:
-               // iframe.src = getsrcurlZForm_19499('https://forms.zohopublic.com/...');
+                    if ( typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined" ) {
+                        for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+                            var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+                            var utmVal = zfutm_zfLead.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
+                             if ( typeof utmVal !== "undefined" && utmVal != "" ){
+                                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
+                            }
+                        }
+                    }
+                }catch(e){}
+                return zf_src;
             }
-          }
-          // Function to get Zoho source URL (often includes UTM tracking)
-          function getsrcurlZForm_19499(zf_src) {
-            try {
-              if (typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined") {
-                for (var prmIdx = 0; prmIdx < ZFAdvLead.utmPNameArr.length; prmIdx++) {
-                  var utmPm = ZFAdvLead.utmPNameArr[prmIdx];
-                  var utmVal = zfutm_zfAdvLead.zfautm_gC_enc(ZFAdvLead.utmPNameArr[prmIdx]);
-                  if (typeof utmVal !== "undefined") {
-                    if (utmVal != "") {
-                      if (zf_src.indexOf('?') > 0) {
-                        zf_src = zf_src + '&' + utmPm + '=' + utmVal; //No I18N
-                      } else {
-                        zf_src = zf_src + '?' + utmPm + '=' + utmVal; //No I18N
-                      }
-                    }
-                  }
+            
+            var zf_popup_timer = setTimeout(function (){
+                var mainLb = document.getElementById("formsLightBox_918683");
+                if (mainLb && mainLb.style.display === 'none') { // Check if popup is not already shown
+                    showZForm_918683();
+                } else if (!mainLb) { // If not even constructed, show it
+                     showZForm_918683();
                 }
-              }
-              if (typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined") {
-                for (var prmIdx = 0; prmIdx < ZFLead.utmPNameArr.length; prmIdx++) {
-                  var utmPm = ZFLead.utmPNameArr[prmIdx];
-                  var utmVal = zfutm_zfLead.zfutm_gC_enc(ZFLead.utmPNameArr[prmIdx]);
-                  if (typeof utmVal !== "undefined") {
-                    if (utmVal != "") {
-                      if (zf_src.indexOf('?') > 0) {
-                        zf_src = zf_src + '&' + utmPm + '=' + utmVal; //No I18N
-                      } else {
-                        zf_src = zf_src + '?' + utmPm + '=' + utmVal; //No I18N
-                      }
-                    }
-                  }
-                }
-              }
-            } catch (e) {
-              console.error("Error in getsrcurlZForm_19499:", e);
+            }, 60*1000);
+            
+            var zfButton = document.getElementById("zf_button_918683");
+            if(zfButton){
+                zfButton.onclick = function() { showZForm_918683(); };
             }
-            return zf_src;
-          }
+            
+    }catch(e){}
+  })();</script>
+  
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
 
-          // Optional: Add a timed popup trigger after some seconds/minutes
-          // setTimeout(function (){
-          // showZForm_19499();
-          // }, 60*1000); // Example: show popup after 60 seconds
-
-          // Add listener to the hidden Zoho button. This is what our CTAs will trigger.
-          // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
-          var buttonElem = document.getElementById("zf_button_19499");
-          if (buttonElem) {
-            // buttonElem.style.display = "block"; // Keep it hidden
-            buttonElem.addEventListener("click", showZForm_19499);
-            console.log("Zoho trigger button listener attached.");
-          } else {
-            console.error("Zoho trigger button #zf_button_19499 not found!");
-          }
-        } catch (e) {
-          console.error("Error in Zoho Popup Script:", e);
+    // Accordion for Pricing Section
+    document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        toggle.classList.toggle('active');
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
         }
-      })();
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // console.log("Custom JS: DOMContentLoaded.");
-        const openPopupButtons = document.querySelectorAll('.open-zoho-popup');
-        // !!! Cập nhật ID này nếu nó khác trong mã Zoho của bạn !!!
-        const zohoTriggerButton = document.getElementById('zf_button_19499');
-        if (!zohoTriggerButton) {
-          console.error("Custom JS: Zoho trigger button #zf_button_19499 not found! Cannot attach listeners.");
-          return; // Stop if the required Zoho button is missing
-        }
-        // console.log("Custom JS: Zoho trigger button found.");
-        openPopupButtons.forEach(button => {
-          button.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            // console.log("Custom JS: Button .open-zoho-popup clicked.");
-            // Programmatically click the hidden Zoho button
-            zohoTriggerButton.click();
-            // console.log("Custom JS: Trigger button clicked programmatically.");
-          });
-          // console.log("Custom JS: Listener attached to button", button);
-        });
-        // console.log("Custom JS for triggering Zoho popup initialized.");
       });
-      // Optional: Re-initialize AOS or other scripts if needed after DOMContentLoaded
-    </script>
-    <script type="text/javascript">
-      (function() {
-        try {
-          // !!! Cập nhật ID div target nếu nó khác trong mã Zoho của bạn !!!
-          // Chú ý: ID này có thể khác ID của div chứa iframe trong popup
-          var targetDivId = "zf_div_n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4"; // Vẫn giữ ID cũ cho embed form nếu nó không thay đổi
-          var targetDiv = document.getElementById(targetDivId);
-          if (targetDiv && targetDiv.getElementsByTagName("iframe").length === 0) { // Only embed if div exists and no iframe is already inside
-            var f = document.createElement("iframe");
-            // !!! Cập nhật SRC này bằng URL form EMBED của bạn từ Zoho !!!
-            f.src = 'https://forms.zohopublic.com/phong02468gm1/form/ngKThamGia/formperma/n5e1aP0MsIct-rSqXMX5nGe2FT9pmHWupE1lm5vsrk4?zf_rszfm=1';
-            f.style.border = "none";
-            f.style.width = "100%"; // Use 100% width to be responsive within container
-            f.style.minHeight = "600px"; // Initial minimum height, will be adjusted by Zoho script
-            f.style.overflow = "hidden";
-            f.style.transition = "all 0.5s ease";
-            f.setAttribute("aria-label", 'Đăng Ký Tham Gia Workshop Ngay'); // Add ARIA label
-            targetDiv.appendChild(f);
-            window.addEventListener('message', function(event) {
-              var evntData = event.data;
-              if (evntData && evntData.constructor == String) {
-                var zf_ifrm_data = evntData.split("|");
-                if (zf_ifrm_data.length >= 2) { // zf_ifrm_data.length == 2 or 3
-                  var zf_perma = zf_ifrm_data[0];
-                  var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
-                  if (!isNaN(zf_ifrm_ht_px)) {
-                    var zf_ifrm_ht_nw = (zf_ifrm_ht_px + 15) + "px"; // Add margin/padding
-                    // !!! Cập nhật ID div chứa iframe nếu nó khác trong mã Zoho của bạn !!! (Đây là ID của embed div)
-                    var iframe = document.getElementById(targetDivId).getElementsByTagName("iframe")[0];
-                    // Check if iframe exists and matches the form by perma ID
-                    if (iframe && (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0) {
-                      var prevIframeHeight = iframe.style.height;
-                      var zf_tout = false;
-                      if (zf_ifrm_data.length == 3) { // Indicates scroll might be needed
-                        // iframe.scrollIntoView({ behavior: 'smooth' }); // Keep scrollIntoView for embed
-                        zf_tout = true;
-                      }
-                      if (prevIframeHeight != zf_ifrm_ht_nw) {
-                        if (zf_tout) {
-                          setTimeout(function() {
-                            iframe.style.height = zf_ifrm_ht_nw;
-                          }, 500);
-                        } else {
-                          iframe.style.height = zf_ifrm_ht_nw;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }, false);
-            console.log("Zoho Embed Script initialized.");
-          } else if (!targetDiv) {
-            console.error("Zoho embed target div #" + targetDivId + " not found!");
-          } else {
-              console.log("Zoho embed target div already contains an iframe. Skipping embed script execution.");
-          }
-        } catch (e) {
-          console.error("Error in Zoho Embed Script:", e);
-        }
-      })();
-    </script>
-  </body>
+    });
+
+    // Accordion for FAQ Section
+    document.querySelectorAll('.faq-item h4').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+             const answer = item.querySelector('.faq-answer');
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.paddingTop = "10px";
+            } else {
+                answer.style.maxHeight = null;
+                answer.style.paddingTop = "0";
+
+            }
+        });
+    });
+    
+    // Trigger Zoho Popup for all designated buttons
+    document.querySelectorAll('.trigger-zoho-popup').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            if (typeof showZForm_918683 === 'function') {
+                showZForm_918683();
+            } else {
+                console.error('Zoho popup function showZForm_918683 not found.');
+            }
+        });
+    });
+  </script>
+</body>
 </html>
