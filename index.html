@@ -282,12 +282,12 @@
       flex-direction: column;
     }
     .testimonial-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 3px solid var(--primary-gold);
+        width: 200px;
+        height: 226px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        /* border: 3px solid var(--primary-gold); */
     }
     .testimonial-card .testimonial-text {
       font-style: italic;
@@ -299,6 +299,68 @@
       font-weight: 700;
       color: var(--title-blue);
     }
+
+
+.img-wrapper {
+    position: relative; /* Quan trọng để định vị ::before */
+    width: 200px; /* Kích thước ban đầu của ảnh */
+    height: 226px; /* Kích thước ban đầu của ảnh */
+    border-radius: 50%; /* Bo tròn */
+    margin: 0 auto 20px; /* Căn giữa wrapper và thêm margin dưới */
+    overflow: hidden; /* Giúp ẩn bớt phần pseudo-element thừa ra ngoài */
+    display: flex; /* Dùng flexbox để căn giữa ảnh */
+    justify-content: center;
+    align-items: center;
+    /* Optional: Add a subtle background color that will be masked for the border */
+    background-color: transparent; /* Pseudo-element handles the border color */
+}
+
+.img-wrapper img {
+    display: block;
+    width: 100%; /* Ảnh lấp đầy wrapper */
+    height: 100%; /* Ảnh lấp đầy wrapper */
+    object-fit: cover;
+    border-radius: 50%; /* Giữ bo tròn ảnh */
+    position: relative; /* Đảm bảo ảnh nằm trên pseudo-element */
+    z-index: 1;
+    /* Bỏ margin-bottom ở đây, đã chuyển lên img-wrapper */
+}
+
+.img-wrapper::before {
+    content: '';
+    position: absolute;
+    /* Làm cho pseudo-element lớn hơn wrapper một chút để tạo không gian cho viền */
+    top: -10px; /* Độ dày viền tối đa ở phía trên */
+    left: -10px; /* Độ dày viền tối đa ở phía trái */
+    right: -10px; /* Độ dày viền tối đa ở phía phải */
+    bottom: -10px; /* Độ dày viền tối đa ở phía dưới */
+    border-radius: 50%; /* Giữ bo tròn */
+    z-index: 0; /* Đặt phía sau ảnh */
+    background-color: var(--primary-gold, gold); /* Màu của viền */
+
+    /* Tạo mặt nạ (mask) để làm mờ/trong suốt phần trên */
+    /* Sử dụng conic-gradient để tạo hiệu ứng fade theo vòng tròn */
+    mask-image: conic-gradient(from 0deg at 50% 50%,
+                               rgba(0,0,0,0) 45deg,   /* Trong suốt từ 0deg (phải) đến 45deg (trên-phải) */
+                               rgba(0,0,0,0.5) 60deg,  /* Bắt đầu chuyển mờ */
+                               rgba(0,0,0,1) 90deg,   /* Hoàn toàn đậm từ 90deg (trên) đến 270deg (dưới) */
+                               rgba(0,0,0,1) 270deg,
+                               rgba(0,0,0,1) 300deg, /* Hoàn toàn đậm từ 270deg đến 300deg (dưới-trái) */
+                               rgba(0,0,0,0.5) 315deg, /* Bắt đầu chuyển mờ */
+                               rgba(0,0,0,0) 360deg  /* Trong suốt từ 315deg (trên-trái) đến 360deg (phải, tương đương 0deg) */
+                              );
+
+    /* Thêm prefix cho tương thích trình duyệt */
+    -webkit-mask-image: conic-gradient(from 0deg at 50% 50%,
+                                       rgba(0,0,0,0) 45deg,
+                                       rgba(0,0,0,0.5) 60deg,
+                                       rgba(0,0,0,1) 90deg,
+                                       rgba(0,0,0,1) 270deg,
+                                       rgba(0,0,0,1) 300deg,
+                                       rgba(0,0,0,0.5) 315deg,
+                                       rgba(0,0,0,0) 360deg
+                                      );
+}
 
     /* Pricing Section - Integrating provided styles */
     .pricing-section { background-color: var(--light-bg-alt); }
@@ -908,23 +970,29 @@
       <div class="row g-4">
         <div class="col-lg-4 col-md-6" data-aos="fade-up">
           <div class="testimonial-card text-center">
-            <img src="../images/user1.png?text=User1" alt="Bùi Xuân Trường" class="mx-auto">
+            <div class="img-wrapper">
+            <img src="../images/user1.jpg?text=User1" alt="Bùi Xuân Trường" class="mx-auto">
             <p class="testimonial-text">"Em cảm thấy biết ơn vì đã học hỏi rất nhiều kiến thức mà trước đây chưa từng biết đến... sau 2 lần tham dự... em đã có nhiều sự thay đổi lớn. Em đã dần tự tin hơn... môn kỹ năng giao tiếp thuyết trình em đã được điểm tuyệt đối..."</p>
             <p class="testimonial-author">Bạn Bùi Xuân Trường</p>
+            </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="testimonial-card text-center">
+          <div class="img-wrapper">
             <img src="../images/user2.png?text=User2" alt="Đỗ Thị Thùy Dương" class="mx-auto">
             <p class="testimonial-text">"Khi được nghe anh Văn Minh chia sẻ... tâm trí em được mở rộng ra một vùng tri thức mới... em hiểu được rằng Hùng biện không chỉ vậy, mà Hùng biện còn là khả năng phản biện và tư duy sâu sắc... Muốn hùng biện hay, trước hết phải trang bị cho mình một tâm thức sâu sắc..."</p>
             <p class="testimonial-author">Bạn Đỗ Thị Thùy Dương</p>
+            </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="testimonial-card text-center">
+          <div class="img-wrapper">
             <img src="../images/user2.png?text=User3" alt="Ngô Quang Việt" class="mx-auto">
             <p class="testimonial-text">"Mình vốn là người hướng nội... những bài thuyết trình trên lớp là “cực hình”... sau một lần tình cờ tham gia hội thảo... suy nghĩ của mình đã thay đổi. Mình nhận ra hướng nội không đồng nghĩa với việc ăn nói kém... Từ đó mình đã cố gắng áp dụng dần những điều học được..."</p>
             <p class="testimonial-author">Bạn Ngô Quang Việt</p>
+          </div>
           </div>
         </div>
       </div>
