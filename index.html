@@ -323,51 +323,55 @@
         z-index: 1;
     }
     
-.img-wrapper::before {
-    content: '';
-    position: absolute;
-    top: -10px; /* Độ dày viền */
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    z-index: 0;
-
-    /* ---- Cập nhật background-image với màu #00188b và chuyển màu mạnh hơn ---- */
-    background-image: conic-gradient(
-        from 0deg at 50% 50%, /* Bắt đầu gradient từ hướng phải (0deg), tại tâm */
-        #00188b 240deg, /* Màu xanh đậm #00188b từ 240deg (dưới-trái) */
-        #ffffff 300deg, /* Giữ màu xanh đậm đến 300deg (dưới-phải) */
-        #ffffff 330deg, /* Chuyển nhanh sang màu trắng #ffffff ở 330deg */
-        #ffffff 30deg,  /* Giữ màu trắng đến 30deg (trên-phải) */
-        #00188b 60deg,  /* Chuyển nhanh lại sang màu xanh đậm ở 60deg (trên-trái) */
-        #ffffff 120deg  /* Giữ màu xanh đậm đến 120deg */
-        /* Gradient sẽ tự lặp lại giữa 120deg và 240deg */
-    );
-    /* -------------------------------------------------------------------- */
-
-    /* Giữ nguyên mask-image để tạo hiệu ứng viền nhỏ dần/mờ dần ở phía trên */
-    mask-image: conic-gradient(from 0deg at 50% 50%,
-                               rgba(0,0,0,0) 45deg,
-                               rgba(0,0,0,0.5) 60deg,
-                               rgba(0,0,0,1) 90deg,
-                               rgba(0,0,0,1) 270deg,
-                               rgba(0,0,0,1) 300deg,
-                               rgba(0,0,0,0.5) 315deg,
-                               rgba(0,0,0,0) 360deg
-                              );
-
-    /* Thêm prefix cho tương thích trình duyệt */
-    -webkit-mask-image: conic-gradient(from 0deg at 50% 50%,
-                                       rgba(0,0,0,0) 45deg,
-                                       rgba(0,0,0,0.5) 60deg,
-                                       rgba(0,0,0,1) 90deg,
-                                       rgba(0,0,0,1) 270deg,
-                                       rgba(0,0,0,1) 300deg,
-                                       rgba(0,0,0,0.5) 315deg,
-                                       rgba(0,0,0,0) 360deg
-                                      );
-}
+    .img-wrapper::before {
+        content: '';
+        position: absolute;
+        /* Làm cho pseudo-element lớn hơn wrapper một chút để tạo không gian cho viền */
+        top: -10px; /* Độ dày viền tối đa ở phía trên */
+        left: -10px; /* Độ dày viền tối đa ở phía trái */
+        right: -10px; /* Độ dày viền tối đa ở phía phải */
+        bottom: -10px; /* Độ dày viền tối đa ở phía dưới */
+        border-radius: 50%; /* Giữ bo tròn */
+        z-index: 0; /* Đặt phía sau ảnh */
+    
+        /* ---- Thay thế background-color bằng background-image sử dụng gradient ---- */
+        background-image: conic-gradient(
+            from 0deg at 50% 50%, /* Bắt đầu gradient từ hướng phải (0deg), tại tâm */
+            var(--primary-gold-dark, #a08a5b) 240deg, /* Màu đậm hơn ở góc 240deg (dưới-trái) */
+            var(--primary-gold, rgb(85, 111, 218)) 270deg, /* Màu chính ở góc 270deg (dưới) */
+            var(--primary-gold-light, #0063e4) 300deg, /* Màu nhạt hơn ở góc 300deg (dưới-phải) */
+            var(--primary-gold-lighter, #fffac2) 330deg, /* Màu rất nhạt ở góc 330deg */
+            var(--primary-gold-lighter, #fffac2) 30deg,  /* Giữ màu rất nhạt đến góc 30deg */
+            var(--primary-gold-light, #ffea92) 60deg,  /* Chuyển sang màu nhạt hơn ở góc 60deg */
+            var(--primary-gold, rgb(0, 255, 94)) 90deg,   /* Chuyển sang màu chính ở góc 90deg (trên) */
+            var(--primary-gold-dark, #a08a5b) 120deg, /* Chuyển sang màu đậm hơn ở góc 120deg (trên-trái) */
+            var(--primary-gold-dark, #ad079f) 240deg /* Hoàn thành vòng lặp về màu đậm hơn */
+        );
+        /* -------------------------------------------------------------------- */
+    
+    
+        /* Giữ nguyên mask-image để tạo hiệu ứng viền nhỏ dần/mờ dần ở phía trên */
+        mask-image: conic-gradient(from 0deg at 50% 50%,
+                                   rgba(0,0,0,0) 45deg,   /* Trong suốt từ 0deg (phải) đến 45deg (trên-phải) */
+                                   rgba(0,0,0,0.5) 60deg,  /* Bắt đầu chuyển mờ */
+                                   rgba(0,0,0,1) 90deg,   /* Hoàn toàn đậm từ 90deg (trên) đến 270deg (dưới) */
+                                   rgba(0,0,0,1) 270deg,
+                                   rgba(0,0,0,1) 300deg, /* Hoàn toàn đậm từ 270deg đến 300deg (dưới-trái) */
+                                   rgba(0,0,0,0.5) 315deg, /* Bắt đầu chuyển mờ */
+                                   rgba(0,0,0,0) 360deg  /* Trong suốt từ 315deg (trên-trái) đến 360deg (phải, tương đương 0deg) */
+                                  );
+    
+        /* Thêm prefix cho tương thích trình duyệt */
+        -webkit-mask-image: conic-gradient(from 0deg at 50% 50%,
+                                           rgba(0,0,0,0) 45deg,
+                                           rgba(0,0,0,0.5) 60deg,
+                                           rgba(0,0,0,1) 90deg,
+                                           rgba(0,0,0,1) 270deg,
+                                           rgba(0,0,0,1) 300deg,
+                                           rgba(0,0,0,0.5) 315deg,
+                                           rgba(0,0,0,0) 360deg
+                                          );
+    }
 
     /* Pricing Section - Integrating provided styles */
     .pricing-section { background-color: var(--light-bg-alt); }
