@@ -341,7 +341,7 @@
     /* ---- Cập nhật background-image: Gradient màu chỉ ở phần dưới ---- */
     background-image: conic-gradient(
         from 0deg at 50% 50%, /* Bắt đầu gradient từ hướng phải (0deg), tại tâm */
-        transparent 135deg,   /* Trong suốt từ 0deg (phải) đến 135deg (trên-trái) */
+        #a4ffd5 135deg,   /* Trong suốt từ 0deg (phải) đến 135deg (trên-trái) */
         #00188b 225deg,       /* Bắt đầu màu xanh đậm #00188b ở 225deg (dưới-trái) */
         #00bfff 270deg,       /* Chuyển sang màu xanh sáng #00bfff ở 270deg (chính giữa dưới) */
         #00188b 315deg,       /* Chuyển lại sang màu xanh đậm ở 315deg (dưới-phải) */
@@ -495,10 +495,12 @@
     .gallery-item-masonry {
       /* Chiều rộng được xác định bởi Bootstrap col classes */
       /* Masonry sẽ tính toán vị trí */
+      margin: 10px; /* Thêm khoảng cách 10px xung quanh mỗi ảnh */
+
     }
 
     .gallery-img-styled { /* Class mới cho ảnh thumbnail */
-      border-radius: var(--border-radius);
+      /* border-radius: var(--border-radius); */
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 100%;
