@@ -1329,381 +1329,309 @@
 
   <!-- Zoho Popup Button (Hidden) -->
   <button id="zf_button_918683" style="display: none;">Form</button>
-
+  <!-- Các thư viện JS bên ngoài -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- LightGallery JS và Plugins -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
-
-  <!-- Masonry JS (và imagesLoaded - khuyến nghị) -->
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-  <script>
-
-  <!-- Zoho Popup Script -->
-  <script type="text/javascript">(function() {
-    try{
-            if( document.readyState == "complete" ){
-                onloadActions_918683();
-            }  else {
-                window.addEventListener('load', function (){
-                    onloadActions_918683();
-                }, false);
-            }
-
-            function onloadActions_918683(){
-                constructDiv_918683();
-                // Pre-load the form once the div structure is ready
-                if (document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683")) {
-                    loadZForm_918683();
-                }
-            }
-
-            function constructDiv_918683(){
-                if (document.getElementById('formsLightBox_918683')) return;
-
-                var iframeDiv = document.createElement("div");
-                iframeDiv.setAttribute('id','RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683');
-                iframeDiv.setAttribute('class','zf_main_id_918683');
-
-                var closeFormDiv = document.createElement("div");
-                closeFormDiv.setAttribute('id','deleteform_918683');
-                closeFormDiv.setAttribute('class','zf_lb_closeform_918683');
-
-                var containerDiv = document.createElement("div");
-                containerDiv.setAttribute('id','containerDiv_918683');
-                containerDiv.setAttribute('class','zf_lB_Container_918683');
-                containerDiv.appendChild(iframeDiv);
-                containerDiv.appendChild(closeFormDiv);
-
-                var wrapperDiv = document.createElement("div");
-                wrapperDiv.setAttribute('class','zf_lB_Wrapper_918683');
-                wrapperDiv.appendChild(containerDiv);
-
-                var dimmerDiv = document.createElement("div");
-                dimmerDiv.setAttribute('class','zf_lB_Dimmer_918683');
-                dimmerDiv.setAttribute('elname','popup_box');
-                dimmerDiv.onclick = function() { deleteZForm_918683(); };
-
-
-                var mainDiv = document.createElement("div");
-                mainDiv.setAttribute('id','formsLightBox_918683');
-                mainDiv.style.display = "none";
-                mainDiv.appendChild(wrapperDiv);
-                mainDiv.appendChild(dimmerDiv);
-
-                document.body.appendChild(mainDiv);
-            }
-
-            window.showZForm_918683 = function (){
-                var mainDiv = document.getElementById("formsLightBox_918683");
-
-                if (!mainDiv) { // If for some reason it wasn't constructed
-                    constructDiv_918683();
-                    loadZForm_918683(); // Load if had to reconstruct
-                    mainDiv = document.getElementById("formsLightBox_918683");
-                } else {
-                    // Ensure iframe is loaded or reload if it's blank/incorrect
-                    var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
-                    var iframe = iframeHolder ? iframeHolder.getElementsByTagName("iframe")[0] : undefined;
-
-                    if(iframe == undefined || iframe.length == 0 || iframe.src === 'about:blank' || iframe.src === '' || !iframe.src.includes('formperma')){
-                        loadZForm_918683();
-                    }
-                }
-
-                if (mainDiv) {
-                    mainDiv.style.display = "block";
-                    setTimeout(function() {
-                        var containerDiv = document.getElementById('containerDiv_918683');
-                        if (containerDiv) containerDiv.classList.add('fadeIn');
-                    }, 10);
-                    document.body.style.overflow = "hidden";
-                }
-            }
-
-            window.deleteZForm_918683 = function() {
-                var divCont = document.getElementById("formsLightBox_918683");
-                var containerDiv = document.getElementById('containerDiv_918683');
-                if (containerDiv) containerDiv.classList.remove('fadeIn');
-
-                if (divCont) {
-                    divCont.style.display="none";
-                }
-                document.body.style.overflow = "";
-
-                // Optionally clear iframe src to stop video/audio if any
-                var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
-                if (iframeHolder) {
-                    var iframe = iframeHolder.getElementsByTagName("iframe")[0];
-                    if (iframe) {
-                        // Setting to about:blank is usually sufficient to stop most content and free resources
-                        // iframe.src = 'about:blank';
-                        // If you want to ensure it reloads next time, do nothing or set src to empty string
-                        // For pre-loading, we prefer to keep it loaded but hidden.
-                    }
-                }
-            }
-
-            function loadZForm_918683() {
-                var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
-                if (!iframeHolder) return;
-
-                var oldIframe = iframeHolder.getElementsByTagName("iframe")[0];
-                // Only remove and reload if there's no iframe or if src is problematic (e.g., about:blank after closing)
-                // If pre-loading, we want to avoid reloading if it's already the correct src.
-                if (oldIframe && (oldIframe.src === 'about:blank' || oldIframe.src === '' || !oldIframe.src.includes('formperma'))) {
-                    oldIframe.remove();
-                    oldIframe = null; // Clear reference
-                }
-                if (!oldIframe) { // If no iframe or removed
-                    var f = document.createElement("iframe");
-                    f.src = getsrcurlZForm_918683('https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1');
-                    f.setAttribute("aria-label", "Form Đăng Ký");
-                    // Ensure iframe takes full space of its container
-                    f.style.width = "100%";
-                    f.style.height = "100%";
-                    f.style.border = "none";
-                    iframeHolder.appendChild(f);
-                }
-
-
-                var deleteFormBtn = document.getElementById("deleteform_918683");
-                deleteFormBtn.onclick = function() { deleteZForm_918683(); }
-
-                window.addEventListener('message', function (event){
-                    var evntData = event.data;
-                    if( evntData && evntData.constructor == String ){
-                        var zf_ifrm_data = evntData.split("|");
-                        if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
-                            var zf_perma = zf_ifrm_data[0];
-                            var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
-                            if (isNaN(zf_ifrm_ht_px)) return;
-
-                            var iframeElement = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683").getElementsByTagName("iframe")[0];
-                            if (!iframeElement || !iframeElement.src) return;
-
-
-                            if ( (iframeElement.src).indexOf('formperma') > 0 && (iframeElement.src).indexOf(zf_perma) > 0 ) {
-                                var zf_ifrm_ht_nw = ( zf_ifrm_ht_px + 30 ) + "px";
-                                var containerToResize = document.getElementById("containerDiv_918683");
-
-                                var updateHeight = function() {
-                                   if(containerToResize) containerToResize.style.height = zf_ifrm_ht_nw;
-                                };
-
-                                if(zf_ifrm_data.length == 3) {
-                                    setTimeout(updateHeight, 500);
-                                } else {
-                                    updateHeight();
-                                }
-                            }
-                        }
-                    }
-                }, false);
-            }
-
-            function getsrcurlZForm_918683(zf_src) {
-                try {
-                    if ( typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined" ) {
-                        for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
-                            var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
-                            var utmVal = zfutm_zfAdvLead.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
-                            if ( typeof utmVal !== "undefined" && utmVal != "" ){
-                                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
-                            }
-                        }
-                    }
-                    if ( typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined" ) {
-                        for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
-                            var utmPm = ZFLead.utmPNameArr[ prmIdx ];
-                            var utmVal = zfutm_zfLead.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
-                             if ( typeof utmVal !== "undefined" && utmVal != "" ){
-                                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
-                            }
-                        }
-                    }
-                }catch(e){}
-                return zf_src;
-            }
-
-            /*
-            // Removed auto-popup timer, enable if needed
-            var zf_popup_timer = setTimeout(function (){
-                var mainLb = document.getElementById("formsLightBox_918683");
-                if (mainLb && mainLb.style.display === 'none') {
-                    showZForm_918683();
-                } else if (!mainLb) {
-                     showZForm_918683();
-                }
-            }, 60*1000);
-            */
-
-            var zfButton = document.getElementById("zf_button_918683");
-            if(zfButton){
-                zfButton.onclick = function() { showZForm_918683(); };
-            }
-
-    }catch(e){}
-  })();</script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true,
-  offset: 50 // Mặc định là 120. Thử giảm xuống xem sao
-  });
-
-  // Accordion for Pricing Section (Giữ nguyên)
-  document.querySelectorAll('.accordion-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const content = toggle.nextElementSibling;
-      toggle.classList.toggle('active');
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
+  <!-- Zoho Popup Script (trong thẻ script riêng) -->
+  <script type="text/javascript">
+  (function() {
+    try {
+      if (document.readyState == "complete") {
+        onloadActions_918683();
       } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
+        window.addEventListener('load', function() {
+          onloadActions_918683();
+        }, false);
       }
-    });
-  });
 
-  // Accordion for FAQ Section - Cập nhật
-  document.querySelectorAll('.faq-list-container .faq-item h4').forEach(header => {
-      header.addEventListener('click', () => {
+      function onloadActions_918683() {
+        constructDiv_918683();
+        if (document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683")) {
+          loadZForm_918683();
+        }
+      }
+
+      function constructDiv_918683() {
+        if (document.getElementById('formsLightBox_918683')) return;
+        var iframeDiv = document.createElement("div");
+        iframeDiv.setAttribute('id', 'RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683');
+        iframeDiv.setAttribute('class', 'zf_main_id_918683');
+        var closeFormDiv = document.createElement("div");
+        closeFormDiv.setAttribute('id', 'deleteform_918683');
+        closeFormDiv.setAttribute('class', 'zf_lb_closeform_918683');
+        var containerDiv = document.createElement("div");
+        containerDiv.setAttribute('id', 'containerDiv_918683');
+        containerDiv.setAttribute('class', 'zf_lB_Container_918683');
+        containerDiv.appendChild(iframeDiv);
+        containerDiv.appendChild(closeFormDiv);
+        var wrapperDiv = document.createElement("div");
+        wrapperDiv.setAttribute('class', 'zf_lB_Wrapper_918683');
+        wrapperDiv.appendChild(containerDiv);
+        var dimmerDiv = document.createElement("div");
+        dimmerDiv.setAttribute('class', 'zf_lB_Dimmer_918683');
+        dimmerDiv.setAttribute('elname', 'popup_box');
+        dimmerDiv.onclick = function() { deleteZForm_918683(); };
+        var mainDiv = document.createElement("div");
+        mainDiv.setAttribute('id', 'formsLightBox_918683');
+        mainDiv.style.display = "none";
+        mainDiv.appendChild(wrapperDiv);
+        mainDiv.appendChild(dimmerDiv);
+        document.body.appendChild(mainDiv);
+      }
+
+      window.showZForm_918683 = function() {
+        var mainDiv = document.getElementById("formsLightBox_918683");
+        if (!mainDiv) {
+          constructDiv_918683();
+          loadZForm_918683();
+          mainDiv = document.getElementById("formsLightBox_918683");
+        } else {
+          var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+          var iframe = iframeHolder ? iframeHolder.getElementsByTagName("iframe")[0] : undefined;
+          if (iframe == undefined || iframe.length == 0 || iframe.src === 'about:blank' || iframe.src === '' || !iframe.src.includes('formperma')) {
+            loadZForm_918683();
+          }
+        }
+        if (mainDiv) {
+          mainDiv.style.display = "block";
+          setTimeout(function() {
+            var containerDiv = document.getElementById('containerDiv_918683');
+            if (containerDiv) containerDiv.classList.add('fadeIn');
+          }, 10);
+          document.body.style.overflow = "hidden";
+        }
+      }
+
+      window.deleteZForm_918683 = function() {
+        var divCont = document.getElementById("formsLightBox_918683");
+        var containerDiv = document.getElementById('containerDiv_918683');
+        if (containerDiv) containerDiv.classList.remove('fadeIn');
+        if (divCont) {
+          divCont.style.display = "none";
+        }
+        document.body.style.overflow = "";
+        var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+        if (iframeHolder) {
+          var iframe = iframeHolder.getElementsByTagName("iframe")[0];
+          // if (iframe) { iframe.src = 'about:blank'; } // Tùy chọn
+        }
+      }
+
+      function loadZForm_918683() {
+        var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+        if (!iframeHolder) return;
+        var oldIframe = iframeHolder.getElementsByTagName("iframe")[0];
+        if (oldIframe && (oldIframe.src === 'about:blank' || oldIframe.src === '' || !oldIframe.src.includes('formperma'))) {
+          oldIframe.remove();
+          oldIframe = null;
+        }
+        if (!oldIframe) {
+          var f = document.createElement("iframe");
+          f.src = getsrcurlZForm_918683('https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1');
+          f.setAttribute("aria-label", "Form Đăng Ký");
+          f.style.width = "100%";
+          f.style.height = "100%";
+          f.style.border = "none";
+          iframeHolder.appendChild(f);
+        }
+        var deleteFormBtn = document.getElementById("deleteform_918683");
+        deleteFormBtn.onclick = function() { deleteZForm_918683(); }
+        window.addEventListener('message', function(event) {
+          var evntData = event.data;
+          if (evntData && evntData.constructor == String) {
+            var zf_ifrm_data = evntData.split("|");
+            if (zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3) {
+              var zf_perma = zf_ifrm_data[0];
+              var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
+              if (isNaN(zf_ifrm_ht_px)) return;
+              var iframeElement = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683").getElementsByTagName("iframe")[0];
+              if (!iframeElement || !iframeElement.src) return;
+              if ((iframeElement.src).indexOf('formperma') > 0 && (iframeElement.src).indexOf(zf_perma) > 0) {
+                var zf_ifrm_ht_nw = (zf_ifrm_ht_px + 30) + "px";
+                var containerToResize = document.getElementById("containerDiv_918683");
+                var updateHeight = function() {
+                  if (containerToResize) containerToResize.style.height = zf_ifrm_ht_nw;
+                };
+                if (zf_ifrm_data.length == 3) {
+                  setTimeout(updateHeight, 500);
+                } else {
+                  updateHeight();
+                }
+              }
+            }
+          }
+        }, false);
+      }
+
+      function getsrcurlZForm_918683(zf_src) {
+        try {
+          if (typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined") {
+            for (var prmIdx = 0; prmIdx < ZFAdvLead.utmPNameArr.length; prmIdx++) {
+              var utmPm = ZFAdvLead.utmPNameArr[prmIdx];
+              var utmVal = zfutm_zfAdvLead.zfautm_gC_enc(ZFAdvLead.utmPNameArr[prmIdx]);
+              if (typeof utmVal !== "undefined" && utmVal != "") {
+                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
+              }
+            }
+          }
+          if (typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined") {
+            for (var prmIdx = 0; prmIdx < ZFLead.utmPNameArr.length; prmIdx++) {
+              var utmPm = ZFLead.utmPNameArr[prmIdx];
+              var utmVal = zfutm_zfLead.zfutm_gC_enc(ZFLead.utmPNameArr[prmIdx]);
+              if (typeof utmVal !== "undefined" && utmVal != "") {
+                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
+              }
+            }
+          }
+        } catch (e) {}
+        return zf_src;
+      }
+
+      var zfButton = document.getElementById("zf_button_918683");
+      if (zfButton) {
+        zfButton.onclick = function() { showZForm_918683(); };
+      }
+
+    } catch (e) {}
+  })();
+  </script>
+
+  <!-- Các script khởi tạo tùy chỉnh -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Khởi tạo AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50
+      });
+
+      // Accordion for Pricing Section
+      document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const content = toggle.nextElementSibling;
+          toggle.classList.toggle('active');
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Accordion for FAQ Section
+      document.querySelectorAll('.faq-list-container .faq-item h4').forEach(header => {
+        header.addEventListener('click', () => {
           const currentItem = header.parentElement;
           const answer = currentItem.querySelector('.faq-answer');
           const isActive = currentItem.classList.contains('active');
           const allItemsContainer = currentItem.closest('.faq-list-container');
           
-          if (!allItemsContainer || !answer) return; // Guard clauses
+          if (!allItemsContainer || !answer) return;
 
           const allFaqItems = allItemsContainer.querySelectorAll('.faq-item');
 
-          // Đóng tất cả các mục khác
           allFaqItems.forEach(item => {
-              const otherAnswer = item.querySelector('.faq-answer');
-              if (item !== currentItem && item.classList.contains('active')) {
-                  item.classList.remove('active'); // Xoay icon
-                  if (otherAnswer) {
-                      otherAnswer.style.maxHeight = "0px";
-                      // Sau khi transition max-height kết thúc, đặt lại padding về 0
-                      // Để tránh phức tạp với transitionend, chúng ta có thể đặt padding ngay
-                      // vì max-height = 0 sẽ ẩn nó đi.
-                      otherAnswer.style.paddingTop = "0px";
-                  }
+            const otherAnswer = item.querySelector('.faq-answer');
+            if (item !== currentItem && item.classList.contains('active')) {
+              item.classList.remove('active');
+              if (otherAnswer) {
+                otherAnswer.style.maxHeight = "0px";
+                otherAnswer.style.paddingTop = "0px";
               }
+            }
           });
 
-          // Xử lý mục hiện tại
-          if (isActive) { // Nếu đang mở -> đóng lại
-              currentItem.classList.remove('active');
-              answer.style.maxHeight = "0px";
-              // Đặt padding về 0 sau khi transition max-height hoàn tất (hoặc gần như vậy)
-              // Đối với việc đóng, đặt paddingTop = 0 ngay cũng được vì max-height sẽ ẩn nó.
-              answer.style.paddingTop = "0px";
-
-          } else { // Nếu đang đóng -> mở ra
-              currentItem.classList.add('active');
-              // Bước 1: Đặt padding-top mong muốn.
-              // Vì `box-sizing: border-box`, padding này sẽ nằm trong không gian của `max-height`.
-              answer.style.paddingTop = "10px";
-              
-              // Bước 2: Đợi frame tiếp theo để trình duyệt áp dụng padding và tính toán lại layout.
-              requestAnimationFrame(() => {
-                  // Bước 3: Lấy scrollHeight (giờ đã bao gồm nội dung text VÀ padding-top vì box-sizing)
-                  // và đặt max-height để kích hoạt transition.
-                  // scrollHeight sẽ là chiều cao thực của nội dung bên trong .faq-answer,
-                  // bao gồm cả padding của nó nếu box-sizing là border-box và có nội dung.
-                  // Nếu không có nội dung, scrollHeight có thể chỉ là padding.
-                  // Chúng ta muốn max-height đủ để chứa text + padding.
-                  answer.style.maxHeight = answer.scrollHeight + "px";
-              });
+          if (isActive) {
+            currentItem.classList.remove('active');
+            answer.style.maxHeight = "0px";
+            answer.style.paddingTop = "0px";
+          } else {
+            currentItem.classList.add('active');
+            answer.style.paddingTop = "10px";
+            requestAnimationFrame(() => {
+              answer.style.maxHeight = answer.scrollHeight + "px";
+            });
           }
+        });
       });
-  });
 
-  // Scroll to Pricing Section (Giữ nguyên)
-  document.querySelectorAll('.scroll-to-pricing-section').forEach(button => {
-      button.addEventListener('click', function(event) {
+      // Scroll to Pricing Section
+      document.querySelectorAll('.scroll-to-pricing-section').forEach(button => {
+        button.addEventListener('click', function(event) {
           event.preventDefault();
           const pricingSection = document.getElementById('gia-ve-uu-dai');
           if (pricingSection) {
-              pricingSection.scrollIntoView({ behavior: 'smooth' });
+            pricingSection.scrollIntoView({ behavior: 'smooth' });
           }
+        });
       });
-  });
 
-  // Trigger Zoho Popup (Giữ nguyên)
-  document.querySelectorAll('.trigger-zoho-popup').forEach(button => {
-      button.addEventListener('click', function(event) {
+      // Trigger Zoho Popup
+      document.querySelectorAll('.trigger-zoho-popup').forEach(button => {
+        button.addEventListener('click', function(event) {
           event.preventDefault();
           if (typeof showZForm_918683 === 'function') {
-              showZForm_918683();
+            showZForm_918683();
           } else {
-              console.error('Zoho popup function showZForm_918683 not found.');
+            console.error('Zoho popup function showZForm_918683 not found.');
           }
+        });
       });
-  });
 
-
-    document.addEventListener('DOMContentLoaded', function () {
-      // ... (các khởi tạo AOS, Accordion, Scroll, Zoho hiện có) ...
-
+      // Khởi tạo LightGallery và Masonry
       const galleryRoot = document.getElementById('lightgallery-masonry');
       if (galleryRoot) {
-          // Khởi tạo LightGallery
-          const lgInstance = lightGallery(galleryRoot, {
-              selector: '.gallery-item-masonry > a', // Chọn đúng các thẻ <a> chứa ảnh
-              plugins: [lgZoom, lgThumbnail],      // Sử dụng các plugin đã import/load
-              speed: 500,
-              download: false, // Tắt nút download nếu không muốn
-              mobileSettings: {
-                  controls: true,
-                  showCloseIcon: true,
-                  download: false,
-              },
-              subHtmlSelectorRelative: true, // Lấy sub-html từ data-attribute của thẻ <a>
-              thumbnail: true, // Bật plugin thumbnail
-              // zoom: true, // Plugin zoom thường được tự động kích hoạt nếu có lgZoom
+        const lgInstance = lightGallery(galleryRoot, {
+          selector: '.gallery-item-masonry > a',
+          plugins: [lgZoom, lgThumbnail], // Biến lgZoom và lgThumbnail được cung cấp bởi các plugin JS của LightGallery
+          speed: 500,
+          download: false,
+          mobileSettings: {
+            controls: true,
+            showCloseIcon: true,
+            download: false,
+          },
+          subHtmlSelectorRelative: true,
+          thumbnail: true,
+        });
+
+        if (typeof Masonry !== 'undefined' && typeof imagesLoaded !== 'undefined') {
+          const masonry = new Masonry(galleryRoot, {
+            itemSelector: '.gallery-item-masonry',
+            columnWidth: '.gallery-item-masonry',
+            percentPosition: true,
+            gutter: 0
           });
 
-          // Khởi tạo Masonry
-          // Đảm bảo Masonry và imagesLoaded đã được tải
-          if (typeof Masonry !== 'undefined' && typeof imagesLoaded !== 'undefined') {
-              const masonry = new Masonry(galleryRoot, {
-                  itemSelector: '.gallery-item-masonry',
-                  columnWidth: '.gallery-item-masonry', // Masonry sẽ dùng chiều rộng của item này
-                  percentPosition: true,
-                  gutter: 0 // Khoảng cách ngang giữa các cột đã được Bootstrap grid (padding của col) xử lý.
-                            // Khoảng cách dọc được xử lý bằng mb-4 trên item.
-              });
+          imagesLoaded(galleryRoot).on('progress', function() {
+            masonry.layout();
+          });
 
-              // Layout lại Masonry sau khi tất cả ảnh đã tải xong để tránh chồng chéo
-              imagesLoaded(galleryRoot).on('progress', function() {
-                  masonry.layout();
-              });
+          let resizeTimeout;
+          window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+              masonry.layout();
+            }, 250);
+          });
 
-              // Tùy chọn: Layout lại Masonry khi kích thước cửa sổ thay đổi (debounce để tối ưu)
-              let resizeTimeout;
-              window.addEventListener('resize', function() {
-                  clearTimeout(resizeTimeout);
-                  resizeTimeout = setTimeout(function() {
-                      masonry.layout();
-                  }, 250);
-              });
-
-          } else {
-              if (typeof Masonry === 'undefined') {
-                console.warn('Masonry library is not found. Make sure masonry.pkgd.min.js is loaded.');
-              }
-              if (typeof imagesLoaded === 'undefined') {
-                console.warn('imagesLoaded library is not found. Make sure imagesloaded.pkgd.min.js is loaded.');
-              }
+        } else {
+          if (typeof Masonry === 'undefined') {
+            console.warn('Masonry library is not found. Make sure masonry.pkgd.min.js is loaded.');
           }
+          if (typeof imagesLoaded === 'undefined') {
+            console.warn('imagesLoaded library is not found. Make sure imagesloaded.pkgd.min.js is loaded.');
+          }
+        }
       }
     });
-</script>
+  </script>
 </body>
 </html>
