@@ -1186,37 +1186,37 @@
       <!-- Container cho Masonry và LightGallery -->
       <div id="lightgallery-masonry" class="gallery-masonry-grid">
         <!-- Item 1 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in"  data-aos-offset="0">
+        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" >
           <a href="../images/ws1.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 1</h4><p>Không khí sôi nổi tại workshop tháng trước.</p>">
             <img alt="Workshop Ảnh 1" src="../images/ws1.jpg" class="img-fluid gallery-img-styled" />
           </a>
         </div>
         <!-- Item 2 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="100" data-aos-offset="0">
+        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="100">
           <a href="../images/ws2.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 2</h4><p>Học viên hào hứng đặt câu hỏi.</p>">
             <img alt="Workshop Ảnh 2" src="../images/ws2.jpg" class="img-fluid gallery-img-styled" />
           </a>
         </div>
         <!-- Item 3 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="200" data-aos-offset="0">
+        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="200">
           <a href="../images/ws3.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 3</h4><p>Trainer chia sẻ kiến thức.</p>">
             <img alt="Workshop Ảnh 3" src="../images/ws3.jpg" class="img-fluid gallery-img-styled" />
           </a>
         </div>
         <!-- Item 4 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300" data-aos-offset="0">
+        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300">
            <a href="../images/ws4.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 4</h4><p>Thảo luận nhóm hiệu quả.</p>">
             <img alt="Workshop Ảnh 4" src="../images/ws4.jpg" class="img-fluid gallery-img-styled" />
           </a>
         </div>
         <!-- Item 5 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300" data-aos-offset="0">
+        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="400">
           <a href="../images/ws5.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 5</h4><p>Khoảnh khắc đáng nhớ.</p>">
             <img alt="Workshop Ảnh 5" src="../images/ws5.jpg" class="img-fluid gallery-img-styled" />
           </a>
         </div>
         <!-- Item 6 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300" data-aos-offset="0">
+        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="500">
           <a href="../images/ws6.jpg" data-lg-size="1200-80 0" data-sub-html="<h4>Workshop Ảnh 6</h4><p>Kết nối và học hỏi.</p>">
             <img alt="Workshop Ảnh 6" src="../images/ws6.jpg" class="img-fluid gallery-img-styled" />
           </a>
@@ -1610,9 +1610,11 @@
             gutter: 0
           });
 
-          imagesLoaded(galleryRoot).on('progress', function() {
-            masonry.layout();
-          });
+        imagesLoaded(galleryRoot).on('progress', function() {
+          masonry.layout();
+        }).on('always', function() {
+          AOS.refresh();
+        });
 
           let resizeTimeout;
           window.addEventListener('resize', function() {
