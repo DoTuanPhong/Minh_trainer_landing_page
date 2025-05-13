@@ -891,10 +891,12 @@
       }
 
       /* Áp dụng Grid cho các thẻ 
+												
 												<a> bên trong contact-item */
       .contact-item a {
         display: grid;
         /* Chuyển 
+													
 													<a> thành Grid container */
         grid-template-columns: auto 1fr;
         /* Tạo 2 cột: icon (auto width) và text (fill remaining space) */
@@ -906,6 +908,7 @@
         /* Loại bỏ gạch chân */
         color: inherit;
         /* Kế thừa màu chữ từ phần tử cha (
+														
 														<p>) */
         /* Các thuộc tính khác cho link khi hover nếu muốn */
       }
@@ -1058,20 +1061,20 @@
         /* Media query cho màn hình lớn hơn 1200px */
         @media (min-width: 1200px) {
 
-          /* Áp dụng giới hạn chiều rộng và căn giữa cho phần tử .row bên trong hero-section */
-          .hero-section .row {
+          /* Áp dụng giới hạn chiều rộng và căn giữa cho phần tử .container bên trong hero-section */
+          .hero-section .container {
             max-width: 1140px;
             /* Giới hạn chiều rộng tối đa của nội dung */
-            margin: 0 auto;
-            /* Căn giữa phần tử .row */
-            /*
-           Lưu ý quan trọng: Việc ghi đè margin của .row có thể ảnh hưởng
-           đến hệ thống grid của Bootstrap. Nếu gặp vấn đề về khoảng cách
-           giữa các cột hoặc layout, cách làm chuẩn là bọc nội dung (div.row)
-           trong một div có class="container" và áp dụng max-width/margin cho container đó.
-        */
+            /* Margin: 0 auto; thường đã được Bootstrap áp dụng cho .container */
+            /* nhưng thêm vào đây để đảm bảo nếu có ghi đè ở đâu đó */
+            margin-left: auto;
+            margin-right: auto;
+            /* Có thể cần điều chỉnh padding trái/phải của container nếu muốn khoảng cách khác */
+            /* padding-left: 15px; padding-right: 15px; */
+            /* Giá trị mặc định của Bootstrap */
           }
         }
+      }
       }
     </style>
   </head>
@@ -1513,6 +1516,7 @@
           <!-- Item 1 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in">
             <a href="../images/ws1.jpg" data-lg-size="1200-800" data-sub-html="
+																									
 																									<h4>Workshop Ảnh 1</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 1" src="../images/ws1.jpg" class="img-fluid gallery-img-styled" />
@@ -1521,6 +1525,7 @@
           <!-- Item 2 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="100">
             <a href="../images/ws2.jpg" data-lg-size="1200-800" data-sub-html="
+																									
 																									<h4>Workshop Ảnh 2</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 2" src="../images/ws2.jpg" class="img-fluid gallery-img-styled" />
@@ -1529,6 +1534,7 @@
           <!-- Item 3 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="200">
             <a href="../images/ws3.jpg" data-lg-size="1200-800" data-sub-html="
+																									
 																									<h4>Workshop Ảnh 3</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 3" src="../images/ws3.jpg" class="img-fluid gallery-img-styled" />
@@ -1537,6 +1543,7 @@
           <!-- Item 4 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300">
             <a href="../images/ws4.jpg" data-lg-size="1200-800" data-sub-html="
+																									
 																									<h4>Workshop Ảnh 4</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 4" src="../images/ws4.jpg" class="img-fluid gallery-img-styled" />
@@ -1545,6 +1552,7 @@
           <!-- Item 5 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="400">
             <a href="../images/ws5.jpg" data-lg-size="1200-800" data-sub-html="
+																									
 																									<h4>Workshop Ảnh 5</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 5" src="../images/ws5.jpg" class="img-fluid gallery-img-styled" />
@@ -1553,6 +1561,7 @@
           <!-- Item 6 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="500">
             <a href="../images/ws6.jpg" data-lg-size="1200-80 0" data-sub-html="
+																									
 																									<h4>Workshop Ảnh 6</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 6" src="../images/ws6.jpg" class="img-fluid gallery-img-styled" />
