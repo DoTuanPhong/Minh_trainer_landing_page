@@ -1,125 +1,142 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workshop Xây Dựng Lập Luận Thuyết Phục</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Xây Dựng Lập Luận Thuyết Phục</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- LightGallery CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css">
+    <style>
+      :root {
+        --dark-blue: #04153D;
+        --title-blue: #1D3C82;
+        --button-red: #DA0529;
+        --light-bg: #fbfbfb;
+        --light-bg-alt: #f0f2f5;
+        --text-light: #ffffff;
+        --text-dark: #343a40;
+        --primary-gold: #DDB04D;
+        --border-radius: 0.5rem;
+        --green-check: #28a745;
+        /* Bootstrap success green */
+      }
 
-  <style>
-    :root {
-      --dark-blue: #04153D;
-      --title-blue: #1D3C82;
-      --button-red: #DA0529;
-      --light-bg: #fbfbfb;
-      --light-bg-alt: #f0f2f5;
-      --text-light: #ffffff;
-      --text-dark: #343a40;
-      --primary-gold: #DDB04D;
-      --border-radius: 0.5rem;
-      --green-check: #28a745; /* Bootstrap success green */
-    }
+      body {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.7;
+        color: var(--text-dark);
+        background-color: var(--light-bg);
+      }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.7;
-      color: var(--text-dark);
-      background-color: var(--light-bg);
-    }
+      html {
+        scroll-behavior: smooth;
+        /* For smooth scrolling */
+      }
 
-    html {
-      scroll-behavior: smooth; /* For smooth scrolling */
-    }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--title-blue);
+        font-weight: 700;
+      }
 
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--title-blue);
-      font-weight: 700;
-    }
+      .section-padding {
+        padding: 80px 0;
+      }
 
-    .section-padding {
-      padding: 80px 0;
-    }
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        font-weight: 900;
+        color: var(--title-blue);
+      }
 
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      font-weight: 900;
-      color: var(--title-blue);
-    }
-    .section-title.red-title {
+      .section-title.red-title {
         color: var(--button-red);
-    }
+      }
 
+      .btn-brand {
+        background-color: var(--button-red);
+        color: var(--text-light);
+        padding: 12px 30px;
+        border-radius: var(--border-radius);
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border: none;
+        /* Ensure button style consistency */
+      }
 
-    .btn-brand {
-      background-color: var(--button-red);
-      color: var(--text-light);
-      padding: 12px 30px;
-      border-radius: var(--border-radius);
-      font-weight: 700;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      border: none; /* Ensure button style consistency */
-    }
-    .btn-brand:hover {
-      background-color: #b00420;
-      color: var(--text-light);
-      transform: translateY(-2px);
-    }
+      .btn-brand:hover {
+        background-color: #b00420;
+        color: var(--text-light);
+        transform: translateY(-2px);
+      }
 
-/* Hero Section */
-    .hero-section {
-      background-color: var(--dark-blue); /* Fallback color */
-      /* Thay thế ảnh base64 bằng ảnh từ thư mục images */
-      background-image: linear-gradient(rgba(4, 21, 61, 0.828), rgba(4, 21, 61, 0.828)), url('../images/hero-bg.jpg');
-      background-size: cover;
-      background-position: center;
-      color: var(--text-light);
-      padding: 100px 0 60px;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-    }
+      /* Hero Section */
+      .hero-section {
+        background-color: var(--dark-blue);
+        /* Fallback color */
+        /* Thay thế ảnh base64 bằng ảnh từ thư mục images */
+        background-image: linear-gradient(rgba(4, 21, 61, 0.828), rgba(4, 21, 61, 0.828)), url('../images/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--text-light);
+        padding: 100px 0 60px;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+      }
 
-    .hero-section .pill-title {
-      display: inline-block;
-      border: 2px solid var(--primary-gold);
-      color: var(--primary-gold);
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-size: 1.1rem; /* Increased size slightly */
-      font-weight: 700;
-      margin-bottom: 25px; /* Increased margin */
-      background-color: rgba(255,255,255,0.1);
-      text-transform: uppercase; /* Added for pill title */
-      font-family: 'Montserrat', sans-serif; /* Ensured Montserrat */
-    }
-.hero-section .main-slogan {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-light);
-    margin-bottom: 0.05rem;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.2;
-}
-    .workshop-details-hero {
+      .hero-section .pill-title {
+        display: inline-block;
+        border: 2px solid var(--primary-gold);
+        color: var(--primary-gold);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        /* Increased size slightly */
+        font-weight: 700;
+        margin-bottom: 25px;
+        /* Increased margin */
+        background-color: rgba(255, 255, 255, 0.1);
+        text-transform: uppercase;
+        /* Added for pill title */
+        font-family: 'Montserrat', sans-serif;
+        /* Ensured Montserrat */
+      }
+
+      .hero-section .main-slogan {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--text-light);
+        margin-bottom: 0.05rem;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.2;
+      }
+
+      .workshop-details-hero {
         margin-top: 30px;
-    }
-    .workshop-details-hero .detail-item {
+      }
+
+      .workshop-details-hero .detail-item {
         display: flex;
         align-items: flex-start;
         margin-bottom: 15px;
         font-size: 1.1rem;
-    }
-    .workshop-details-hero .detail-item i {
+      }
+
+      .workshop-details-hero .detail-item i {
         color: var(--primary-gold);
         font-size: 1.5rem;
         margin-right: 15px;
@@ -127,89 +144,100 @@
         text-align: center;
         flex-shrink: 0;
         margin-top: 3px;
-    }
-    .hero-trainer-info {
-      text-align: center;
-      max-width: 512px;
-    }
-    .hero-trainer-info img {
-      max-width: 250px;
-      /* border-radius: 50%;
+      }
+
+      .hero-trainer-info {
+        text-align: center;
+        max-width: 512px;
+      }
+
+      .hero-trainer-info img {
+        max-width: 250px;
+        /* border-radius: 50%;
       border: 5px solid var(--primary-gold);
       margin-bottom: 20px;
       box-shadow: 0 0 20px rgba(221, 176, 77, 0.5); */
-    }
-    .hero-trainer-name-plate {
+      }
+
+      .hero-trainer-name-plate {
         background: linear-gradient(135deg, #354adc 0%, #c0c3dd 100%);
-      color: var(--dark-blue);
-      padding: 10px 20px;
-      display: inline-block;
-      border-radius: var(--border-radius);
-      clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
-    }
-    .hero-trainer-name-plate h3 {
-      margin-bottom: 0;
-      font-size: 1.5rem;
-      color: var(--dark-blue);
-    }
-    .hero-trainer-titles p {
-      margin-bottom: 5px;
-      font-size: 1rem;
-      color: var(--text-light);
-      opacity: 0.9;
-    }
+        color: var(--dark-blue);
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: var(--border-radius);
+        clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+      }
 
-    /* Problem Section */
-    .problem-section .speech-bubble {
-      background-color: var(--title-blue);
-      color: var(--text-light);
-      padding: 20px 30px;
-      border-radius: var(--border-radius);
-      position: relative;
-      margin-bottom: 30px;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    .problem-section .speech-bubble::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 50px;
-      border-width: 15px 15px 0;
-      border-style: solid;
-      border-color: var(--title-blue) transparent;
-    }
-    .problem-list li {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: flex-start;
-    }
-    .problem-list li i {
-      color: var(--button-red);
-      margin-right: 10px;
-      margin-top: 5px;
-    }
-    .highlight-text {
-      font-weight: 700;
-      color: var(--title-blue);
-      background-color: #ffe066;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
+      .hero-trainer-name-plate h3 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        color: var(--dark-blue);
+      }
 
-    /* General List Styling */
-    .styled-list {
+      .hero-trainer-titles p {
+        margin-bottom: 5px;
+        font-size: 1rem;
+        color: var(--text-light);
+        opacity: 0.9;
+      }
+
+      /* Problem Section */
+      .problem-section .speech-bubble {
+        background-color: var(--title-blue);
+        color: var(--text-light);
+        padding: 20px 30px;
+        border-radius: var(--border-radius);
+        position: relative;
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .problem-section .speech-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50px;
+        border-width: 15px 15px 0;
+        border-style: solid;
+        border-color: var(--title-blue) transparent;
+      }
+
+      .problem-list li {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .problem-list li i {
+        color: var(--button-red);
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+
+      .highlight-text {
+        font-weight: 700;
+        color: var(--title-blue);
+        background-color: #ffe066;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      /* General List Styling */
+      .styled-list {
         list-style: none;
         padding-left: 0;
-    }
-    .styled-list li {
+      }
+
+      .styled-list li {
         font-size: 1.1rem;
         margin-bottom: 15px;
         padding-left: 35px;
         position: relative;
-    }
-    .styled-list li::before {
+      }
+
+      .styled-list li::before {
         content: "\f058";
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
@@ -218,57 +246,64 @@
         left: 0;
         top: 2px;
         font-size: 1.3rem;
-    }
+      }
 
-    /* Gifts Section */
-    .gift-card {
-      background-color: var(--text-light);
-      padding: 30px;
-      border-radius: var(--border-radius);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      text-align: center;
-      height: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gift-card:hover {
+      /* Gifts Section */
+      .gift-card {
+        background-color: var(--text-light);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gift-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    }
-    .gift-card .gift-icon {
-      font-size: 3.5rem;
-      color: var(--button-red);
-      margin-bottom: 20px;
-    }
-    .gift-card h4 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-      color: var(--title-blue);
-    }
-    .gift-card .vip-tag {
-      font-size: 0.8rem;
-      font-weight: bold;
-      color: var(--primary-gold);
-      display: block;
-      margin-top: 5px;
-    }
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      }
 
-    /* Trainer Section (Phần 6) */
-    .trainer-section-content img {
+      .gift-card .gift-icon {
+        font-size: 3.5rem;
+        color: var(--button-red);
+        margin-bottom: 20px;
+      }
+
+      .gift-card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: var(--title-blue);
+      }
+
+      .gift-card .vip-tag {
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: var(--primary-gold);
+        display: block;
+        margin-top: 5px;
+      }
+
+      /* Trainer Section (Phần 6) */
+      .trainer-section-content img {
         max-width: 250px;
         border-radius: var(--border-radius);
         padding: 6.22px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.288);
-    }
-    .trainer-section-content ul {
+      }
+
+      .trainer-section-content ul {
         list-style: none;
         padding-left: 0;
-    }
-    .trainer-section-content ul li {
+      }
+
+      .trainer-section-content ul li {
         padding-left: 25px;
         position: relative;
         margin-bottom: 10px;
-    }
-     .trainer-section-content ul li::before {
+      }
+
+      .trainer-section-content ul li::before {
         content: "\f005";
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
@@ -276,248 +311,307 @@
         position: absolute;
         left: 0;
         top: 5px;
-     }
+      }
 
-    /* Testimonials */
-    .testimonial-card {
-      background-color: var(--text-light);
-      padding: 30px;
-      border-radius: var(--border-radius);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .testimonial-card img {
+      /* Testimonials */
+      .testimonial-card {
+        background-color: var(--text-light);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .testimonial-card img {
         width: 200px;
         height: 226px;
         object-fit: cover;
         border-radius: 50%;
         margin-bottom: 20px;
         /* border: 3px solid var(--primary-gold); */
-    }
-    .testimonial-card .testimonial-text {
-      font-style: italic;
-      color: #555;
-      margin-bottom: 15px;
-      flex-grow: 1;
-    }
-    .testimonial-card .testimonial-author {
-      font-weight: 700;
-      color: var(--title-blue);
-    }
+      }
 
+      .testimonial-card .testimonial-text {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 15px;
+        flex-grow: 1;
+      }
 
-    .img-wrapper {
-        position: relative; /* Quan trọng để định vị ::before */
-        width: 226px; /* Kích thước ban đầu của ảnh */
-        height: 226px; /* Kích thước ban đầu của ảnh */
-        border-radius: 50%; /* Bo tròn */
-        margin: 0 auto 20px; /* Căn giữa wrapper và thêm margin dưới */
-        overflow: hidden; /* Giúp ẩn bớt phần pseudo-element thừa ra ngoài */
-        display: flex; /* Dùng flexbox để căn giữa ảnh */
+      .testimonial-card .testimonial-author {
+        font-weight: 700;
+        color: var(--title-blue);
+      }
+
+      .img-wrapper {
+        position: relative;
+        /* Quan trọng để định vị ::before */
+        width: 226px;
+        /* Kích thước ban đầu của ảnh */
+        height: 226px;
+        /* Kích thước ban đầu của ảnh */
+        border-radius: 50%;
+        /* Bo tròn */
+        margin: 0 auto 20px;
+        /* Căn giữa wrapper và thêm margin dưới */
+        overflow: hidden;
+        /* Giúp ẩn bớt phần pseudo-element thừa ra ngoài */
+        display: flex;
+        /* Dùng flexbox để căn giữa ảnh */
         justify-content: center;
         align-items: center;
-    }
-    
-    .img-wrapper img {
+      }
+
+      .img-wrapper img {
         display: block;
-        width: 100%; /* Ảnh lấp đầy wrapper */
-        height: 100%; /* Ảnh lấp đầy wrapper */
+        width: 100%;
+        /* Ảnh lấp đầy wrapper */
+        height: 100%;
+        /* Ảnh lấp đầy wrapper */
         object-fit: cover;
-        border-radius: 50%; /* Giữ bo tròn ảnh */
-        position: relative; /* Đảm bảo ảnh nằm trên pseudo-element */
+        border-radius: 50%;
+        /* Giữ bo tròn ảnh */
+        position: relative;
+        /* Đảm bảo ảnh nằm trên pseudo-element */
         z-index: 1;
-    }
-    
-.img-wrapper::before {
-    content: '';
-    position: absolute;
-    top: -10px; /* Độ dày viền */
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    z-index: 0;
+      }
 
-    /* ---- Cập nhật background-image: Gradient màu chỉ ở phần dưới ---- */
-    background-image: conic-gradient(
-        from 0deg at 50% 50%, /* Bắt đầu gradient từ hướng phải (0deg), tại tâm */
-        #a4ffd5 135deg,   /* Trong suốt từ 0deg (phải) đến 135deg (trên-trái) */
-        #00188b 225deg,       /* Bắt đầu màu xanh đậm #00188b ở 225deg (dưới-trái) */
-        #00bfff 270deg,       /* Chuyển sang màu xanh sáng #00bfff ở 270deg (chính giữa dưới) */
-        #00188b 315deg,       /* Chuyển lại sang màu xanh đậm ở 315deg (dưới-phải) */
-        transparent 360deg    /* Trở lại trong suốt từ 315deg đến 360deg (tương đương 0deg) và 135deg */
-    );
-    /* -------------------------------------------------------------------- */
+      .img-wrapper::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        /* Độ dày viền */
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-radius: 50%;
+        z-index: 0;
+        /* ---- Cập nhật background-image: Gradient màu chỉ ở phần dưới ---- */
+        background-image: conic-gradient(from 0deg at 50% 50%,
+            /* Bắt đầu gradient từ hướng phải (0deg), tại tâm */
+            #a4ffd5 135deg,
+            /* Trong suốt từ 0deg (phải) đến 135deg (trên-trái) */
+            #00188b 225deg,
+            /* Bắt đầu màu xanh đậm #00188b ở 225deg (dưới-trái) */
+            #00bfff 270deg,
+            /* Chuyển sang màu xanh sáng #00bfff ở 270deg (chính giữa dưới) */
+            #00188b 315deg,
+            /* Chuyển lại sang màu xanh đậm ở 315deg (dưới-phải) */
+            transparent 360deg
+            /* Trở lại trong suốt từ 315deg đến 360deg (tương đương 0deg) và 135deg */
+          );
+        /* -------------------------------------------------------------------- */
+        /* Vẫn giữ nguyên mask-image để tạo hiệu ứng viền nhỏ dần/mờ dần ở phía trên */
+        /* Mask này làm cho phần pseudo-element ở phía trên trở nên trong suốt, bất kể màu nền là gì */
+        mask-image: conic-gradient(from 0deg at 50% 50%,
+            rgba(0, 0, 0, 0) 45deg,
+            rgba(0, 0, 0, 0.5) 60deg,
+            rgba(0, 0, 0, 1) 90deg,
+            rgba(0, 0, 0, 1) 270deg,
+            rgba(0, 0, 0, 1) 300deg,
+            rgba(0, 0, 0, 0.5) 315deg,
+            rgba(0, 0, 0, 0) 360deg);
+        /* Thêm prefix cho tương thích trình duyệt */
+        -webkit-mask-image: conic-gradient(from 0deg at 50% 50%,
+            rgba(0, 0, 0, 0) 45deg,
+            rgba(0, 0, 0, 0.5) 60deg,
+            rgba(0, 0, 0, 1) 90deg,
+            rgba(0, 0, 0, 1) 270deg,
+            rgba(0, 0, 0, 1) 300deg,
+            rgba(0, 0, 0, 0.5) 315deg,
+            rgba(0, 0, 0, 0) 360deg);
+      }
 
+      /* Pricing Section - Integrating provided styles */
+      .pricing-section {
+        background-color: var(--light-bg-alt);
+      }
 
-    /* Vẫn giữ nguyên mask-image để tạo hiệu ứng viền nhỏ dần/mờ dần ở phía trên */
-    /* Mask này làm cho phần pseudo-element ở phía trên trở nên trong suốt, bất kể màu nền là gì */
-    mask-image: conic-gradient(from 0deg at 50% 50%,
-                               rgba(0,0,0,0) 45deg,
-                               rgba(0,0,0,0.5) 60deg,
-                               rgba(0,0,0,1) 90deg,
-                               rgba(0,0,0,1) 270deg,
-                               rgba(0,0,0,1) 300deg,
-                               rgba(0,0,0,0.5) 315deg,
-                               rgba(0,0,0,0) 360deg
-                              );
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-    /* Thêm prefix cho tương thích trình duyệt */
-    -webkit-mask-image: conic-gradient(from 0deg at 50% 50%,
-                                       rgba(0,0,0,0) 45deg,
-                                       rgba(0,0,0,0.5) 60deg,
-                                       rgba(0,0,0,1) 90deg,
-                                       rgba(0,0,0,1) 270deg,
-                                       rgba(0,0,0,1) 300deg,
-                                       rgba(0,0,0,0.5) 315deg,
-                                       rgba(0,0,0,0) 360deg
-                                      );
-}
+      .ticket-card {
+        background: var(--text-light);
+        border-radius: var(--border-radius);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-    /* Pricing Section - Integrating provided styles */
-    .pricing-section { background-color: var(--light-bg-alt); }
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .ticket-card {
-      background: var(--text-light);
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .ticket-card:hover {
+      .ticket-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-    .ticket-header {
-      padding: 20px;
-      border-bottom: 1px solid #eee;
-    }
-    .ticket-header h3 {
-      margin: 0 0 8px;
-      font-size: 1.4rem;
-      color: var(--title-blue);
-    }
-    .ticket-header .requirements {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 10px;
-    }
-    .ticket-header .price {
-      font-size: 2rem;
-      font-weight: bold;
-      color: var(--button-red);
-    }
-    .accordion { flex-grow: 1; }
-    .accordion-item { border-top: 1px solid #eee; }
-    .accordion-toggle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .accordion-toggle:hover { background: #f9f9f9; }
-    .accordion-toggle .gift-label {
-      font-weight: bold;
-      color: var(--title-blue);
-      display: flex;
-      align-items: center;
-    }
-    .accordion-toggle .gift-label i { margin-right: 8px; }
-    .arrow-btn {
-      background-color: white;
-      border: 1px solid var(--button-red);
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .arrow-btn i { color: var(--button-red); transition: transform 0.3s; }
-    .accordion-toggle.active .arrow-btn i { transform: rotate(180deg); }
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      padding: 0 20px;
-    }
-    .accordion-content ul {
-      list-style: none;
-      padding: 15px 0;
-      margin: 0;
-    }
-    .accordion-content ul li {
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 0.95rem;
-    }
-    .accordion-content ul li:last-child { border-bottom: none; }
-    .check-icon { color: var(--green-check); margin-right: 5px; }
-    .ticket-footer {
-      padding: 20px;
-      border-top: 1px solid #eee;
-      text-align: center;
-    }
-    .ticket-footer button {
-      background: var(--button-red);
-      color: #fff;
-      border: none;
-      border-radius: var(--border-radius);
-      padding: 10px 25px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
-    .ticket-footer button:hover {
-      background: #b00420;
-      transform: translateY(-2px);
-    }
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
 
-        /* CSS cho gallery masonry */
-    .gallery-masonry-grid {
-      /* Masonry sẽ quản lý layout này */
-    }
+      .ticket-header {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+      }
 
-    .gallery-item-masonry {
-      /* Chiều rộng được xác định bởi Bootstrap col classes */
-      /* Masonry sẽ tính toán vị trí */
+      .ticket-header h3 {
+        margin: 0 0 8px;
+        font-size: 1.4rem;
+        color: var(--title-blue);
+      }
 
+      .ticket-header .requirements {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 10px;
+      }
 
-    }
+      .ticket-header .price {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--button-red);
+      }
 
-    .gallery-img-styled { /* Class mới cho ảnh thumbnail */
-      /* border-radius: var(--border-radius); */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
-      padding: 8.28px; /* Thêm padding để tạo khoảng cách giữa ảnh */
-      height: auto; /* Quan trọng cho Masonry và responsive */
-      display: block; /* Để loại bỏ khoảng trắng thừa bên dưới ảnh */
-    }
-    .gallery-img-styled:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
+      .accordion {
+        flex-grow: 1;
+      }
 
+      .accordion-item {
+        border-top: 1px solid #eee;
+      }
 
-    /* Gallery Section */
-    /* .gallery-img {
+      .accordion-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .accordion-toggle:hover {
+        background: #f9f9f9;
+      }
+
+      .accordion-toggle .gift-label {
+        font-weight: bold;
+        color: var(--title-blue);
+        display: flex;
+        align-items: center;
+      }
+
+      .accordion-toggle .gift-label i {
+        margin-right: 8px;
+      }
+
+      .arrow-btn {
+        background-color: white;
+        border: 1px solid var(--button-red);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .arrow-btn i {
+        color: var(--button-red);
+        transition: transform 0.3s;
+      }
+
+      .accordion-toggle.active .arrow-btn i {
+        transform: rotate(180deg);
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 20px;
+      }
+
+      .accordion-content ul {
+        list-style: none;
+        padding: 15px 0;
+        margin: 0;
+      }
+
+      .accordion-content ul li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.95rem;
+      }
+
+      .accordion-content ul li:last-child {
+        border-bottom: none;
+      }
+
+      .check-icon {
+        color: var(--green-check);
+        margin-right: 5px;
+      }
+
+      .ticket-footer {
+        padding: 20px;
+        border-top: 1px solid #eee;
+        text-align: center;
+      }
+
+      .ticket-footer button {
+        background: var(--button-red);
+        color: #fff;
+        border: none;
+        border-radius: var(--border-radius);
+        padding: 10px 25px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .ticket-footer button:hover {
+        background: #b00420;
+        transform: translateY(-2px);
+      }
+
+      /* CSS cho gallery masonry */
+      .gallery-masonry-grid {
+        /* Masonry sẽ quản lý layout này */
+      }
+
+      .gallery-item-masonry {
+        /* Chiều rộng được xác định bởi Bootstrap col classes */
+        /* Masonry sẽ tính toán vị trí */
+      }
+
+      .gallery-img-styled {
+        /* Class mới cho ảnh thumbnail */
+        /* border-radius: var(--border-radius); */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%;
+        padding: 8.28px;
+        /* Thêm padding để tạo khoảng cách giữa ảnh */
+        height: auto;
+        /* Quan trọng cho Masonry và responsive */
+        display: block;
+        /* Để loại bỏ khoảng trắng thừa bên dưới ảnh */
+      }
+
+      .gallery-img-styled:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Gallery Section */
+      /* .gallery-img {
       width: 100%;
       height: 250px;
       object-fit: cover;
@@ -529,57 +623,68 @@
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     } */
+      /* FAQ Section */
+      .faq-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+      }
 
-  /* FAQ Section */
-  .faq-item {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #e0e0e0;
-  }
-  .faq-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-  }
-  .faq-item h4 {
-      font-size: 1.25rem;
-      color: var(--title-blue);
-      margin-bottom: 10px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  .faq-item h4 .faq-icon {
-      transition: transform 0.3s ease;
-  }
-  .faq-item .faq-answer {
-      padding-left: 20px;
-      font-size: 1rem;
-      line-height: 1.7;
-      max-height: 0; /* Trạng thái đóng ban đầu */
-      overflow: hidden;
-      padding-top: 0; /* Sẽ được JS điều khiển, trạng thái đóng ban đầu là 0 */
-      transition: max-height 1s ease-in-out; /* Chỉ transition max-height, có thể giảm thời gian một chút */
-      /* Bỏ transition cho padding-top ở đây */
-      box-sizing: border-box; /* THÊM DÒNG NÀY: Giúp kiểm soát kích thước tốt hơn */
-  }
-   .faq-item.active .faq-answer {
-      /* max-height và padding-top sẽ được JavaScript xử lý */
-   }
-  .faq-item.active h4 .faq-icon {
-      transform: rotate(180deg);
-  }
+      .faq-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
 
+      .faq-item h4 {
+        font-size: 1.25rem;
+        color: var(--title-blue);
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-     .faq-item.active .faq-answer {
-        /* max-height is set by JS */
-        padding-top: 10px; /* Match JS */
-     }
-    .faq-item.active h4 .faq-icon {
+      .faq-item h4 .faq-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item .faq-answer {
+        padding-left: 20px;
+        font-size: 1rem;
+        line-height: 1.7;
+        max-height: 0;
+        /* Trạng thái đóng ban đầu */
+        overflow: hidden;
+        padding-top: 0;
+        /* Sẽ được JS điều khiển, trạng thái đóng ban đầu là 0 */
+        transition: max-height 1s ease-in-out;
+        /* Chỉ transition max-height, có thể giảm thời gian một chút */
+        /* Bỏ transition cho padding-top ở đây */
+        box-sizing: border-box;
+        /* THÊM DÒNG NÀY: Giúp kiểm soát kích thước tốt hơn */
+      }
+
+      .faq-item.active .faq-answer {
+        /* max-height và padding-top sẽ được JavaScript xử lý */
+      }
+
+      .faq-item.active h4 .faq-icon {
         transform: rotate(180deg);
-    }
-    .faq-highlight-final {
+      }
+
+      .faq-item.active .faq-answer {
+        /* max-height is set by JS */
+        padding-top: 10px;
+        /* Match JS */
+      }
+
+      .faq-item.active h4 .faq-icon {
+        transform: rotate(180deg);
+      }
+
+      .faq-highlight-final {
         font-weight: bold;
         color: var(--text-light);
         background-color: var(--button-red);
@@ -587,77 +692,89 @@
         border-radius: var(--border-radius);
         display: inline-block;
         margin-top: 20px;
-    }
+      }
 
-    /* Form Section */
-    .form-section {
+      /* Form Section */
+      .form-section {
         background-color: var(--title-blue);
         color: var(--text-light);
-    }
-    .form-section .section-title, .form-section p {
+      }
+
+      .form-section .section-title,
+      .form-section p {
         color: var(--text-light);
-    }
-    #zoho-form-embed-container iframe {
+      }
+
+      #zoho-form-embed-container iframe {
         border-radius: var(--border-radius);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
 
+      /* Contact Section */
+      .contact-section {
+        background-color: var(--dark-blue);
+        color: var(--primary-gold);
+      }
 
-    /* Contact Section */
-    .contact-section {
-      background-color: var(--dark-blue);
-      color: var(--primary-gold);
-    }
-    .contact-section p, .contact-section .contact-item .fas {
-      color: var(--text-light);
-    }
-    .contact-section .section-title {
-      color: var(--primary-gold);
-    }
-    .contact-section .contact-item {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
+      .contact-section p,
+      .contact-section .contact-item .fas {
+        color: var(--text-light);
+      }
 
-    }
-    .contact-section .contact-item i.fa-envelope {
-      color: var(--primary-gold);
-    }
-    .contact-social-icons {
+      .contact-section .section-title {
+        color: var(--primary-gold);
+      }
+
+      .contact-section .contact-item {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .contact-section .contact-item i.fa-envelope {
+        color: var(--primary-gold);
+      }
+
+      .contact-social-icons {
         margin-bottom: 20px;
-    }
-    .social-icon-link {
+      }
+
+      .social-icon-link {
         display: inline-block;
         margin: 0 15px;
-    }
-    .social-icon-large {
+      }
+
+      .social-icon-large {
         font-size: 3rem;
         color: var(--primary-gold);
         transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .social-icon-large:hover {
+      }
+
+      .social-icon-large:hover {
         color: var(--text-light);
         transform: scale(1.1);
-    }
+      }
 
-    /* Footer */
-    footer {
-      background-color: #020e27;
-      color: rgba(255,255,255,0.7);
-      padding: 30px 0;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: var(--text-light);
-    }
+      /* Footer */
+      footer {
+        background-color: #020e27;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 30px 0;
+        font-size: 0.9rem;
+      }
 
-    /* Zoho Popup Styles */
-    .zf_lB_Dimmer_918683{
+      footer a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: var(--text-light);
+      }
+
+      /* Zoho Popup Styles */
+      .zf_lB_Dimmer_918683 {
         position: fixed;
         top: 0px;
         left: 0px;
@@ -666,31 +783,35 @@
         background: rgb(0, 0, 0);
         opacity: 0.8;
         z-index: 10000000;
-  	pointer-events: auto !important;
-    }
-    .zf_lB_Container_918683{
+        pointer-events: auto !important;
+      }
+
+      .zf_lB_Container_918683 {
         position: fixed;
         background-color: white;
         margin: 0;
         margin-right: 0px;
         padding: 0;
         /* height: 1533px; /* Will be adjusted by Zoho script */
-        width:  70%;
+        width: 70%;
         top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
         border: none;
         max-height: calc(100% - 60px);
-        z-index: 10000001; /* Ensure container is on top of dimmer via wrapper */
+        z-index: 10000001;
+        /* Ensure container is on top of dimmer via wrapper */
         transition: height 0.5s ease;
         overflow-y: auto;
-        display: flex; /* To make iframe fill height */
-        flex-direction: column; /* To make iframe fill height */
+        display: flex;
+        /* To make iframe fill height */
+        flex-direction: column;
+        /* To make iframe fill height */
         pointer-events: auto;
+      }
 
-    }
-    .zf_lB_Wrapper_918683{
+      .zf_lB_Wrapper_918683 {
         position: fixed;
         top: 0;
         left: 0;
@@ -700,19 +821,22 @@
         align-items: center;
         justify-content: center;
         z-index: 10000001;
-	pointer-events: none;
-    }
-    .zf_main_id_918683{
+        pointer-events: none;
+      }
+
+      .zf_main_id_918683 {
         height: 100%;
         width: 100%;
         display: flex;
-    }
-    .zf_main_id_918683 iframe {
+      }
+
+      .zf_main_id_918683 iframe {
         width: 100% !important;
         height: 100% !important;
         border: none;
-    }
-    .zf_lb_closeform_918683 {
+      }
+
+      .zf_lb_closeform_918683 {
         position: absolute;
         right: -20px;
         background: #2f2e2e;
@@ -723,9 +847,12 @@
         top: -15px;
         cursor: pointer;
         border: 2px solid #d9d9d9;
-        z-index: 10000002; /* Above container */
-    }
-    .zf_lb_closeform_918683:before, .zf_lb_closeform_918683:after {
+        z-index: 10000002;
+        /* Above container */
+      }
+
+      .zf_lb_closeform_918683:before,
+      .zf_lb_closeform_918683:after {
         position: absolute;
         left: 15px;
         content: ' ';
@@ -733,916 +860,1163 @@
         width: 2px;
         top: 7px;
         background-color: #f7f7f7;
-    }
-    .zf_lb_closeform_918683:before { transform: rotate(45deg); }
-    .zf_lb_closeform_918683:after { transform: rotate(-45deg); }
-    .fadeIn {
-        -webkit-animation-name: fadeIn; animation-name: fadeIn;
-        -webkit-animation-duration: 1s; animation-duration: 1s;
-        -webkit-animation-fill-mode: both; animation-fill-mode: both;
+      }
+
+      .zf_lb_closeform_918683:before {
+        transform: rotate(45deg);
+      }
+
+      .zf_lb_closeform_918683:after {
+        transform: rotate(-45deg);
+      }
+
+      .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
         /* display: block !important; /* Managed by JS */
-    }
+      }
 
-/* CSS để căn chỉnh khối bao bọc các mục liên hệ và căn giữa nó */
-.contact-items-grid-container {
-  max-width: 500px; /* Đặt chiều rộng tối đa cho khối */
-  margin: auto; /* Căn giữa khối trong container */
-  /* text-align: left; */ /* Không cần thiết ở đây vì đã dùng Grid */
-}
+      /* CSS để căn chỉnh khối bao bọc các mục liên hệ và căn giữa nó */
+      .contact-items-grid-container {
+        max-width: 500px;
+        /* Đặt chiều rộng tối đa cho khối */
+        margin: auto;
+        /* Căn giữa khối trong container */
+        /* text-align: left; */
+        /* Không cần thiết ở đây vì đã dùng Grid */
+      }
 
-/* Áp dụng Grid cho các thẻ <a> bên trong contact-item */
-.contact-item a {
-  display: grid; /* Chuyển <a> thành Grid container */
-  grid-template-columns: auto 1fr; /* Tạo 2 cột: icon (auto width) và text (fill remaining space) */
-  gap: 10px; /* Khoảng cách giữa icon và text */
-  align-items: center; /* Căn icon và text theo chiều dọc ở giữa */
+      /* Áp dụng Grid cho các thẻ 
+												<a> bên trong contact-item */
+      .contact-item a {
+        display: grid;
+        /* Chuyển 
+													<a> thành Grid container */
+        grid-template-columns: auto 1fr;
+        /* Tạo 2 cột: icon (auto width) và text (fill remaining space) */
+        gap: 10px;
+        /* Khoảng cách giữa icon và text */
+        align-items: center;
+        /* Căn icon và text theo chiều dọc ở giữa */
+        text-decoration: none;
+        /* Loại bỏ gạch chân */
+        color: inherit;
+        /* Kế thừa màu chữ từ phần tử cha (
+														<p>) */
+        /* Các thuộc tính khác cho link khi hover nếu muốn */
+      }
 
-  text-decoration: none; /* Loại bỏ gạch chân */
-  color: inherit; /* Kế thừa màu chữ từ phần tử cha (<p>) */
-  /* Các thuộc tính khác cho link khi hover nếu muốn */
-}
+      /* Đảm bảo icon nằm gọn trong cột 1 của Grid */
+      .contact-item a svg,
+      .contact-item a i {
+        /* Không cần vertical-align nữa vì đã dùng align-items: center trên grid container */
+        display: block;
+        /* Đảm bảo icon là block element trong grid cell */
+        width: 24px;
+        /* Thiết lập kích thước icon */
+        height: 24px;
+        /* Thiết lập kích thước icon */
+      }
 
-/* Đảm bảo icon nằm gọn trong cột 1 của Grid */
-.contact-item a svg,
-.contact-item a i {
-    /* Không cần vertical-align nữa vì đã dùng align-items: center trên grid container */
-    display: block; /* Đảm bảo icon là block element trong grid cell */
-    width: 24px; /* Thiết lập kích thước icon */
-    height: 24px; /* Thiết lập kích thước icon */
-}
+      /* Đảm bảo văn bản nằm gọn trong cột 2 của Grid */
+      .contact-item a span {
+        display: block;
+        /* Đảm bảo span là block element trong grid cell */
+      }
 
-/* Đảm bảo văn bản nằm gọn trong cột 2 của Grid */
-.contact-item a span {
-    display: block; /* Đảm bảo span là block element trong grid cell */
-}
+      /* Optional: Thêm hiệu ứng hover cho toàn bộ dòng */
+      .contact-item a:hover {
+        opacity: 0.8;
+        /* Ví dụ: Giảm độ mờ khi di chuột qua */
+        /* color: #0056b3; */
+        /* Ví dụ: Đổi màu chữ khi hover */
+      }
 
-/* Optional: Thêm hiệu ứng hover cho toàn bộ dòng */
-.contact-item a:hover {
-  opacity: 0.8; /* Ví dụ: Giảm độ mờ khi di chuột qua */
-  /* color: #0056b3; */ /* Ví dụ: Đổi màu chữ khi hover */
-}
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
 
+        100% {
+          opacity: 1;
+        }
+      }
 
-    @-webkit-keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
-    @keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
-    @media screen and (min-device-width: 10px) and (max-device-width: 380px) { .zf_lB_Container_918683 { width: 90% !important; max-height: calc(100% - 20px); } .zf_lb_closeform_918683 { right: -10px; top: -10px;} }
-    @media screen and (min-device-width: 360px) and (max-device-width: 480px) { .zf_lB_Container_918683 { width: 90% !important; max-height: calc(100% - 20px); } .zf_lb_closeform_918683 { right: -10px; top: -10px;} }
-    @media screen and (min-device-width: 440px) and (max-device-width: 500px) { .zf_lB_Container_918683 { width: 85% !important; } }
-    @media only screen and (min-width:500px) and (max-width:600px)  { .zf_lB_Container_918683 { width: 80%; } }
-    @media only screen and (min-width:601px) and (max-width:700px)  { .zf_lB_Container_918683 { width: 75%; } }
-    @media only screen and (min-width:700px) and (max-width:800px)  { .zf_lB_Container_918683 { width: 70%; } }
-    @media screen and (min-device-width: 801px) and (max-device-width: 1268px) { .zf_lB_Container_918683 { width: 70% !important; } }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
 
+        100% {
+          opacity: 1;
+        }
+      }
 
-    @media (max-width: 991.98px) {
-      .hero-section .main-slogan { font-size: 1.8rem; }
-      .hero-trainer-info { margin-top: 40px; }
-      .section-title { font-size: 2rem; }
-    }
-    @media (max-width: 767.98px) {
-      .hero-section { padding: 60px 0 40px; text-align: center;}
-      .hero-section .text-content { margin-bottom: 40px; }
-      .workshop-details-hero .detail-item { justify-content: center; }
-      .problem-section .speech-bubble { font-size: 1.2rem; }
-  .hero-section .pill-title {
-    font-size: 0.9rem; /* Giảm kích thước font cho màn hình điện thoại */
-    /* white-space: nowrap; vẫn giữ nguyên để đảm bảo không xuống dòng */
-    /* Nếu cần, có thể thêm overflow: hidden; text-overflow: ellipsis;
+      @media screen and (min-device-width: 10px) and (max-device-width: 380px) {
+        .zf_lB_Container_918683 {
+          width: 90% !important;
+          max-height: calc(100% - 20px);
+        }
+
+        .zf_lb_closeform_918683 {
+          right: -10px;
+          top: -10px;
+        }
+      }
+
+      @media screen and (min-device-width: 360px) and (max-device-width: 480px) {
+        .zf_lB_Container_918683 {
+          width: 90% !important;
+          max-height: calc(100% - 20px);
+        }
+
+        .zf_lb_closeform_918683 {
+          right: -10px;
+          top: -10px;
+        }
+      }
+
+      @media screen and (min-device-width: 440px) and (max-device-width: 500px) {
+        .zf_lB_Container_918683 {
+          width: 85% !important;
+        }
+      }
+
+      @media only screen and (min-width:500px) and (max-width:600px) {
+        .zf_lB_Container_918683 {
+          width: 80%;
+        }
+      }
+
+      @media only screen and (min-width:601px) and (max-width:700px) {
+        .zf_lB_Container_918683 {
+          width: 75%;
+        }
+      }
+
+      @media only screen and (min-width:700px) and (max-width:800px) {
+        .zf_lB_Container_918683 {
+          width: 70%;
+        }
+      }
+
+      @media screen and (min-device-width: 801px) and (max-device-width: 1268px) {
+        .zf_lB_Container_918683 {
+          width: 70% !important;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .hero-section .main-slogan {
+          font-size: 1.8rem;
+        }
+
+        .hero-trainer-info {
+          margin-top: 40px;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .hero-section {
+          padding: 60px 0 40px;
+          text-align: center;
+        }
+
+        .hero-section .text-content {
+          margin-bottom: 40px;
+        }
+
+        .workshop-details-hero .detail-item {
+          justify-content: center;
+        }
+
+        .problem-section .speech-bubble {
+          font-size: 1.2rem;
+        }
+
+        .hero-section .pill-title {
+          font-size: 0.9rem;
+          /* Giảm kích thước font cho màn hình điện thoại */
+          /* white-space: nowrap; vẫn giữ nguyên để đảm bảo không xuống dòng */
+          /* Nếu cần, có thể thêm overflow: hidden; text-overflow: ellipsis;
        nhưng với font size nhỏ hơn thường là đủ */
-  }
-   .hero-section .main-slogan {
-       font-size: 1.5rem; /* Có thể giảm thêm font size cho slogan nếu cần */
-   }
-   .container, .container-lg, .container-md, .container-sm, .container-xl{
+        }
+
+        .hero-section .main-slogan {
+          font-size: 1.5rem;
+          /* Có thể giảm thêm font size cho slogan nếu cần */
+        }
+
+        /* Media query cho màn hình lớn hơn 1200px */
+        @media (min-width: 1200px) {
+
+          /* Áp dụng giới hạn chiều rộng và căn giữa cho phần tử .row bên trong hero-section */
+          .hero-section .row {
             max-width: 1140px;
-   }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Phần 1: Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-7 text-content" data-aos="fade-right">
-          <p class="pill-title">WORKSHOP NÓI TRƯỚC CÔNG CHÚNG</p>
-          <h2 class="main-slogan">TỪ ẤP ÚNG ĐẾN TỰ TIN</h2>
-          <h2 class="main-slogan">TỪ LỦNG CỦNG ĐẾN LẬP LUẬN THUYẾT PHỤC</h2>
-
-          <div class="workshop-details-hero">
-            <div class="detail-item">
-              <i class="fas fa-calendar-alt"></i>
-              <span><strong>Thời gian:</strong> 20h - 22h15, thứ 7 và CN (21-22/06/2025)<br>(Chọn 1 trong 2 buổi để tham gia)</span>
+            /* Giới hạn chiều rộng tối đa của nội dung */
+            margin: 0 auto;
+            /* Căn giữa phần tử .row */
+            /*
+           Lưu ý quan trọng: Việc ghi đè margin của .row có thể ảnh hưởng
+           đến hệ thống grid của Bootstrap. Nếu gặp vấn đề về khoảng cách
+           giữa các cột hoặc layout, cách làm chuẩn là bọc nội dung (div.row)
+           trong một div có class="container" và áp dụng max-width/margin cho container đó.
+        */
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Phần 1: Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 text-content" data-aos="fade-right">
+            <p class="pill-title">WORKSHOP NÓI TRƯỚC CÔNG CHÚNG</p>
+            <h2 class="main-slogan">TỪ ẤP ÚNG ĐẾN TỰ TIN</h2>
+            <h2 class="main-slogan">TỪ LỦNG CỦNG ĐẾN LẬP LUẬN THUYẾT PHỤC</h2>
+            <div class="workshop-details-hero">
+              <div class="detail-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>
+                  <strong>Thời gian:</strong> 20h - 22h15, thứ 7 và CN (21-22/06/2025) <br>(Chọn 1 trong 2 buổi để tham gia) </span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-video"></i>
+                <span>
+                  <strong>Địa điểm:</strong> Online qua Zoom </span>
+              </div>
             </div>
-            <div class="detail-item">
-              <i class="fas fa-video"></i>
-              <span><strong>Địa điểm:</strong> Online qua Zoom</span>
+            <!-- Thay đổi button này -->
+            <button class="btn btn-brand mt-4 scroll-to-pricing-section">Đăng Ký Ngay</button>
+          </div>
+          <div class="col-lg-5 hero-trainer-info" data-aos="fade-left" data-aos-delay="200">
+            <img src="../images/trainer-minh-hero.png" alt="Trainer Đặng Văn Minh" title="" style="">
+            <div class="hero-trainer-name-plate">
+              <h3>Đặng Văn Minh</h3>
+            </div>
+            <div class="hero-trainer-titles mt-2">
+              <p>Nhà sáng lập FSO</p>
+              <p>Quán quân Tôi Lên Tiếng</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 2: Vấn đề -->
+    <section class="section-padding problem-section" style="background-color: var(--light-bg);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 text-center">
+            <div class="speech-bubble mx-auto" data-aos="zoom-in">Mình biết kỹ năng nói quan trọng lắm, nhưng...</div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-8">
+            <ul class="list-unstyled problem-list">
+              <li data-aos="fade-up">
+                <i class="fas fa-times-circle"></i>Đứng trước thầy cô, sếp hay đồng nghiệp là run lắm. Chỉ sợ mọi người nhìn rồi phán xét, kiểu "nói gì chán ngắt vậy?"
+              </li>
+              <li data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-times-circle"></i>Ý tưởng thì có rồi nhưng mở miệng ra nói lại bị rối các ý, không sao rành mạch được
+              </li>
+              <li data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-times-circle"></i>Hay bị lủng củng khi trình bày, lập luận thiếu chặt chẽ. Hay bị chê là nói chung chung, lan man, thiếu trọng tâm
+              </li>
+              <li data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-times-circle"></i>Từng xem và lưu lại nhiều clip Tiktok nhưng vẫn mơ hồ. Biết thì biết nhưng áp dụng sao cho đúng thì chịu
+              </li>
+              <li data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-times-circle"></i>Rất muốn truyền cảm hứng và làm cho khán giả "wow" nhưng vẫn chưa tìm ra cách làm hiệu quả
+              </li>
+              <li data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-times-circle"></i>Thấy người ta nói thì mê nhưng vẫn chưa hiểu được tinh thần và ý nghĩa thực sự của kỹ năng này...
+              </li>
+            </ul>
+            <p class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
+              <span class="highlight-text" style="font-family: 'Montserrat', sans-serif; font-weight: bold;">Nếu bạn cũng có cảm giác trên như nhiều người ngoài kia thì Workshop này dành cho bạn.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 3: TỚI WORKSHOP, LĨNH HỘI ĐƯỢC GÌ NHỈ? -->
+    <section class="section-padding" style="background-color: var(--light-bg-alt);">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-down">TỚI WORKSHOP, LĨNH HỘI ĐƯỢC GÌ NHỈ?</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <ul class="styled-list">
+              <li data-aos="fade-up">Xóa tan 3 MINDSET SAI LẦM khiến bạn mãi cứ ngại nói</li>
+              <li data-aos="fade-up" data-aos-delay="100">Hiểu đúng "BẢN CHẤT" của việc nói trước đám đông</li>
+              <li data-aos="fade-up" data-aos-delay="200">Hack công thức lập luận P.R.E.P cùng các biến thể</li>
+              <li data-aos="fade-up" data-aos-delay="300">Bắt bài ngay 3 LỖI NGỤY BIỆN "quen mặt" mà ai cũng từng dính</li>
+              <li data-aos="fade-up" data-aos-delay="400">Làm chủ công thức tạo ra thông điệp "cháy lòng" người nghe</li>
+              <li data-aos="fade-up" data-aos-delay="500">Bỏ túi checklist 10 cách rèn kỹ năng nói mà không cần sân khấu</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 4: HỌC XONG, NHẬN LẠI ĐƯỢC GÌ NHỈ? -->
+    <section class="section-padding" style="background-color: var(--light-bg);">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-down">HỌC XONG, NHẬN LẠI ĐƯỢC GÌ NHỈ?</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="styled-list">
+              <li data-aos="fade-up">Gỡ khỏi não mấy suy nghĩ kiểu: “Tôi nói dở lắm” - ai rồi cũng nói hay nếu biết cách</li>
+              <li data-aos="fade-up" data-aos-delay="50">"Nói đâu phải để flex" - Hiểu đúng về tinh thần thực sự của việc nói trước đám đông</li>
+              <li data-aos="fade-up" data-aos-delay="100">Bỏ túi công thức lập luận - nói logic, chặt chẽ nhưng đầy cảm hứng</li>
+              <li data-aos="fade-up" data-aos-delay="150">Né ngay 3 lỗi ngụy biện hay gặp - đỡ bị bắt bẻ, tăng sức thuyết phục</li>
+              <li data-aos="fade-up" data-aos-delay="200">Biết cách “bật” ra thông điệp đắt giá khiến người ta nhớ mãi</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul class="styled-list">
+              <li data-aos="fade-up" data-aos-delay="250">Có ngay 10 tuyệt chiêu luyện nói lên trình vèo vèo</li>
+              <li data-aos="fade-up" data-aos-delay="300">Học tới đâu thực hành liền tới đó - khỏi lo nghe xong rồi quên</li>
+              <li data-aos="fade-up" data-aos-delay="350">Hỏi đáp luôn 1-1 với diễn giả – hỏi gì cũng được, không sợ “quê”</li>
+              <li data-aos="fade-up" data-aos-delay="400">Học xong còn rinh ngay BỘ QUÀ TẶNG</li>
+              <li data-aos="fade-up" data-aos-delay="450">Gặp gỡ "đồng âm đồng vibe" - toàn người trẻ đam mê nói, siêu dễ thương</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center mt-5" data-aos="zoom-in">
           <!-- Thay đổi button này -->
-          <button class="btn btn-brand mt-4 scroll-to-pricing-section">Đăng Ký Ngay</button>
-        </div>
-        <div class="col-lg-5 hero-trainer-info" data-aos="fade-left" data-aos-delay="200">
-        <img src="../images/trainer-minh-hero.png" alt="Trainer Đặng Văn Minh" title="" style="">
-          <div class="hero-trainer-name-plate">
-            <h3>Đặng Văn Minh</h3>
-          </div>
-          <div class="hero-trainer-titles mt-2">
-            <p>Nhà sáng lập FSO</p>
-            <p>Quán quân Tôi Lên Tiếng</p>
-          </div>
+          <button class="btn btn-brand scroll-to-pricing-section">Tôi muốn nhận những điều này!</button>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Phần 2: Vấn đề -->
-  <section class="section-padding problem-section" style="background-color: var(--light-bg);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9 text-center">
-          <div class="speech-bubble mx-auto" data-aos="zoom-in">Mình biết kỹ năng nói quan trọng lắm, nhưng...</div>
-        </div>
-      </div>
-      <div class="row justify-content-center mt-4">
-        <div class="col-lg-8">
-          <ul class="list-unstyled problem-list">
-            <li data-aos="fade-up"><i class="fas fa-times-circle"></i>Đứng trước thầy cô, sếp hay đồng nghiệp là run lắm. Chỉ sợ mọi người nhìn rồi phán xét, kiểu "nói gì chán ngắt vậy?"</li>
-            <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-times-circle"></i>Ý tưởng thì có rồi nhưng mở miệng ra nói lại bị rối các ý, không sao rành mạch được</li>
-            <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-times-circle"></i>Hay bị lủng củng khi trình bày, lập luận thiếu chặt chẽ. Hay bị chê là nói chung chung, lan man, thiếu trọng tâm</li>
-            <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-times-circle"></i>Từng xem và lưu lại nhiều clip Tiktok nhưng vẫn mơ hồ. Biết thì biết nhưng áp dụng sao cho đúng thì chịu</li>
-            <li data-aos="fade-up" data-aos-delay="400"><i class="fas fa-times-circle"></i>Rất muốn truyền cảm hứng và làm cho khán giả "wow" nhưng vẫn chưa tìm ra cách làm hiệu quả</li>
-            <li data-aos="fade-up" data-aos-delay="500"><i class="fas fa-times-circle"></i>Thấy người ta nói thì mê nhưng vẫn chưa hiểu được tinh thần và ý nghĩa thực sự của kỹ năng này...</li>
-          </ul>
-          <p class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
-            <span class="highlight-text" style="font-family: 'Montserrat', sans-serif; font-weight: bold;">Nếu bạn cũng có cảm giác trên như nhiều người ngoài kia thì Workshop này dành cho bạn.</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Phần 3: TỚI WORKSHOP, LĨNH HỘI ĐƯỢC GÌ NHỈ? -->
-  <section class="section-padding" style="background-color: var(--light-bg-alt);">
-    <div class="container">
-      <h2 class="section-title text-center" data-aos="fade-down">TỚI WORKSHOP, LĨNH HỘI ĐƯỢC GÌ NHỈ?</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <ul class="styled-list">
-            <li data-aos="fade-up">Xóa tan 3 MINDSET SAI LẦM khiến bạn mãi cứ ngại nói</li>
-            <li data-aos="fade-up" data-aos-delay="100">Hiểu đúng "BẢN CHẤT" của việc nói trước đám đông</li>
-            <li data-aos="fade-up" data-aos-delay="200">Hack công thức lập luận P.R.E.P cùng các biến thể</li>
-            <li data-aos="fade-up" data-aos-delay="300">Bắt bài ngay 3 LỖI NGỤY BIỆN "quen mặt" mà ai cũng từng dính</li>
-            <li data-aos="fade-up" data-aos-delay="400">Làm chủ công thức tạo ra thông điệp "cháy lòng" người nghe</li>
-            <li data-aos="fade-up" data-aos-delay="500">Bỏ túi checklist 10 cách rèn kỹ năng nói mà không cần sân khấu</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Phần 4: HỌC XONG, NHẬN LẠI ĐƯỢC GÌ NHỈ? -->
-  <section class="section-padding" style="background-color: var(--light-bg);">
-    <div class="container">
-      <h2 class="section-title text-center" data-aos="fade-down">HỌC XONG, NHẬN LẠI ĐƯỢC GÌ NHỈ?</h2>
-      <div class="row">
-        <div class="col-lg-6">
-          <ul class="styled-list">
-            <li data-aos="fade-up">Gỡ khỏi não mấy suy nghĩ kiểu: “Tôi nói dở lắm” - ai rồi cũng nói hay nếu biết cách</li>
-            <li data-aos="fade-up" data-aos-delay="50">"Nói đâu phải để flex" - Hiểu đúng về tinh thần thực sự của việc nói trước đám đông</li>
-            <li data-aos="fade-up" data-aos-delay="100">Bỏ túi công thức lập luận - nói logic, chặt chẽ nhưng đầy cảm hứng</li>
-            <li data-aos="fade-up" data-aos-delay="150">Né ngay 3 lỗi ngụy biện hay gặp - đỡ bị bắt bẻ, tăng sức thuyết phục</li>
-            <li data-aos="fade-up" data-aos-delay="200">Biết cách “bật” ra thông điệp đắt giá khiến người ta nhớ mãi</li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <ul class="styled-list">
-            <li data-aos="fade-up" data-aos-delay="250">Có ngay 10 tuyệt chiêu luyện nói lên trình vèo vèo</li>
-            <li data-aos="fade-up" data-aos-delay="300">Học tới đâu thực hành liền tới đó - khỏi lo nghe xong rồi quên</li>
-            <li data-aos="fade-up" data-aos-delay="350">Hỏi đáp luôn 1-1 với diễn giả – hỏi gì cũng được, không sợ “quê”</li>
-            <li data-aos="fade-up" data-aos-delay="400">Học xong còn rinh ngay BỘ QUÀ TẶNG</li>
-            <li data-aos="fade-up" data-aos-delay="450">Gặp gỡ "đồng âm đồng vibe" - toàn người trẻ đam mê nói, siêu dễ thương</li>
-          </ul>
-        </div>
-      </div>
-      <div class="text-center mt-5" data-aos="zoom-in">
-        <!-- Thay đổi button này -->
-        <button class="btn btn-brand scroll-to-pricing-section">Tôi muốn nhận những điều này!</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Phần 5: QUÀ "XỊN" RINH VỀ SAU WORKSHOP -->
-  <section class="section-padding" style="background-color: var(--light-bg-alt);">
-    <div class="container">
-      <h2 class="section-title text-center" data-aos="fade-down">QUÀ "XỊN" RINH VỀ SAU WORKSHOP</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
-          <div class="gift-card">
-            <i class="fas fa-certificate gift-icon"></i>
-            <h4>Giấy chứng nhận (bản mềm)</h4>
-            <p>Để “khoe nhẹ” trên CV</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="gift-card">
-            <i class="fas fa-book-open gift-icon"></i>
-            <h4>2 cuốn Ebooks Hùng biện</h4>
-            <p>Nói nhiều không bằng nói có chiều sâu</p>
-            <span class="vip-tag"></span>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="gift-card">
-            <i class="fas fa-file-powerpoint gift-icon"></i>
-            <h4>Bộ template PowerPoint</h4>
-            <p>Khỏi mất thời gian nghĩ bố cục</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="gift-card">
-            <i class="fas fa-video gift-icon"></i>
-            <h4>Trọn bộ Slide + Video record</h4>
-            <p>Lỡ bận việc khác vẫn có cái ôn lại</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="gift-card">
-            <i class="fas fa-graduation-cap gift-icon"></i>
-            <h4>Tài liệu tự học IELTS</h4>
-            <p>Lên Band nhẹ nhàng</p>
-            <span class="vip-tag"></span>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="gift-card">
-            <i class="fas fa-comments gift-icon"></i>
-            <h4>Hỏi riêng Diễn giả</h4>
-            <p>Về Hùng biện & Thần số học (kể cả sau WS)</p>
-            <span class="vip-tag"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Phần 6: Trainer -->
-  <section class="section-padding trainer-section-content" style="background-color: var(--light-bg);">
-    <div class="container">
-      <h2 class="section-title text-center" data-aos="fade-down">Thành Tích Nổi Bật Của Trainer Đặng Văn Minh</h2>
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center" data-aos="fade-right">
-          <img src="../images/minh_trainer.jpg" alt="Trainer Đặng Văn Minh" class="img-fluid mb-3">
-        </div>
-        <div class="col-md-8" data-aos="fade-left">
-          <ul>
-            <li>Nhà sáng lập CLB Nhà Hùng biện Tương lai (FSO)</li>
-            <li>Thực hành và luận giải thần số học chuyên sâu</li>
-            <li>Nhà đào tạo nghệ thuật Hùng biện - Giao tiếp & Thấu hiểu bản thân</li>
-            <li>Diễn giả của hàng trăm Workshop về Hùng biện - Giao tiếp & Thần số học</li>
-            <li>Quán quân Tôi Lên Tiếng, Quý Quân cuộc thi "Thành phố an toàn cho em gái"</li>
-            <li>Giám khảo các cuộc thi "Tôi lên tiếng", "Tôi bản lĩnh", "The Speaker", "Beyond Your Limits"...</li>
-            <li>Cố vấn cho nhiều thí sinh giành giải cao tại các cuộc thi Hùng biện…</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Phần 7: Cảm nhận -->
-  <section class="section-padding" style="background-color: var(--light-bg-alt);">
-    <div class="container">
-      <h2 class="section-title text-center" data-aos="fade-down">Cảm Nhận Chân Thật Từ Học Viên</h2>
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
-          <div class="testimonial-card text-center">
-            <div class="img-wrapper">
-            <img src="../images/user1.jpg?text=User1" alt="Bùi Xuân Trường" class="mx-auto">
-            </div>
-            <p class="testimonial-text">"Em cảm thấy biết ơn vì đã học hỏi rất nhiều kiến thức mà trước đây chưa từng biết đến... sau 2 lần tham dự... em đã có nhiều sự thay đổi lớn. Em đã dần tự tin hơn... môn kỹ năng giao tiếp thuyết trình em đã được điểm tuyệt đối..."</p>
-            <p class="testimonial-author">Bạn Bùi Xuân Trường</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="testimonial-card text-center">
-          <div class="img-wrapper">
-            <img src="../images/user2.jpg?text=User2" alt="Đỗ Thị Thùy Dương" class="mx-auto">
-            </div>
-            <p class="testimonial-text">"Khi được nghe anh Văn Minh chia sẻ... tâm trí em được mở rộng ra một vùng tri thức mới... em hiểu được rằng Hùng biện không chỉ vậy, mà Hùng biện còn là khả năng phản biện và tư duy sâu sắc... Muốn hùng biện hay, trước hết phải trang bị cho mình một tâm thức sâu sắc..."</p>
-            <p class="testimonial-author">Bạn Đỗ Thị Thùy Dương</p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="testimonial-card text-center">
-          <div class="img-wrapper">
-            <img src="../images/user3.jpg?text=User3" alt="Ngô Quang Việt" class="mx-auto">
-            </div>
-            <p class="testimonial-text">"Mình vốn là người hướng nội... những bài thuyết trình trên lớp là “cực hình”... sau một lần tình cờ tham gia hội thảo... suy nghĩ của mình đã thay đổi. Mình nhận ra hướng nội không đồng nghĩa với việc ăn nói kém... Từ đó mình đã cố gắng áp dụng dần những điều học được..."</p>
-            <p class="testimonial-author">Bạn Ngô Quang Việt</p>
-          </div>
-          </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Phần 8: Giá vé -->
-  <section class="section-padding pricing-section" id="gia-ve-uu-dai">
-    <div class="container">
-      <h2 class="section-title text-center" data-aos="fade-down">Giá Vé Ưu Đãi</h2>
-      <div class="grid-container">
-        <!-- VÉ CẠ CỨNG -->
-        <div class="ticket-card" data-aos="fade-up">
-          <div class="ticket-header">
-            <h3>VÉ CẠ CỨNG</h3>
-            <div class="requirements">Đi từ 2 người trở lên là auto giảm liền tay</div>
-            <div class="price">50k<small>/người</small></div>
-          </div>
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-toggle">
-                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
-                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
-              </div>
-              <div class="accordion-content">
-                <ul>
-                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Voucher đặc biệt các khóa học của Trainer Đặng Văn Minh</li>
-                </ul>
-              </div>
+    </section>
+    <!-- Phần 5: QUÀ "XỊN" RINH VỀ SAU WORKSHOP -->
+    <section class="section-padding" style="background-color: var(--light-bg-alt);">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-down">QUÀ "XỊN" RINH VỀ SAU WORKSHOP</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="gift-card">
+              <i class="fas fa-certificate gift-icon"></i>
+              <h4>Giấy chứng nhận (bản mềm)</h4>
+              <p>Để “khoe nhẹ” trên CV</p>
             </div>
           </div>
-          <div class="ticket-footer">
-            <button class="trigger-zoho-popup">Đặt vé</button>
-          </div>
-        </div>
-        <!-- VÉ SĂN SỚM -->
-        <div class="ticket-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="ticket-header">
-            <h3>VÉ SĂN SỚM</h3>
-            <div class="requirements">Đặt sớm từ 22/02 - 12/03/2025</div>
-            <div class="price">55k<small>/người</small></div>
-          </div>
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-toggle">
-                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
-                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
-              </div>
-              <div class="accordion-content">
-                <ul>
-                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
-                </ul>
-              </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="gift-card">
+              <i class="fas fa-book-open gift-icon"></i>
+              <h4>2 cuốn Ebooks Hùng biện</h4>
+              <p>Nói nhiều không bằng nói có chiều sâu</p>
+              <span class="vip-tag"></span>
             </div>
           </div>
-          <div class="ticket-footer">
-             <button class="trigger-zoho-popup">Đặt vé</button>
-          </div>
-        </div>
-        <!-- VÉ TIÊU CHUẨN -->
-        <div class="ticket-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="ticket-header">
-            <h3>VÉ TIÊU CHUẨN</h3>
-            <div class="requirements">Đặt vé từ 13/03 - 19/03/2025</div>
-            <div class="price">60k<small>/người</small></div>
-          </div>
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-toggle">
-                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
-                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
-              </div>
-              <div class="accordion-content">
-                <ul>
-                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint</li>
-                </ul>
-              </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="gift-card">
+              <i class="fas fa-file-powerpoint gift-icon"></i>
+              <h4>Bộ template PowerPoint</h4>
+              <p>Khỏi mất thời gian nghĩ bố cục</p>
             </div>
           </div>
-          <div class="ticket-footer">
-            <button class="trigger-zoho-popup">Đặt vé</button>
-          </div>
-        </div>
-        <!-- VÉ NƯỚC ĐẾN CHÂN -->
-        <div class="ticket-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="ticket-header">
-            <h3>VÉ NƯỚC ĐẾN CHÂN</h3>
-            <div class="requirements">Đặt vé sát ngay từ 20/03 - 23/03/2025</div>
-            <div class="price">70k<small>/người</small></div>
-          </div>
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-toggle">
-                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
-                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
-              </div>
-              <div class="accordion-content">
-                <ul>
-                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học</li>
-                </ul>
-              </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="gift-card">
+              <i class="fas fa-video gift-icon"></i>
+              <h4>Trọn bộ Slide + Video record</h4>
+              <p>Lỡ bận việc khác vẫn có cái ôn lại</p>
             </div>
           </div>
-          <div class="ticket-footer">
-            <button class="trigger-zoho-popup">Đặt vé</button>
-          </div>
-        </div>
-        <!-- VÉ VIP PRO MAX -->
-        <div class="ticket-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="ticket-header">
-            <h3>VÉ VIP PRO MAX</h3>
-            <div class="requirements">Trải nghiệm trọn vẹn nhất!</div>
-            <div class="price">199k<small>/người</small></div>
-          </div>
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-toggle">
-                <span class="gift-label"><i class="fa-solid fa-gift"></i>Quà tặng chi tiết</span>
-                <button class="arrow-btn"><i class="fa-solid fa-chevron-down"></i></button>
-              </div>
-              <div class="accordion-content">
-                <ul>
-                  <li><i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm)</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> 2 cuốn Ebooks Hùng biện</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Tài liệu tự học IELTS</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Voucher đặc biệt các khóa học</li>
-                  <li><i class="fa-solid fa-check check-icon"></i> Tặng thêm 1 buổi Group Coaching riêng</li>
-                </ul>
-              </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="gift-card">
+              <i class="fas fa-graduation-cap gift-icon"></i>
+              <h4>Tài liệu tự học IELTS</h4>
+              <p>Lên Band nhẹ nhàng</p>
+              <span class="vip-tag"></span>
             </div>
           </div>
-          <div class="ticket-footer">
-            <button class="trigger-zoho-popup">Đặt vé VIP</button>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="gift-card">
+              <i class="fas fa-comments gift-icon"></i>
+              <h4>Hỏi riêng Diễn giả</h4>
+              <p>Về Hùng biện & Thần số học (kể cả sau WS)</p>
+              <span class="vip-tag"></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Phần 9: Không khí workshop -->
-  <section class="section-padding" style="background-color: var(--light-bg);">
-    <div class="container">
-      <h2 class="section-title text-center" data-aos="fade-down" data-aos-offset="0">Không Khí Các Buổi Workshop Trước</h2>
-      <!-- Container cho Masonry và LightGallery -->
-      <div id="lightgallery-masonry" class="gallery-masonry-grid">
-        <!-- Item 1 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" >
-          <a href="../images/ws1.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 1</h4><p></p>">
-            <img alt="Workshop Ảnh 1" src="../images/ws1.jpg" class="img-fluid gallery-img-styled" />
-          </a>
-        </div>
-        <!-- Item 2 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="100">
-          <a href="../images/ws2.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 2</h4><p></p>">
-            <img alt="Workshop Ảnh 2" src="../images/ws2.jpg" class="img-fluid gallery-img-styled" />
-          </a>
-        </div>
-        <!-- Item 3 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="200">
-          <a href="../images/ws3.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 3</h4><p></p>">
-            <img alt="Workshop Ảnh 3" src="../images/ws3.jpg" class="img-fluid gallery-img-styled" />
-          </a>
-        </div>
-        <!-- Item 4 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300">
-           <a href="../images/ws4.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 4</h4><p></p>">
-            <img alt="Workshop Ảnh 4" src="../images/ws4.jpg" class="img-fluid gallery-img-styled" />
-          </a>
-        </div>
-        <!-- Item 5 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="400">
-          <a href="../images/ws5.jpg" data-lg-size="1200-800" data-sub-html="<h4>Workshop Ảnh 5</h4><p></p>">
-            <img alt="Workshop Ảnh 5" src="../images/ws5.jpg" class="img-fluid gallery-img-styled" />
-          </a>
-        </div>
-        <!-- Item 6 -->
-        <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="500">
-          <a href="../images/ws6.jpg" data-lg-size="1200-80 0" data-sub-html="<h4>Workshop Ảnh 6</h4><p></p>">
-            <img alt="Workshop Ảnh 6" src="../images/ws6.jpg" class="img-fluid gallery-img-styled" />
-          </a>
+    </section>
+    <!-- Phần 6: Trainer -->
+    <section class="section-padding trainer-section-content" style="background-color: var(--light-bg);">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-down">Thành Tích Nổi Bật Của Trainer Đặng Văn Minh</h2>
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center" data-aos="fade-right">
+            <img src="../images/minh_trainer.jpg" alt="Trainer Đặng Văn Minh" class="img-fluid mb-3">
+          </div>
+          <div class="col-md-8" data-aos="fade-left">
+            <ul>
+              <li>Nhà sáng lập CLB Nhà Hùng biện Tương lai (FSO)</li>
+              <li>Thực hành và luận giải thần số học chuyên sâu</li>
+              <li>Nhà đào tạo nghệ thuật Hùng biện - Giao tiếp & Thấu hiểu bản thân</li>
+              <li>Diễn giả của hàng trăm Workshop về Hùng biện - Giao tiếp & Thần số học</li>
+              <li>Quán quân Tôi Lên Tiếng, Quý Quân cuộc thi "Thành phố an toàn cho em gái"</li>
+              <li>Giám khảo các cuộc thi "Tôi lên tiếng", "Tôi bản lĩnh", "The Speaker", "Beyond Your Limits"...</li>
+              <li>Cố vấn cho nhiều thí sinh giành giải cao tại các cuộc thi Hùng biện…</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Phần 10: FAQ -->
-  <section class="section-padding" style="background-color: var(--light-bg-alt);">
-    <div class="container">
-      <h2 class="section-title red-title text-center" data-aos="fade-down">HỎI GÌ ĐÁP NẤY</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
+    </section>
+    <!-- Phần 7: Cảm nhận -->
+    <section class="section-padding" style="background-color: var(--light-bg-alt);">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-down">Cảm Nhận Chân Thật Từ Học Viên</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="testimonial-card text-center">
+              <div class="img-wrapper">
+                <img src="../images/user1.jpg?text=User1" alt="Bùi Xuân Trường" class="mx-auto">
+              </div>
+              <p class="testimonial-text">"Em cảm thấy biết ơn vì đã học hỏi rất nhiều kiến thức mà trước đây chưa từng biết đến... sau 2 lần tham dự... em đã có nhiều sự thay đổi lớn. Em đã dần tự tin hơn... môn kỹ năng giao tiếp thuyết trình em đã được điểm tuyệt đối..."</p>
+              <p class="testimonial-author">Bạn Bùi Xuân Trường</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card text-center">
+              <div class="img-wrapper">
+                <img src="../images/user2.jpg?text=User2" alt="Đỗ Thị Thùy Dương" class="mx-auto">
+              </div>
+              <p class="testimonial-text">"Khi được nghe anh Văn Minh chia sẻ... tâm trí em được mở rộng ra một vùng tri thức mới... em hiểu được rằng Hùng biện không chỉ vậy, mà Hùng biện còn là khả năng phản biện và tư duy sâu sắc... Muốn hùng biện hay, trước hết phải trang bị cho mình một tâm thức sâu sắc..."</p>
+              <p class="testimonial-author">Bạn Đỗ Thị Thùy Dương</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card text-center">
+              <div class="img-wrapper">
+                <img src="../images/user3.jpg?text=User3" alt="Ngô Quang Việt" class="mx-auto">
+              </div>
+              <p class="testimonial-text">"Mình vốn là người hướng nội... những bài thuyết trình trên lớp là “cực hình”... sau một lần tình cờ tham gia hội thảo... suy nghĩ của mình đã thay đổi. Mình nhận ra hướng nội không đồng nghĩa với việc ăn nói kém... Từ đó mình đã cố gắng áp dụng dần những điều học được..."</p>
+              <p class="testimonial-author">Bạn Ngô Quang Việt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 8: Giá vé -->
+    <section class="section-padding pricing-section" id="gia-ve-uu-dai">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-down">Giá Vé Ưu Đãi</h2>
+        <div class="grid-container">
+          <!-- VÉ CẠ CỨNG -->
+          <div class="ticket-card" data-aos="fade-up">
+            <div class="ticket-header">
+              <h3>VÉ CẠ CỨNG</h3>
+              <div class="requirements">Đi từ 2 người trở lên là auto giảm liền tay</div>
+              <div class="price">50k <small>/người</small>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-toggle">
+                  <span class="gift-label">
+                    <i class="fa-solid fa-gift"></i>Quà tặng chi tiết </span>
+                  <button class="arrow-btn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Voucher đặc biệt các khóa học của Trainer Đặng Văn Minh
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <button class="trigger-zoho-popup">Đặt vé</button>
+            </div>
+          </div>
+          <!-- VÉ SĂN SỚM -->
+          <div class="ticket-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="ticket-header">
+              <h3>VÉ SĂN SỚM</h3>
+              <div class="requirements">Đặt sớm từ 22/02 - 12/03/2025</div>
+              <div class="price">55k <small>/người</small>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-toggle">
+                  <span class="gift-label">
+                    <i class="fa-solid fa-gift"></i>Quà tặng chi tiết </span>
+                  <button class="arrow-btn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <button class="trigger-zoho-popup">Đặt vé</button>
+            </div>
+          </div>
+          <!-- VÉ TIÊU CHUẨN -->
+          <div class="ticket-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="ticket-header">
+              <h3>VÉ TIÊU CHUẨN</h3>
+              <div class="requirements">Đặt vé từ 13/03 - 19/03/2025</div>
+              <div class="price">60k <small>/người</small>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-toggle">
+                  <span class="gift-label">
+                    <i class="fa-solid fa-gift"></i>Quà tặng chi tiết </span>
+                  <button class="arrow-btn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <button class="trigger-zoho-popup">Đặt vé</button>
+            </div>
+          </div>
+          <!-- VÉ NƯỚC ĐẾN CHÂN -->
+          <div class="ticket-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="ticket-header">
+              <h3>VÉ NƯỚC ĐẾN CHÂN</h3>
+              <div class="requirements">Đặt vé sát ngay từ 20/03 - 23/03/2025</div>
+              <div class="price">70k <small>/người</small>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-toggle">
+                  <span class="gift-label">
+                    <i class="fa-solid fa-gift"></i>Quà tặng chi tiết </span>
+                  <button class="arrow-btn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm) để “khoe nhẹ” trên CV
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record buổi học
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <button class="trigger-zoho-popup">Đặt vé</button>
+            </div>
+          </div>
+          <!-- VÉ VIP PRO MAX -->
+          <div class="ticket-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="ticket-header">
+              <h3>VÉ VIP PRO MAX</h3>
+              <div class="requirements">Trải nghiệm trọn vẹn nhất!</div>
+              <div class="price">199k <small>/người</small>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-toggle">
+                  <span class="gift-label">
+                    <i class="fa-solid fa-gift"></i>Quà tặng chi tiết </span>
+                  <button class="arrow-btn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Giấy chứng nhận (bản mềm)
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> 2 cuốn Ebooks Hùng biện
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Bộ template PowerPoint
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Trọn bộ Slide + Video record
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Tài liệu tự học IELTS
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Voucher đặc biệt các khóa học
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check check-icon"></i> Tặng thêm 1 buổi Group Coaching riêng
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <button class="trigger-zoho-popup">Đặt vé VIP</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 9: Không khí workshop -->
+    <section class="section-padding" style="background-color: var(--light-bg);">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-down" data-aos-offset="0">Không Khí Các Buổi Workshop Trước</h2>
+        <!-- Container cho Masonry và LightGallery -->
+        <div id="lightgallery-masonry" class="gallery-masonry-grid">
+          <!-- Item 1 -->
+          <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in">
+            <a href="../images/ws1.jpg" data-lg-size="1200-800" data-sub-html="
+																									<h4>Workshop Ảnh 1</h4>
+																									<p></p>">
+              <img alt="Workshop Ảnh 1" src="../images/ws1.jpg" class="img-fluid gallery-img-styled" />
+            </a>
+          </div>
+          <!-- Item 2 -->
+          <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <a href="../images/ws2.jpg" data-lg-size="1200-800" data-sub-html="
+																									<h4>Workshop Ảnh 2</h4>
+																									<p></p>">
+              <img alt="Workshop Ảnh 2" src="../images/ws2.jpg" class="img-fluid gallery-img-styled" />
+            </a>
+          </div>
+          <!-- Item 3 -->
+          <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <a href="../images/ws3.jpg" data-lg-size="1200-800" data-sub-html="
+																									<h4>Workshop Ảnh 3</h4>
+																									<p></p>">
+              <img alt="Workshop Ảnh 3" src="../images/ws3.jpg" class="img-fluid gallery-img-styled" />
+            </a>
+          </div>
+          <!-- Item 4 -->
+          <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <a href="../images/ws4.jpg" data-lg-size="1200-800" data-sub-html="
+																									<h4>Workshop Ảnh 4</h4>
+																									<p></p>">
+              <img alt="Workshop Ảnh 4" src="../images/ws4.jpg" class="img-fluid gallery-img-styled" />
+            </a>
+          </div>
+          <!-- Item 5 -->
+          <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="400">
+            <a href="../images/ws5.jpg" data-lg-size="1200-800" data-sub-html="
+																									<h4>Workshop Ảnh 5</h4>
+																									<p></p>">
+              <img alt="Workshop Ảnh 5" src="../images/ws5.jpg" class="img-fluid gallery-img-styled" />
+            </a>
+          </div>
+          <!-- Item 6 -->
+          <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="500">
+            <a href="../images/ws6.jpg" data-lg-size="1200-80 0" data-sub-html="
+																									<h4>Workshop Ảnh 6</h4>
+																									<p></p>">
+              <img alt="Workshop Ảnh 6" src="../images/ws6.jpg" class="img-fluid gallery-img-styled" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 10: FAQ -->
+    <section class="section-padding" style="background-color: var(--light-bg-alt);">
+      <div class="container">
+        <h2 class="section-title red-title text-center" data-aos="fade-down">HỎI GÌ ĐÁP NẤY</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
             <div class="faq-list-container">
-                <div class="faq-item" data-aos="fade-up">
-                    <h4>1. Workshop này hợp với ai hả? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Dành cho bất kỳ ai muốn "level up" kỹ năng nói, gỡ sạch rào cản để tự tin bắn ý tưởng trước đám đông. Newbie hay Pro đều học được.</div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <h4>2. Có được thực hành hay chỉ ngồi nghe lý thuyết thôi? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Thực hành xịn xò sau từng phần học luôn nhé. Feedback trực tiếp từ anh Trainer siêu có tâm.</div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <h4>3. Lỡ bận không tham gia được thì sao? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Không lo! Bạn sẽ nhận video record + slide đầy đủ để xem lại. Không bỏ lỡ gì hết.</div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <h4>4. Workshop kéo dài bao lâu? Học ở đâu nhỉ? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Chừng 2-2.5 tiếng siêu hào hứng, học online qua Zoom, chỉ cần ngồi nhà là chiến được.</div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <h4>5. Giá vé bao nhiêu, có deal hời nào không? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Siêu hời nè. Chỉ 50k/1 người nếu rủ hội bạn đăng ký cùng. Còn VÉ SUPER VIP và mấy hạng vé khác để bạn thoải mái chọn. Chi tiết xem mục "Giá vé" bên trên nhé!</div>
-                </div>
-                 <div class="faq-item" data-aos="fade-up">
-                    <h4>6. Mình chưa biết gì về hùng biện, học nổi không? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Dễ luôn. Bài giảng siêu dễ nhớ, đầy hình ảnh và công thức được đơn giản hóa, cả newbie lẫn "cứng" đều bắt sóng được.</div>
-                </div>
-                 <div class="faq-item" data-aos="fade-up">
-                    <h4>7. Workshop này khác gì mấy nguồn trên mạng? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Khác một trời một vực. Học tư duy gốc rễ, đi vào bản chất nhất. Được thực hành tại chỗ, nhận bí kíp thực chiến từ Trainer Đặng Văn Minh, cộng thêm những câu chuyện thực tế đầy cảm hứng hùng biện từ anh ấy.</div>
-                </div>
-                 <div class="faq-item" data-aos="fade-up">
-                    <h4>8. Rủ cả nhóm đi để nhận vé ưu đãi nhóm thì đăng ký kiểu gì? <i class="fas fa-chevron-down faq-icon"></i></h4>
-                    <div class="faq-answer">Bạn cứ điền Form, ghi Họ tên + SĐT của bạn và hội bạn vào phần "ghi chú", xong là nhà FSO chủ động liên hệ. Quá đơn giản.</div>
-                </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>1. Workshop này hợp với ai hả? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Dành cho bất kỳ ai muốn "level up" kỹ năng nói, gỡ sạch rào cản để tự tin bắn ý tưởng trước đám đông. Newbie hay Pro đều học được.</div>
+              </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>2. Có được thực hành hay chỉ ngồi nghe lý thuyết thôi? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Thực hành xịn xò sau từng phần học luôn nhé. Feedback trực tiếp từ anh Trainer siêu có tâm.</div>
+              </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>3. Lỡ bận không tham gia được thì sao? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Không lo! Bạn sẽ nhận video record + slide đầy đủ để xem lại. Không bỏ lỡ gì hết.</div>
+              </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>4. Workshop kéo dài bao lâu? Học ở đâu nhỉ? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Chừng 2-2.5 tiếng siêu hào hứng, học online qua Zoom, chỉ cần ngồi nhà là chiến được.</div>
+              </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>5. Giá vé bao nhiêu, có deal hời nào không? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Siêu hời nè. Chỉ 50k/1 người nếu rủ hội bạn đăng ký cùng. Còn VÉ SUPER VIP và mấy hạng vé khác để bạn thoải mái chọn. Chi tiết xem mục "Giá vé" bên trên nhé!</div>
+              </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>6. Mình chưa biết gì về hùng biện, học nổi không? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Dễ luôn. Bài giảng siêu dễ nhớ, đầy hình ảnh và công thức được đơn giản hóa, cả newbie lẫn "cứng" đều bắt sóng được.</div>
+              </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>7. Workshop này khác gì mấy nguồn trên mạng? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Khác một trời một vực. Học tư duy gốc rễ, đi vào bản chất nhất. Được thực hành tại chỗ, nhận bí kíp thực chiến từ Trainer Đặng Văn Minh, cộng thêm những câu chuyện thực tế đầy cảm hứng hùng biện từ anh ấy.</div>
+              </div>
+              <div class="faq-item" data-aos="fade-up">
+                <h4>8. Rủ cả nhóm đi để nhận vé ưu đãi nhóm thì đăng ký kiểu gì? <i class="fas fa-chevron-down faq-icon"></i>
+                </h4>
+                <div class="faq-answer">Bạn cứ điền Form, ghi Họ tên + SĐT của bạn và hội bạn vào phần "ghi chú", xong là nhà FSO chủ động liên hệ. Quá đơn giản.</div>
+              </div>
             </div>
             <p class="text-center mt-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
-            <span class="highlight-text" style="font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.3rem;">Đừng bỏ lỡ cơ hội có 1-0-2 này từ nhà FSO nhé.</span>
+              <span class="highlight-text" style="font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.3rem;">Đừng bỏ lỡ cơ hội có 1-0-2 này từ nhà FSO nhé.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 11: Form đăng ký -->
+    <section id="form-section-target" class="section-padding form-section" data-aos="fade-in">
+      <div class="container">
+        <h2 class="section-title text-center">Nâng Cấp Kỹ Năng Nói Của Bạn Ngay Hôm Nay!</h2>
+        <p class="text-center lead mb-5">Điền thông tin vào form dưới đây để giữ chỗ và nhận ngay ưu đãi!</p>
+        <div id="zoho-form-embed-container" class="mx-auto" style="max-width: 700px; min-height: 750px; background-color: #fff; border-radius: var(--border-radius);">
+          <iframe frameborder="0" style="height:100%;width:100%;border:none; min-height: 750px;" src="https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1" title="Form Đăng Ký Workshop"></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 12: Liên hệ -->
+    <section class="section-padding contact-section">
+      <div class="container" data-aos="fade-up" data-aos-offset="0">
+        <h2 class="section-title text-center">LIÊN HỆ VỚI NHÀ FSO</h2>
+        <div class="contact-items-grid-container">
+          <p class="contact-item">
+            <a href="https://www.facebook.com/groups/fso.speak" target="_blank" title="Facebook FSO">
+              <?xml version="1.0" encoding="utf-8"?>
+              <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg width="800px" height="800px" viewBox="126.445 2.281 589 589" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="420.945" cy="296.781" r="294.5" fill="#3c5a9a" />
+                <path d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z" fill="#ffffff" />
+              </svg>
+              <span>Fanpage CLB Nhà Hùng biện Tương lai (FSO)</span>
+            </a>
+          </p>
+          <p class="contact-item">
+            <a href="https://zalo.me/0397193232" target="_blank" title="Zalo FSO">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166016H27.199C33.2653 0.166016 36.8103 1.05701 39.9572 2.74421C43.1041 4.4314 45.5875 6.89585 47.2557 10.0428C48.9429 13.1897 49.8339 16.7347 49.8339 22.801V27.1991C49.8339 33.2654 48.9429 36.8104 47.2557 39.9573C45.5685 43.1042 43.1041 45.5877 39.9572 47.2559C36.8103 48.9431 33.2653 49.8341 27.199 49.8341H22.8009C16.7346 49.8341 13.1896 48.9431 10.0427 47.2559C6.89583 45.5687 4.41243 43.1042 2.7442 39.9573C1.057 36.8104 0.166016 33.2654 0.166016 27.1991V22.801C0.166016 16.7347 1.057 13.1897 2.7442 10.0428C4.43139 6.89585 6.89583 4.41245 10.0427 2.74421C13.1707 1.05701 16.7346 0.166016 22.782 0.166016Z" fill="#0068FF" />
+                <path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.8336 26.4736V27.1994C49.8336 33.2657 48.9427 36.8107 47.2555 39.9576C45.5683 43.1045 43.1038 45.5879 39.9569 47.2562C36.81 48.9434 33.265 49.8344 27.1987 49.8344H22.8007C17.8369 49.8344 14.5612 49.2378 11.8104 48.0966L7.27539 43.4267L49.8336 26.4736Z" fill="#001A33" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.5892C10.1019 43.846 13.0061 43.1836 15.0682 42.1825C24.0225 47.1318 38.0197 46.8954 46.4923 41.4732C46.8209 40.9803 47.1279 40.4677 47.4128 39.9363C49.1062 36.7779 50.0004 33.22 50.0004 27.1316V22.7175C50.0004 16.629 49.1062 13.0711 47.4128 9.91273C45.7385 6.75436 43.2461 4.28093 40.0877 2.58758C36.9293 0.894239 33.3714 0 27.283 0H22.8499C17.6644 0 14.2982 0.652754 11.4699 1.89893C11.3153 2.03737 11.1636 2.17818 11.0151 2.32135C2.71734 10.3203 2.08658 27.6593 9.12279 37.0782C9.13064 37.0921 9.13933 37.1061 9.14889 37.1203C10.2334 38.7185 9.18694 41.5154 7.55068 43.1516C7.28431 43.399 7.37944 43.5512 7.779 43.5892Z" fill="white" />
+                <path d="M20.5632 17H10.8382V19.0853H17.5869L10.9329 27.3317C10.7244 27.635 10.5728 27.9194 10.5728 28.5639V29.0947H19.748C20.203 29.0947 20.5822 28.7156 20.5822 28.2606V27.1421H13.4922L19.748 19.2938C19.8428 19.1801 20.0134 18.9716 20.0893 18.8768L20.1272 18.8199C20.4874 18.2891 20.5632 17.8341 20.5632 17.2844V17Z" fill="#0068FF" />
+                <path d="M32.9416 29.0947H34.3255V17H32.2402V28.3933C32.2402 28.7725 32.5435 29.0947 32.9416 29.0947Z" fill="#0068FF" />
+                <path d="M25.814 19.6924C23.1979 19.6924 21.0747 21.8156 21.0747 24.4317C21.0747 27.0478 23.1979 29.171 25.814 29.171C28.4301 29.171 30.5533 27.0478 30.5533 24.4317C30.5723 21.8156 28.4491 19.6924 25.814 19.6924ZM25.814 27.2184C24.2785 27.2184 23.0273 25.9672 23.0273 24.4317C23.0273 22.8962 24.2785 21.645 25.814 21.645C27.3495 21.645 28.6007 22.8962 28.6007 24.4317C28.6007 25.9672 27.3685 27.2184 25.814 27.2184Z" fill="#0068FF" />
+                <path d="M40.4867 19.6162C37.8516 19.6162 35.7095 21.7584 35.7095 24.3934C35.7095 27.0285 37.8516 29.1707 40.4867 29.1707C43.1217 29.1707 45.2639 27.0285 45.2639 24.3934C45.2639 21.7584 43.1217 19.6162 40.4867 19.6162ZM40.4867 27.2181C38.9322 27.2181 37.681 25.9669 37.681 24.4124C37.681 22.8579 38.9322 21.6067 40.4867 21.6067C42.0412 21.6067 43.2924 22.8579 43.2924 24.4124C43.2924 25.9669 42.0412 27.2181 40.4867 27.2181Z" fill="#0068FF" />
+                <path d="M29.4562 29.0944H30.5747V19.957H28.6221V28.2793C28.6221 28.7153 29.0012 29.0944 29.4562 29.0944Z" fill="#0068FF" />
+              </svg>
+              <span>Zalo trợ giúp: 039.719.3232</span>
+            </a>
+          </p>
+          <p class="contact-item">
+            <a href="mailto:fso.contact.info@gmail.com">
+              <?xml version="1.0" encoding="utf-8"?>
+              <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg width="800px" height="800px" viewBox="7.086 -169.483 1277.149 1277.149" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" d="M1138.734 931.095h.283M1139.017 931.095h-.283" />
+                <path d="M1179.439 7.087c57.543 0 104.627 47.083 104.627 104.626v30.331l-145.36 103.833-494.873 340.894L148.96 242.419v688.676h-37.247c-57.543 0-104.627-47.082-104.627-104.625V111.742C7.086 54.198 54.17 7.115 111.713 7.115l532.12 394.525L1179.41 7.115l.029-.028z" fill="#e75a4d" />
+                <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#a)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <path fill="#e7e4d7" d="M148.96 242.419v688.676h989.774V245.877L643.833 586.771z" />
+                <path fill="#b8b7ae" d="M148.96 931.095l494.873-344.324-2.24-1.586L148.96 923.527z" />
+                <path fill="#b7b6ad" d="M1138.734 245.877l.283 685.218-495.184-344.324z" />
+                <path d="M1284.066 142.044l.17 684.51c-2.494 76.082-35.461 103.238-145.219 104.514l-.283-685.219 145.36-103.833-.028.028z" fill="#b2392f" />
+                <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#b)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#c)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <linearGradient id="d" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#d)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <linearGradient id="e" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#e)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <linearGradient id="f" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#f)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#g)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <linearGradient id="h" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)">
+                  <stop offset="0" stop-color="#f8f6ef" />
+                  <stop offset="1" stop-color="#e7e4d6" />
+                </linearGradient>
+                <path fill="url(#h)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+                <path fill="#f7f5ed" d="M111.713 7.087l532.12 394.525L1179.439 7.087z" />
+              </svg>
+              <span>Email: fso.contact.info@gmail.com</span>
+            </a>
           </p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Phần 11: Form đăng ký -->
-  <section id="form-section-target" class="section-padding form-section" data-aos="fade-in">
-    <div class="container">
-      <h2 class="section-title text-center">Nâng Cấp Kỹ Năng Nói Của Bạn Ngay Hôm Nay!</h2>
-      <p class="text-center lead mb-5">Điền thông tin vào form dưới đây để giữ chỗ và nhận ngay ưu đãi!</p>
-      <div id="zoho-form-embed-container" class="mx-auto" style="max-width: 700px; min-height: 750px; background-color: #fff; border-radius: var(--border-radius);">
-        <iframe frameborder="0" style="height:100%;width:100%;border:none; min-height: 750px;"
-                src="https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1"
-                title="Form Đăng Ký Workshop"></iframe>
+    </section>
+    <footer>
+      <div class="container text-center">
+        <p>© 2024 CLB Nhà Hùng biện Tương lai (FSO). All Rights Reserved.</p>
       </div>
-    </div>
-  </section>
-<!-- Phần 12: Liên hệ -->
-<section class="section-padding contact-section">
-  <div class="container" data-aos="fade-up" data-aos-offset="0">
-    <h2 class="section-title text-center" >LIÊN HỆ VỚI NHÀ FSO</h2>
-    <div class="contact-items-grid-container">
-      <p class="contact-item">
-        <a href="https://www.facebook.com/groups/fso.speak" target="_blank" title="Facebook FSO">
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="126.445 2.281 589 589" xmlns="http://www.w3.org/2000/svg"><circle cx="420.945" cy="296.781" r="294.5" fill="#3c5a9a"/><path d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z" fill="#ffffff"/></svg>
-           <span>Fanpage CLB Nhà Hùng biện Tương lai (FSO)</span>
-        </a> 
-      </p>
-      <p class="contact-item">
-        <a href="https://zalo.me/0397193232" target="_blank" title="Zalo FSO">
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166016H27.199C33.2653 0.166016 36.8103 1.05701 39.9572 2.74421C43.1041 4.4314 45.5875 6.89585 47.2557 10.0428C48.9429 13.1897 49.8339 16.7347 49.8339 22.801V27.1991C49.8339 33.2654 48.9429 36.8104 47.2557 39.9573C45.5685 43.1042 43.1041 45.5877 39.9572 47.2559C36.8103 48.9431 33.2653 49.8341 27.199 49.8341H22.8009C16.7346 49.8341 13.1896 48.9431 10.0427 47.2559C6.89583 45.5687 4.41243 43.1042 2.7442 39.9573C1.057 36.8104 0.166016 33.2654 0.166016 27.1991V22.801C0.166016 16.7347 1.057 13.1897 2.7442 10.0428C4.43139 6.89585 6.89583 4.41245 10.0427 2.74421C13.1707 1.05701 16.7346 0.166016 22.782 0.166016Z" fill="#0068FF"/>
-<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.8336 26.4736V27.1994C49.8336 33.2657 48.9427 36.8107 47.2555 39.9576C45.5683 43.1045 43.1038 45.5879 39.9569 47.2562C36.81 48.9434 33.265 49.8344 27.1987 49.8344H22.8007C17.8369 49.8344 14.5612 49.2378 11.8104 48.0966L7.27539 43.4267L49.8336 26.4736Z" fill="#001A33"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.5892C10.1019 43.846 13.0061 43.1836 15.0682 42.1825C24.0225 47.1318 38.0197 46.8954 46.4923 41.4732C46.8209 40.9803 47.1279 40.4677 47.4128 39.9363C49.1062 36.7779 50.0004 33.22 50.0004 27.1316V22.7175C50.0004 16.629 49.1062 13.0711 47.4128 9.91273C45.7385 6.75436 43.2461 4.28093 40.0877 2.58758C36.9293 0.894239 33.3714 0 27.283 0H22.8499C17.6644 0 14.2982 0.652754 11.4699 1.89893C11.3153 2.03737 11.1636 2.17818 11.0151 2.32135C2.71734 10.3203 2.08658 27.6593 9.12279 37.0782C9.13064 37.0921 9.13933 37.1061 9.14889 37.1203C10.2334 38.7185 9.18694 41.5154 7.55068 43.1516C7.28431 43.399 7.37944 43.5512 7.779 43.5892Z" fill="white"/>
-<path d="M20.5632 17H10.8382V19.0853H17.5869L10.9329 27.3317C10.7244 27.635 10.5728 27.9194 10.5728 28.5639V29.0947H19.748C20.203 29.0947 20.5822 28.7156 20.5822 28.2606V27.1421H13.4922L19.748 19.2938C19.8428 19.1801 20.0134 18.9716 20.0893 18.8768L20.1272 18.8199C20.4874 18.2891 20.5632 17.8341 20.5632 17.2844V17Z" fill="#0068FF"/>
-<path d="M32.9416 29.0947H34.3255V17H32.2402V28.3933C32.2402 28.7725 32.5435 29.0947 32.9416 29.0947Z" fill="#0068FF"/>
-<path d="M25.814 19.6924C23.1979 19.6924 21.0747 21.8156 21.0747 24.4317C21.0747 27.0478 23.1979 29.171 25.814 29.171C28.4301 29.171 30.5533 27.0478 30.5533 24.4317C30.5723 21.8156 28.4491 19.6924 25.814 19.6924ZM25.814 27.2184C24.2785 27.2184 23.0273 25.9672 23.0273 24.4317C23.0273 22.8962 24.2785 21.645 25.814 21.645C27.3495 21.645 28.6007 22.8962 28.6007 24.4317C28.6007 25.9672 27.3685 27.2184 25.814 27.2184Z" fill="#0068FF"/>
-<path d="M40.4867 19.6162C37.8516 19.6162 35.7095 21.7584 35.7095 24.3934C35.7095 27.0285 37.8516 29.1707 40.4867 29.1707C43.1217 29.1707 45.2639 27.0285 45.2639 24.3934C45.2639 21.7584 43.1217 19.6162 40.4867 19.6162ZM40.4867 27.2181C38.9322 27.2181 37.681 25.9669 37.681 24.4124C37.681 22.8579 38.9322 21.6067 40.4867 21.6067C42.0412 21.6067 43.2924 22.8579 43.2924 24.4124C43.2924 25.9669 42.0412 27.2181 40.4867 27.2181Z" fill="#0068FF"/>
-<path d="M29.4562 29.0944H30.5747V19.957H28.6221V28.2793C28.6221 28.7153 29.0012 29.0944 29.4562 29.0944Z" fill="#0068FF"/>
-</svg>
-          <span>Zalo trợ giúp: 039.719.3232</span>
-        </a>
-      </p>
-<p class="contact-item">
-        <a href="mailto:fso.contact.info@gmail.com">
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="7.086 -169.483 1277.149 1277.149" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M1138.734 931.095h.283M1139.017 931.095h-.283"/><path d="M1179.439 7.087c57.543 0 104.627 47.083 104.627 104.626v30.331l-145.36 103.833-494.873 340.894L148.96 242.419v688.676h-37.247c-57.543 0-104.627-47.082-104.627-104.625V111.742C7.086 54.198 54.17 7.115 111.713 7.115l532.12 394.525L1179.41 7.115l.029-.028z" fill="#e75a4d"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#a)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><path fill="#e7e4d7" d="M148.96 242.419v688.676h989.774V245.877L643.833 586.771z"/><path fill="#b8b7ae" d="M148.96 931.095l494.873-344.324-2.24-1.586L148.96 923.527z"/><path fill="#b7b6ad" d="M1138.734 245.877l.283 685.218-495.184-344.324z"/><path d="M1284.066 142.044l.17 684.51c-2.494 76.082-35.461 103.238-145.219 104.514l-.283-685.219 145.36-103.833-.028.028z" fill="#b2392f"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#b)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#c)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#d)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#e)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#f)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#g)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><linearGradient id="h" gradientUnits="userSpaceOnUse" x1="1959.712" y1="737.107" x2="26066.213" y2="737.107" gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"><stop offset="0" stop-color="#f8f6ef"/><stop offset="1" stop-color="#e7e4d6"/></linearGradient><path fill="url(#h)" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/><path fill="#f7f5ed" d="M111.713 7.087l532.12 394.525L1179.439 7.087z"/></svg>
-          <span>Email: fso.contact.info@gmail.com</span>
-        </a>
-      </p>
-    </div>
-  </div>
-</section>
-  <footer>
-    <div class="container text-center">
-      <p>© 2024 CLB Nhà Hùng biện Tương lai (FSO). All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Zoho Popup Button (Hidden) -->
-  <button id="zf_button_918683" style="display: none;">Form</button>
-  <!-- Các thư viện JS bên ngoài -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-
-  <!-- Zoho Popup Script (trong thẻ script riêng) -->
-  <script type="text/javascript">
-  (function() {
-    try {
-      if (document.readyState == "complete") {
-        onloadActions_918683();
-      } else {
-        window.addEventListener('load', function() {
-          onloadActions_918683();
-        }, false);
-      }
-
-      function onloadActions_918683() {
-        constructDiv_918683();
-        if (document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683")) {
-          loadZForm_918683();
-        }
-      }
-
-      function constructDiv_918683() {
-        if (document.getElementById('formsLightBox_918683')) return;
-        var iframeDiv = document.createElement("div");
-        iframeDiv.setAttribute('id', 'RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683');
-        iframeDiv.setAttribute('class', 'zf_main_id_918683');
-        var closeFormDiv = document.createElement("div");
-        closeFormDiv.setAttribute('id', 'deleteform_918683');
-        closeFormDiv.setAttribute('class', 'zf_lb_closeform_918683');
-        var containerDiv = document.createElement("div");
-        containerDiv.setAttribute('id', 'containerDiv_918683');
-        containerDiv.setAttribute('class', 'zf_lB_Container_918683');
-        containerDiv.appendChild(iframeDiv);
-        containerDiv.appendChild(closeFormDiv);
-        var wrapperDiv = document.createElement("div");
-        wrapperDiv.setAttribute('class', 'zf_lB_Wrapper_918683');
-        wrapperDiv.appendChild(containerDiv);
-        var dimmerDiv = document.createElement("div");
-        dimmerDiv.setAttribute('class', 'zf_lB_Dimmer_918683');
-        dimmerDiv.setAttribute('elname', 'popup_box');
-        dimmerDiv.onclick = function() { deleteZForm_918683(); };
-        var mainDiv = document.createElement("div");
-        mainDiv.setAttribute('id', 'formsLightBox_918683');
-        mainDiv.style.display = "none";
-        mainDiv.appendChild(wrapperDiv);
-        mainDiv.appendChild(dimmerDiv);
-        document.body.appendChild(mainDiv);
-      }
-
-      window.showZForm_918683 = function() {
-        var mainDiv = document.getElementById("formsLightBox_918683");
-        if (!mainDiv) {
-          constructDiv_918683();
-          loadZForm_918683();
-          mainDiv = document.getElementById("formsLightBox_918683");
-        } else {
-          var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
-          var iframe = iframeHolder ? iframeHolder.getElementsByTagName("iframe")[0] : undefined;
-          if (iframe == undefined || iframe.length == 0 || iframe.src === 'about:blank' || iframe.src === '' || !iframe.src.includes('formperma')) {
-            loadZForm_918683();
+    </footer>
+    <!-- Zoho Popup Button (Hidden) -->
+    <button id="zf_button_918683" style="display: none;">Form</button>
+    <!-- Các thư viện JS bên ngoài -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- Zoho Popup Script (trong thẻ script riêng) -->
+    <script type="text/javascript">
+      (function() {
+        try {
+          if (document.readyState == "complete") {
+            onloadActions_918683();
+          } else {
+            window.addEventListener('load', function() {
+              onloadActions_918683();
+            }, false);
           }
-        }
-        if (mainDiv) {
-          mainDiv.style.display = "block";
-          setTimeout(function() {
+
+          function onloadActions_918683() {
+            constructDiv_918683();
+            if (document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683")) {
+              loadZForm_918683();
+            }
+          }
+
+          function constructDiv_918683() {
+            if (document.getElementById('formsLightBox_918683')) return;
+            var iframeDiv = document.createElement("div");
+            iframeDiv.setAttribute('id', 'RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683');
+            iframeDiv.setAttribute('class', 'zf_main_id_918683');
+            var closeFormDiv = document.createElement("div");
+            closeFormDiv.setAttribute('id', 'deleteform_918683');
+            closeFormDiv.setAttribute('class', 'zf_lb_closeform_918683');
+            var containerDiv = document.createElement("div");
+            containerDiv.setAttribute('id', 'containerDiv_918683');
+            containerDiv.setAttribute('class', 'zf_lB_Container_918683');
+            containerDiv.appendChild(iframeDiv);
+            containerDiv.appendChild(closeFormDiv);
+            var wrapperDiv = document.createElement("div");
+            wrapperDiv.setAttribute('class', 'zf_lB_Wrapper_918683');
+            wrapperDiv.appendChild(containerDiv);
+            var dimmerDiv = document.createElement("div");
+            dimmerDiv.setAttribute('class', 'zf_lB_Dimmer_918683');
+            dimmerDiv.setAttribute('elname', 'popup_box');
+            dimmerDiv.onclick = function() {
+              deleteZForm_918683();
+            };
+            var mainDiv = document.createElement("div");
+            mainDiv.setAttribute('id', 'formsLightBox_918683');
+            mainDiv.style.display = "none";
+            mainDiv.appendChild(wrapperDiv);
+            mainDiv.appendChild(dimmerDiv);
+            document.body.appendChild(mainDiv);
+          }
+          window.showZForm_918683 = function() {
+            var mainDiv = document.getElementById("formsLightBox_918683");
+            if (!mainDiv) {
+              constructDiv_918683();
+              loadZForm_918683();
+              mainDiv = document.getElementById("formsLightBox_918683");
+            } else {
+              var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+              var iframe = iframeHolder ? iframeHolder.getElementsByTagName("iframe")[0] : undefined;
+              if (iframe == undefined || iframe.length == 0 || iframe.src === 'about:blank' || iframe.src === '' || !iframe.src.includes('formperma')) {
+                loadZForm_918683();
+              }
+            }
+            if (mainDiv) {
+              mainDiv.style.display = "block";
+              setTimeout(function() {
+                var containerDiv = document.getElementById('containerDiv_918683');
+                if (containerDiv) containerDiv.classList.add('fadeIn');
+              }, 10);
+              document.body.style.overflow = "hidden";
+            }
+          }
+          window.deleteZForm_918683 = function() {
+            var divCont = document.getElementById("formsLightBox_918683");
             var containerDiv = document.getElementById('containerDiv_918683');
-            if (containerDiv) containerDiv.classList.add('fadeIn');
-          }, 10);
-          document.body.style.overflow = "hidden";
-        }
-      }
+            if (containerDiv) containerDiv.classList.remove('fadeIn');
+            if (divCont) {
+              divCont.style.display = "none";
+            }
+            document.body.style.overflow = "";
+            var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+            if (iframeHolder) {
+              var iframe = iframeHolder.getElementsByTagName("iframe")[0];
+              // if (iframe) { iframe.src = 'about:blank'; } // Tùy chọn
+            }
+          }
 
-      window.deleteZForm_918683 = function() {
-        var divCont = document.getElementById("formsLightBox_918683");
-        var containerDiv = document.getElementById('containerDiv_918683');
-        if (containerDiv) containerDiv.classList.remove('fadeIn');
-        if (divCont) {
-          divCont.style.display = "none";
-        }
-        document.body.style.overflow = "";
-        var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
-        if (iframeHolder) {
-          var iframe = iframeHolder.getElementsByTagName("iframe")[0];
-          // if (iframe) { iframe.src = 'about:blank'; } // Tùy chọn
-        }
-      }
-
-      function loadZForm_918683() {
-        var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
-        if (!iframeHolder) return;
-        var oldIframe = iframeHolder.getElementsByTagName("iframe")[0];
-        if (oldIframe && (oldIframe.src === 'about:blank' || oldIframe.src === '' || !oldIframe.src.includes('formperma'))) {
-          oldIframe.remove();
-          oldIframe = null;
-        }
-        if (!oldIframe) {
-          var f = document.createElement("iframe");
-          f.src = getsrcurlZForm_918683('https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1');
-          f.setAttribute("aria-label", "Form Đăng Ký");
-          f.style.width = "100%";
-          f.style.height = "100%";
-          f.style.border = "none";
-          iframeHolder.appendChild(f);
-        }
-        var deleteFormBtn = document.getElementById("deleteform_918683");
-        deleteFormBtn.onclick = function() { deleteZForm_918683(); }
-        window.addEventListener('message', function(event) {
-          var evntData = event.data;
-          if (evntData && evntData.constructor == String) {
-            var zf_ifrm_data = evntData.split("|");
-            if (zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3) {
-              var zf_perma = zf_ifrm_data[0];
-              var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
-              if (isNaN(zf_ifrm_ht_px)) return;
-              var iframeElement = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683").getElementsByTagName("iframe")[0];
-              if (!iframeElement || !iframeElement.src) return;
-              if ((iframeElement.src).indexOf('formperma') > 0 && (iframeElement.src).indexOf(zf_perma) > 0) {
-                var zf_ifrm_ht_nw = (zf_ifrm_ht_px + 30) + "px";
-                var containerToResize = document.getElementById("containerDiv_918683");
-                var updateHeight = function() {
-                  if (containerToResize) containerToResize.style.height = zf_ifrm_ht_nw;
-                };
-                if (zf_ifrm_data.length == 3) {
-                  setTimeout(updateHeight, 500);
-                } else {
-                  updateHeight();
+          function loadZForm_918683() {
+            var iframeHolder = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683");
+            if (!iframeHolder) return;
+            var oldIframe = iframeHolder.getElementsByTagName("iframe")[0];
+            if (oldIframe && (oldIframe.src === 'about:blank' || oldIframe.src === '' || !oldIframe.src.includes('formperma'))) {
+              oldIframe.remove();
+              oldIframe = null;
+            }
+            if (!oldIframe) {
+              var f = document.createElement("iframe");
+              f.src = getsrcurlZForm_918683('https://forms.zohopublic.com/vanminhdang01fsogm1/form/Formdangkythamdu/formperma/RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE?zf_rszfm=1');
+              f.setAttribute("aria-label", "Form Đăng Ký");
+              f.style.width = "100%";
+              f.style.height = "100%";
+              f.style.border = "none";
+              iframeHolder.appendChild(f);
+            }
+            var deleteFormBtn = document.getElementById("deleteform_918683");
+            deleteFormBtn.onclick = function() {
+              deleteZForm_918683();
+            }
+            window.addEventListener('message', function(event) {
+              var evntData = event.data;
+              if (evntData && evntData.constructor == String) {
+                var zf_ifrm_data = evntData.split("|");
+                if (zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3) {
+                  var zf_perma = zf_ifrm_data[0];
+                  var zf_ifrm_ht_px = parseInt(zf_ifrm_data[1], 10);
+                  if (isNaN(zf_ifrm_ht_px)) return;
+                  var iframeElement = document.getElementById("RA7PV59KMMJQw9jt0dVTYcjTqx1BEQVgJqtMMzA4RWE_918683").getElementsByTagName("iframe")[0];
+                  if (!iframeElement || !iframeElement.src) return;
+                  if ((iframeElement.src).indexOf('formperma') > 0 && (iframeElement.src).indexOf(zf_perma) > 0) {
+                    var zf_ifrm_ht_nw = (zf_ifrm_ht_px + 30) + "px";
+                    var containerToResize = document.getElementById("containerDiv_918683");
+                    var updateHeight = function() {
+                      if (containerToResize) containerToResize.style.height = zf_ifrm_ht_nw;
+                    };
+                    if (zf_ifrm_data.length == 3) {
+                      setTimeout(updateHeight, 500);
+                    } else {
+                      updateHeight();
+                    }
+                  }
                 }
               }
-            }
+            }, false);
           }
-        }, false);
-      }
 
-      function getsrcurlZForm_918683(zf_src) {
-        try {
-          if (typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined") {
-            for (var prmIdx = 0; prmIdx < ZFAdvLead.utmPNameArr.length; prmIdx++) {
-              var utmPm = ZFAdvLead.utmPNameArr[prmIdx];
-              var utmVal = zfutm_zfAdvLead.zfautm_gC_enc(ZFAdvLead.utmPNameArr[prmIdx]);
-              if (typeof utmVal !== "undefined" && utmVal != "") {
-                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
+          function getsrcurlZForm_918683(zf_src) {
+            try {
+              if (typeof ZFAdvLead !== "undefined" && typeof zfutm_zfAdvLead !== "undefined") {
+                for (var prmIdx = 0; prmIdx < ZFAdvLead.utmPNameArr.length; prmIdx++) {
+                  var utmPm = ZFAdvLead.utmPNameArr[prmIdx];
+                  var utmVal = zfutm_zfAdvLead.zfautm_gC_enc(ZFAdvLead.utmPNameArr[prmIdx]);
+                  if (typeof utmVal !== "undefined" && utmVal != "") {
+                    zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
+                  }
+                }
               }
-            }
+              if (typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined") {
+                for (var prmIdx = 0; prmIdx < ZFLead.utmPNameArr.length; prmIdx++) {
+                  var utmPm = ZFLead.utmPNameArr[prmIdx];
+                  var utmVal = zfutm_zfLead.zfutm_gC_enc(ZFLead.utmPNameArr[prmIdx]);
+                  if (typeof utmVal !== "undefined" && utmVal != "") {
+                    zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
+                  }
+                }
+              }
+            } catch (e) {}
+            return zf_src;
           }
-          if (typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined") {
-            for (var prmIdx = 0; prmIdx < ZFLead.utmPNameArr.length; prmIdx++) {
-              var utmPm = ZFLead.utmPNameArr[prmIdx];
-              var utmVal = zfutm_zfLead.zfutm_gC_enc(ZFLead.utmPNameArr[prmIdx]);
-              if (typeof utmVal !== "undefined" && utmVal != "") {
-                zf_src += (zf_src.indexOf('?') > 0 ? '&' : '?') + utmPm + '=' + utmVal;
-              }
-            }
+          var zfButton = document.getElementById("zf_button_918683");
+          if (zfButton) {
+            zfButton.onclick = function() {
+              showZForm_918683();
+            };
           }
         } catch (e) {}
-        return zf_src;
-      }
-
-      var zfButton = document.getElementById("zf_button_918683");
-      if (zfButton) {
-        zfButton.onclick = function() { showZForm_918683(); };
-      }
-
-    } catch (e) {}
-  })();
-  </script>
-
-  <!-- Các script khởi tạo tùy chỉnh -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Khởi tạo AOS
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 50
-      });
-
-      // Accordion for Pricing Section
-      document.querySelectorAll('.accordion-toggle').forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const content = toggle.nextElementSibling;
-          toggle.classList.toggle('active');
-          if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
-          }
+      })();
+    </script>
+    <!-- Các script khởi tạo tùy chỉnh -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Khởi tạo AOS
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 50
         });
-      });
-
-      // Accordion for FAQ Section
-      document.querySelectorAll('.faq-list-container .faq-item h4').forEach(header => {
-        header.addEventListener('click', () => {
-          const currentItem = header.parentElement;
-          const answer = currentItem.querySelector('.faq-answer');
-          const isActive = currentItem.classList.contains('active');
-          const allItemsContainer = currentItem.closest('.faq-list-container');
-          
-          if (!allItemsContainer || !answer) return;
-
-          const allFaqItems = allItemsContainer.querySelectorAll('.faq-item');
-
-          allFaqItems.forEach(item => {
-            const otherAnswer = item.querySelector('.faq-answer');
-            if (item !== currentItem && item.classList.contains('active')) {
-              item.classList.remove('active');
-              if (otherAnswer) {
-                otherAnswer.style.maxHeight = "0px";
-                otherAnswer.style.paddingTop = "0px";
-              }
+        // Accordion for Pricing Section
+        document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+          toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            toggle.classList.toggle('active');
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + 'px';
             }
           });
-
-          if (isActive) {
-            currentItem.classList.remove('active');
-            answer.style.maxHeight = "0px";
-            answer.style.paddingTop = "0px";
-          } else {
-            currentItem.classList.add('active');
-            answer.style.paddingTop = "10px";
-            requestAnimationFrame(() => {
-              answer.style.maxHeight = answer.scrollHeight + "px";
+        });
+        // Accordion for FAQ Section
+        document.querySelectorAll('.faq-list-container .faq-item h4').forEach(header => {
+          header.addEventListener('click', () => {
+            const currentItem = header.parentElement;
+            const answer = currentItem.querySelector('.faq-answer');
+            const isActive = currentItem.classList.contains('active');
+            const allItemsContainer = currentItem.closest('.faq-list-container');
+            if (!allItemsContainer || !answer) return;
+            const allFaqItems = allItemsContainer.querySelectorAll('.faq-item');
+            allFaqItems.forEach(item => {
+              const otherAnswer = item.querySelector('.faq-answer');
+              if (item !== currentItem && item.classList.contains('active')) {
+                item.classList.remove('active');
+                if (otherAnswer) {
+                  otherAnswer.style.maxHeight = "0px";
+                  otherAnswer.style.paddingTop = "0px";
+                }
+              }
             });
-          }
+            if (isActive) {
+              currentItem.classList.remove('active');
+              answer.style.maxHeight = "0px";
+              answer.style.paddingTop = "0px";
+            } else {
+              currentItem.classList.add('active');
+              answer.style.paddingTop = "10px";
+              requestAnimationFrame(() => {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+              });
+            }
+          });
         });
-      });
-
-      // Scroll to Pricing Section
-      document.querySelectorAll('.scroll-to-pricing-section').forEach(button => {
-        button.addEventListener('click', function(event) {
-          event.preventDefault();
-          const pricingSection = document.getElementById('gia-ve-uu-dai');
-          if (pricingSection) {
-            pricingSection.scrollIntoView({ behavior: 'smooth' });
-          }
+        // Scroll to Pricing Section
+        document.querySelectorAll('.scroll-to-pricing-section').forEach(button => {
+          button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const pricingSection = document.getElementById('gia-ve-uu-dai');
+            if (pricingSection) {
+              pricingSection.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }
+          });
         });
-      });
-
-      // Trigger Zoho Popup
-      document.querySelectorAll('.trigger-zoho-popup').forEach(button => {
-        button.addEventListener('click', function(event) {
-          event.preventDefault();
-          if (typeof showZForm_918683 === 'function') {
-            showZForm_918683();
-          } else {
-            console.error('Zoho popup function showZForm_918683 not found.');
-          }
+        // Trigger Zoho Popup
+        document.querySelectorAll('.trigger-zoho-popup').forEach(button => {
+          button.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (typeof showZForm_918683 === 'function') {
+              showZForm_918683();
+            } else {
+              console.error('Zoho popup function showZForm_918683 not found.');
+            }
+          });
         });
-      });
-
-      // Khởi tạo LightGallery và Masonry
-      const galleryRoot = document.getElementById('lightgallery-masonry');
-      if (galleryRoot) {
-        const lgInstance = lightGallery(galleryRoot, {
-          selector: '.gallery-item-masonry > a',
-          plugins: [lgZoom, lgThumbnail], // Biến lgZoom và lgThumbnail được cung cấp bởi các plugin JS của LightGallery
-          speed: 500,
-          download: false,
-          mobileSettings: {
-            controls: true,
-            showCloseIcon: true,
+        // Khởi tạo LightGallery và Masonry
+        const galleryRoot = document.getElementById('lightgallery-masonry');
+        if (galleryRoot) {
+          const lgInstance = lightGallery(galleryRoot, {
+            selector: '.gallery-item-masonry > a',
+            plugins: [lgZoom, lgThumbnail], // Biến lgZoom và lgThumbnail được cung cấp bởi các plugin JS của LightGallery
+            speed: 500,
             download: false,
-          },
-          subHtmlSelectorRelative: true,
-          thumbnail: true,
-        });
-
-        if (typeof Masonry !== 'undefined' && typeof imagesLoaded !== 'undefined') {
-          const masonry = new Masonry(galleryRoot, {
-            itemSelector: '.gallery-item-masonry',
-            columnWidth: '.gallery-item-masonry',
-            percentPosition: true,
-            gutter: 0
+            mobileSettings: {
+              controls: true,
+              showCloseIcon: true,
+              download: false,
+            },
+            subHtmlSelectorRelative: true,
+            thumbnail: true,
           });
-
-        imagesLoaded(galleryRoot).on('progress', function() {
-          masonry.layout();
-        }).on('always', function() {
-          AOS.refresh();
-        });
-
-          let resizeTimeout;
-          window.addEventListener('resize', function() {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(function() {
+          if (typeof Masonry !== 'undefined' && typeof imagesLoaded !== 'undefined') {
+            const masonry = new Masonry(galleryRoot, {
+              itemSelector: '.gallery-item-masonry',
+              columnWidth: '.gallery-item-masonry',
+              percentPosition: true,
+              gutter: 0
+            });
+            imagesLoaded(galleryRoot).on('progress', function() {
               masonry.layout();
-            }, 250);
-          });
-
-        } else {
-          if (typeof Masonry === 'undefined') {
-            console.warn('Masonry library is not found. Make sure masonry.pkgd.min.js is loaded.');
-          }
-          if (typeof imagesLoaded === 'undefined') {
-            console.warn('imagesLoaded library is not found. Make sure imagesloaded.pkgd.min.js is loaded.');
+            }).on('always', function() {
+              AOS.refresh();
+            });
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+              clearTimeout(resizeTimeout);
+              resizeTimeout = setTimeout(function() {
+                masonry.layout();
+              }, 250);
+            });
+          } else {
+            if (typeof Masonry === 'undefined') {
+              console.warn('Masonry library is not found. Make sure masonry.pkgd.min.js is loaded.');
+            }
+            if (typeof imagesLoaded === 'undefined') {
+              console.warn('imagesLoaded library is not found. Make sure imagesloaded.pkgd.min.js is loaded.');
+            }
           }
         }
-      }
-    });
-  </script>
-</body>
+      });
+    </script>
+  </body>
 </html>
