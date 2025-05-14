@@ -655,15 +655,12 @@
         font-size: 1rem;
         line-height: 1.7;
         max-height: 0;
-        /* Trạng thái đóng ban đầu */
         overflow: hidden;
         padding-top: 0;
-        /* Sẽ được JS điều khiển, trạng thái đóng ban đầu là 0 */
+        padding-bottom: 0;
         transition: max-height 1s ease-in-out;
-        /* Chỉ transition max-height, có thể giảm thời gian một chút */
-        /* Bỏ transition cho padding-top ở đây */
+        /* Thêm padding-top vào transition */
         box-sizing: border-box;
-        /* THÊM DÒNG NÀY: Giúp kiểm soát kích thước tốt hơn */
       }
 
       .faq-item.active .faq-answer {
@@ -674,13 +671,13 @@
         transform: rotate(180deg);
       }
 
-      .faq-item.active .faq-answer {
+      /* .faq-item.active .faq-answer {
         /* max-height is set by JS */
-        padding-top: 10px;
-        /* Match JS */
+      padding-top: 10px;
+      /* Match JS */
       }
 
-      .faq-item.active h4 .faq-icon {
+      */ .faq-item.active h4 .faq-icon {
         transform: rotate(180deg);
       }
 
@@ -892,10 +889,12 @@
 
       /* Áp dụng Grid cho các thẻ 
 												
+												
 												<a> bên trong contact-item */
       .contact-item a {
         display: grid;
         /* Chuyển 
+													
 													
 													<a> thành Grid container */
         grid-template-columns: auto 1fr;
@@ -908,6 +907,7 @@
         /* Loại bỏ gạch chân */
         color: inherit;
         /* Kế thừa màu chữ từ phần tử cha (
+														
 														
 														<p>) */
         /* Các thuộc tính khác cho link khi hover nếu muốn */
@@ -1059,25 +1059,23 @@
         }
 
         /* Media query cho màn hình lớn hơn 1200px */
-
       }
 
-              @media (min-width: 1200px) {
+      @media (min-width: 1200px) {
 
-          /* Áp dụng giới hạn chiều rộng và căn giữa cho phần tử .container bên trong hero-section */
-          .hero-section .container {
-            max-width: 1000px !important;
-            /* Giới hạn chiều rộng tối đa của nội dung */
-            /* Margin: 0 auto; thường đã được Bootstrap áp dụng cho .container */
-            /* nhưng thêm vào đây để đảm bảo nếu có ghi đè ở đâu đó */
-            margin-left: auto;
-            margin-right: auto;
-            /* Có thể cần điều chỉnh padding trái/phải của container nếu muốn khoảng cách khác */
-            /* padding-left: 15px; padding-right: 15px; */
-            /* Giá trị mặc định của Bootstrap */
-          }
+        /* Áp dụng giới hạn chiều rộng và căn giữa cho phần tử .container bên trong hero-section */
+        .hero-section .container {
+          max-width: 1000px !important;
+          /* Giới hạn chiều rộng tối đa của nội dung */
+          /* Margin: 0 auto; thường đã được Bootstrap áp dụng cho .container */
+          /* nhưng thêm vào đây để đảm bảo nếu có ghi đè ở đâu đó */
+          margin-left: auto;
+          margin-right: auto;
+          /* Có thể cần điều chỉnh padding trái/phải của container nếu muốn khoảng cách khác */
+          /* padding-left: 15px; padding-right: 15px; */
+          /* Giá trị mặc định của Bootstrap */
         }
-
+      }
     </style>
   </head>
   <body>
@@ -1519,6 +1517,7 @@
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in">
             <a href="../images/ws1.jpg" data-lg-size="1200-800" data-sub-html="
 																									
+																									
 																									<h4>Workshop Ảnh 1</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 1" src="../images/ws1.jpg" class="img-fluid gallery-img-styled" />
@@ -1527,6 +1526,7 @@
           <!-- Item 2 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="100">
             <a href="../images/ws2.jpg" data-lg-size="1200-800" data-sub-html="
+																									
 																									
 																									<h4>Workshop Ảnh 2</h4>
 																									<p></p>">
@@ -1537,6 +1537,7 @@
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="200">
             <a href="../images/ws3.jpg" data-lg-size="1200-800" data-sub-html="
 																									
+																									
 																									<h4>Workshop Ảnh 3</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 3" src="../images/ws3.jpg" class="img-fluid gallery-img-styled" />
@@ -1545,6 +1546,7 @@
           <!-- Item 4 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="300">
             <a href="../images/ws4.jpg" data-lg-size="1200-800" data-sub-html="
+																									
 																									
 																									<h4>Workshop Ảnh 4</h4>
 																									<p></p>">
@@ -1555,6 +1557,7 @@
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="400">
             <a href="../images/ws5.jpg" data-lg-size="1200-800" data-sub-html="
 																									
+																									
 																									<h4>Workshop Ảnh 5</h4>
 																									<p></p>">
               <img alt="Workshop Ảnh 5" src="../images/ws5.jpg" class="img-fluid gallery-img-styled" />
@@ -1563,6 +1566,7 @@
           <!-- Item 6 -->
           <div class="gallery-item-masonry col-lg-4 col-md-6 col-12 mb-4" data-aos="zoom-in" data-aos-delay="500">
             <a href="../images/ws6.jpg" data-lg-size="1200-80 0" data-sub-html="
+																									
 																									
 																									<h4>Workshop Ảnh 6</h4>
 																									<p></p>">
@@ -1934,29 +1938,19 @@
             const currentItem = header.parentElement;
             const answer = currentItem.querySelector('.faq-answer');
             const isActive = currentItem.classList.contains('active');
-            const allItemsContainer = currentItem.closest('.faq-list-container');
-            if (!allItemsContainer || !answer) return;
-            const allFaqItems = allItemsContainer.querySelectorAll('.faq-item');
-            allFaqItems.forEach(item => {
-              const otherAnswer = item.querySelector('.faq-answer');
-              if (item !== currentItem && item.classList.contains('active')) {
-                item.classList.remove('active');
-                if (otherAnswer) {
-                  otherAnswer.style.maxHeight = "0px";
-                  otherAnswer.style.paddingTop = "0px";
-                }
-              }
-            });
+            if (!answer) return;
             if (isActive) {
+              // Đóng accordion
               currentItem.classList.remove('active');
               answer.style.maxHeight = "0px";
               answer.style.paddingTop = "0px";
+              answer.style.paddingBottom = "0px";
             } else {
+              // Mở accordion
               currentItem.classList.add('active');
-              answer.style.paddingTop = "10px";
-              requestAnimationFrame(() => {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-              });
+              answer.style.maxHeight = answer.scrollHeight + "px"; // Đặt cùng lúc
+              answer.style.paddingTop = "5px"; // Đặt cùng lúc
+              answer.style.paddingBottom = "5px";
             }
           });
         });
